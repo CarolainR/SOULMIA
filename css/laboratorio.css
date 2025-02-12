@@ -1,0 +1,212 @@
+body {
+    height: 100%; 
+    min-height: 100hv;
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+    font-family:'Franklin Gothic Medium';
+    padding: 0;
+    position: relative;
+  
+}
+.header {
+    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    width: 30%;
+    margin: auto;
+    
+}
+.logo{
+    width: 100px;
+    height:100px ;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+}
+.h1lab{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family:'Franklin Gothic Medium';
+    text-shadow: 2px 2px black;
+}
+.labh1{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family:'Franklin Gothic Medium';
+    text-shadow: 2px 2px black;
+    background-color: black;
+
+}
+.nav {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+   
+    font-size:large;
+    font-family: 'Franklin Gothic Medium';
+}
+.sectionRight{
+    display: flex;
+    font-family:'Franklin Gothic Medium';
+    font-size: 25px ;
+    gap: 25px ;
+}
+.burgerMenu{
+    color: white;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+    margin: auto;
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 150px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    font-family:'Franklin Gothic Medium';
+    text-align: center;
+}
+.dropdownContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdownContent a:hover {
+    background-color:#b30af7;
+}
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+/* menú desplegable del perfil */
+.profileMenu{
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+
+}
+.profileMenuContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    z-index: 1;
+    padding: 1%;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent a:hover {background-color: #b30af7;}
+.profileMenu:hover .profileMenuContent {
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileIcon {
+    cursor: pointer;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+    margin: auto;
+}
+.iconsLab{
+    display: flex;
+    margin: auto;
+    font-size: 60px;
+    justify-content: center;
+}
+.parrafoo{
+    text-align:justify;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+.contenedordeLaboratorio{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    border: 3px solid black;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 5%;
+    margin-top: 1%;
+    padding: 8%;
+    text-shadow: #dc0569;
+}
+h1{
+    text-shadow:  3px 3px 3px #ffffff;
+ 
+}
+h3{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+/* FOOTER*/
+.footer {
+    /* position:unset ; este es el que siempre tendra mi footer abajo */
+    width: 100%;
+    background-color: rgb(128, 49,182 );
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    
+  }
+  /*style para links*/
+  .linksFooter {
+    color: #ffffff; 
+    font-family:'Franklin Gothic Medium';
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+    justify-content: space-around;
+  }
+  .footerLink{
+   text-align: center;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+
+  }
+
+  /* Estilo para los íconos y el texto en el 2 div */
+.iconsBrands {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    margin: 0 20px;
+    
+}
+#brands{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+
+  }
+/* estilo para INFOFOOTER*/
+.infoFooter{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    
+    
+}

@@ -1,0 +1,382 @@
+body {
+    height: 100%; 
+    min-height: 100hv;
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+    font-family:'Franklin Gothic Medium';
+    padding: 0;
+    position: relative;
+  
+}
+.header {
+    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    
+}
+.logo{
+    width: 100px;
+    height:100px ;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family:'Franklin Gothic Medium';   
+}
+.nav {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+   
+    font-size:large;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.navBar{
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+  
+}
+.nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.nav a:hover {
+    background-color: #b30af7;
+}
+.searchBar {
+    margin: 20px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    border-radius: 30%;
+}
+
+.searchBar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15%;
+    border-color: #000000;
+    background-color: rgb(255, 255, 255);
+    font-family:'Franklin Gothic Medium';
+}
+.sectionRight{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    font-family:'Franklin Gothic Medium';
+}
+.burgerMenu{
+    color: white;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+    margin: auto;
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 150px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    font-family:'Franklin Gothic Medium';
+    text-align: center;
+}
+.dropdownContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdownContent a:hover {
+    background-color:#b30af7;
+}
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+/* menú desplegable del perfil */
+.profileMenu{
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+
+}
+.profileMenuContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    z-index: 1;
+    padding: 1%;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent a:hover {background-color: #b30af7;}
+.profileMenu:hover .profileMenuContent {
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileIcon {
+    cursor: pointer;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+    margin: auto;
+    
+}
+.containerDescription{
+width: 100%;
+margin: auto;
+color: white;
+text-align: center;
+box-shadow: 0px 8px 16px 0px #b30af7;
+margin: 2px solid;
+}
+.calificacionesTitle{
+text-align: center;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+/* FOOTER*/
+.footer {
+    /* position:unset ; este es el que siempre tendra mi footer abajo */
+    width: 100%;
+    background-color: rgb(128, 49,182 );
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    
+  }
+  /*style para links*/
+  .linksFooter {
+    color: #ffffff; 
+    font-family:'Franklin Gothic Medium';
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+    justify-content: space-around;
+  }
+  .footerLink{
+   text-align: center;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+
+  }
+
+  /* Estilo para los íconos y el texto en el 2 div */
+.iconsBrands {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    margin: 0 20px;
+    
+}
+#brands{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+
+  }
+/* estilo para INFOFOOTER*/
+.infoFooter{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    
+    
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    gap: 20px; /* Espacio entre botones */
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Estilo para cada sección de botón */
+.button-section {
+    justify-content: space-between;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    background-color: #000000;
+    color: white;
+    justify-content: space-around;
+}
+
+/* Estilo para los botones */
+.button1 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #f3f703;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(245, 241, 5);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button1:hover {
+    background-color: #a028d8;
+}
+.button2 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #06caec;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(8, 180, 233);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button2:hover {
+    background-color: #a028d8;
+}
+.button3 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #f70aa8;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(252, 8, 170);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button3:hover {
+    background-color: #a028d8;
+}
+.button4 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #0af751;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(83, 255, 3);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button4:hover {
+    background-color: #a028d8;
+}
+.button5 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #f70a0a;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(240, 7, 7);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button5:hover {
+    background-color: #a028d8;
+}
+.button6 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #f7a40a;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(247, 113, 3);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button6:hover {
+    background-color: #a028d8;
+}
+.button7 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #b30af7;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(186, 11, 221);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button7:hover {
+    background-color: #a028d8;
+}.button8 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 3px #3f02ce;
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(2, 4, 128);
+    font-family: 'Franklin Gothic Medium';
+}
+
+.button8:hover {
+    background-color: #a028d8;
+}
+
+/* Estilo para el div de contenido debajo del botón */
+.content {
+    margin-top: 10px;
+}
+
+/* Estilo para los divs dentro del contenido */
+.content > div {
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium';
+}
+.nota{
+    background-color: white;
+    color: #000000;
+    width: 20%;
+    height: 20%;
+    justify-content: center;
+    margin: auto;
+}

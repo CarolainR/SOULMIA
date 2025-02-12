@@ -1,0 +1,200 @@
+Vamos a mejorar tu código HTML, CSS y JavaScript para cumplir con los requisitos que mencionaste:
+
+1. **Botón para iniciar sesión con Google**
+2. **Botón de registro que redirige a `index.html` y almacena la información del usuario en `localStorage`**
+
+### 1. HTML
+
+Vamos a configurar el HTML para que tenga el botón de Google y el botón de registro, además de incluir los scripts necesarios para Google Sign-In.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Registro</title>
+    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+    <!-- Google Sign-In Library -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="searchBar">
+        <input type="text" placeholder="Buscar">
+    </div>
+
+    <div class="nav">
+        <!-- Navigation and profile menu here -->
+    </div>
+
+    <div class="divRegistro">
+        <span><h1 class="bienvenidoo">¡ REGÍSTRATE !</h1></span>
+        <!-- Google Sign-In Button -->
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+        <div class="inputss">
+            <!-- Registration Form -->
+            <input id="fullName" class="nombreCom" type="text" placeholder="Nombre Completo">
+            <input id="email" class="correo" type="text" placeholder="Correo Electrónico">
+            <input id="password" class="contraseña" type="password" placeholder="Contraseña">
+            <input id="confirmPassword" class="confirmarContra" type="password" placeholder="Confirmar Contraseña">
+            <div class="checkbox">  
+                <input class="checkBox" type="checkbox"> <a id="olvide" href="./terminosycondiciones.html">Acepto Términos y Condiciones</a> 
+                <br>
+                <input class="checkBox" type="checkbox"> <a id="olvide" href="./politicasdeprivacidad.html">Acepto Políticas de Privacidad</a>
+            </div>
+            <input id="nickname" class="Nick" type="text" placeholder="Nick">
+            <input id="country" class="pais" type="text" placeholder="País">
+            <input id="city" class="ciudad" type="text" placeholder="Ciudad">
+            <input id="profession" class="profesion" type="text" placeholder="Profesión y/Cargo">
+            <button id="registerBtn" class="btn">Registro</button>
+        </div>
+    </div>
+
+    <h3 class="nuestros">¡Nuestros Aliados!</h3>
+    <div class="aliados">
+        <!-- Allies images here -->
+    </div>
+    <!-- Footer here -->
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+### 2. CSS
+
+Aquí tienes algunos estilos básicos para los botones y otros elementos:
+
+```css
+/* registro.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.bienvenidoo {
+    text-align: center;
+    color: #333;
+}
+
+.g-signin2 {
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+}
+
+.inputss {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn, .g-signin2 {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+.btn:hover, .g-signin2:hover {
+    background-color: #357ae8;
+}
+
+.btn:active, .g-signin2:active {
+    background-color: #3367d6;
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+.checkbox input {
+    margin-right: 5px;
+}
+
+/* Add styles for the footer and other elements as needed */
+```
+
+### 3. JavaScript
+
+Aquí tienes el código JavaScript para manejar el inicio de sesión con Google y el registro del usuario.
+
+```javascript
+// script.js
+
+// Function to handle Google Sign-In
+function onSignIn(googleUser) {
+    const profile = googleUser.getBasicProfile();
+    localStorage.setItem('user', JSON.stringify({
+        id: profile.getId(),
+        name: profile.getName(),
+        email: profile.getEmail()
+    }));
+
+    // Redirect to index.html
+    window.location.href = 'index.html';
+}
+
+// Function to handle registration form
+document.getElementById('registerBtn').addEventListener('click', function() {
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const nickname = document.getElementById('nickname').value;
+    const country = document.getElementById('country').value;
+    const city = document.getElementById('city').value;
+    const profession = document.getElementById('profession').value;
+
+    // Simple validation
+    if (password !== confirmPassword) {
+        alert('Las contraseñas no coinciden.');
+        return;
+    }
+
+    // Store registration info in localStorage
+    localStorage.setItem('user', JSON.stringify({
+        fullName: fullName,
+        email: email,
+        nickname: nickname,
+        country: country,
+        city: city,
+        profession: profession
+    }));
+
+    // Redirect to index.html
+    window.location.href = 'index.html';
+});
+```
+
+### Pasos Adicionales
+
+1. **Configura Google Sign-In**:
+   - Registra tu aplicación en la [Google Developer Console](https://console.developers.google.com/).
+   - Activa la API de Google Sign-In.
+   - Obtén las credenciales necesarias y configura la pantalla de consentimiento OAuth.
+   - Agrega el `client_id` correspondiente a tu proyecto en el script de Google Sign-In en tu HTML.
+
+2. **Prueba y Ajusta**:
+   - Asegúrate de que los botones y las funciones funcionan correctamente.
+   - Verifica la redirección y el almacenamiento de datos en `localStorage`.
+
+Con estos ajustes, tu página debería manejar tanto la autenticación con Google como el registro de usuario con almacenamiento en `localStorage`. ¡Si necesitas más ayuda o ajustes, no dudes en decírmelo!
