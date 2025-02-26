@@ -1,0 +1,307 @@
+body {
+    height: 100%; 
+    min-height: 100hv;
+    font-family:'Franklin Gothic Medium';
+    padding: 0;
+    position: relative;
+  
+}
+.header {
+    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    padding: 10px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    
+}
+.greeting {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.greeting span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family:'Franklin Gothic Medium';
+    
+}
+.sectionRight{
+    display: flex;
+    font-family:'Franklin Gothic Medium';
+    font-size: 25px ;
+    gap: 7px ;
+}
+
+.nav {
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    font-size:large;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.navBar{
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    margin-right: 3%;
+    
+}
+.bannerr{
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+
+}
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .profileMenu {
+        display: none; /* Oculta el menú de perfil en móviles */
+    }
+    
+    .navbar-toggler {
+        display: block; /* Muestra el botón de menú en móviles */
+    }
+
+    .navbar-collapse {
+        background-color: #007bff; /* Fondo azul para el menú desplegable en móviles */
+    }
+    
+    .profileIcon {
+        display: block;
+        margin-left: auto;
+    }
+}
+.logo{
+    width: 100px;
+    height:150px ;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+}
+.nav a {
+    color: #fff;
+    padding: 14px 20px;
+    margin-left: 1%;
+    display: flex;
+    font-family:'Franklin Gothic Medium';
+}
+.nav a:hover {
+    background-color: #b30af7;
+}
+.searchBar {
+    margin: 20px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium';
+    border-radius: 30%;
+}
+
+.searchBar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15%;
+    border-color: #000000;
+    background-color: rgb(255, 255, 255);
+    font-family:'Franklin Gothic Medium';
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;    
+    font-family:'Franklin Gothic Medium';
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 1, 170, 0.2);
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdownContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.dropdownContent a:hover {
+    background-color:#b30af7;
+}
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+
+
+
+/* menú desplegable del perfil */
+.profileMenu{
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #b30af7;
+    z-index: 1;
+    padding: 1%;
+    font-family:'Franklin Gothic Medium';
+    border-radius: 4px;
+}
+.profileMenuContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent a:hover {background-color: #b30af7;}
+.profileMenu:hover .profileMenuContent {
+    display: block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileIcon {
+    cursor: pointer;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+    
+}
+.banner{
+    max-width: 1200px;
+}
+/* imagen Promocion */
+.imgPromotion{
+    width:60%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    display: grid;
+    padding:0%;
+    margin: auto;
+    box-sizing: border-box; /*Incluye padding y border en el ancho total*/
+    border: 3px solid black;
+    
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+.imgProm{
+    height:auto;
+    width: 100%;
+} 
+}
+/* div nuestros aliados*/
+.nuestros{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size:large;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+}
+.aliados{
+    width: 1330px;
+    height: 100px;
+    margin-bottom: 40px;
+    border: 3px solid black;
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.imagen{
+width: 80px;
+margin: 40px;
+}
+/* FOOTER*/
+.footer {
+    position:unset ; /*este es el que siempre tendra mi footer abajo*/
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(128, 49,182 );
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin: 0%;
+    font-family:'Franklin Gothic Medium';
+    
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 3px solid #000000; */
+  }
+  /*style para links*/
+  .footer >div:first-child {
+    color: #ffffff; 
+    font-family:'Franklin Gothic Medium';
+  }
+  .footerLink{
+    margin-left: 60px;
+    margin-right: 60px;
+    color: white;
+    font-family:'Franklin Gothic Medium';
+
+  }
+
+  /* Estilo para los íconos y el texto en el 2 div */
+.footer > div:nth-child(2) {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    font-family:'Franklin Gothic Medium';
+    
+}
+#brands{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+/* estilo para INFOFOOTER*/
+.infoFooter{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    
+    
+}
+/* #endFooter{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+  } */
+ 

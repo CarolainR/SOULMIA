@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/pqr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>PQR📝</title>
     <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
@@ -11,38 +11,28 @@
 </head>
 <body>
     <!-- saludo logeado -->
-
+    <div class="nav">
+        <div class="navBar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-none">
+                <a class="navbar-brand">
+                  <img class="logo" src="../sources/Logo final febrero 2025.png" alt="Logo Soulmia" style="max-height: 50px;">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item"><a class="nav-link" href="./vistas/modulos.html">Módulos</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./vistas/biblioteca.html">Biblioteca</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./vistas/profesores.html">Profesores</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./vistas/calificaciones.html">Calificaciones</a></li>
+                    </ul>
+                  </div>
+                </nav>
+    </div>
+</div>
     <div class="greeting" id="greeting" style="display: none;">
         <span id="welcomeMessage">Bienvenido/a, </span>
         <span id="username"></span>
     </div>
 
     <div class="nav">
-        <div class="navBar">
-        <img class="logo" src="./sources/LOGO SOULMIA DEFINITIVO_Mesa de trabajo 1.jpg" alt="Logo Soulmia">
-        <a  href="./modulos.html">Módulos</a>
-        <a  href="./biblioteca.html">Biblioteca</a>
-        <a  href="./profesores.html">Profesores</a>
-        <a  href="./calificaciones.html">Calificaciones</a>
-        <a  href="./videojuego.html">Videojuego</a>
-        <a  href="./envivos.html">En Vivos</a>
-        <a  href="./laboratorio.html">Laboratorio</a>
-        <a  href="./tienda.html">Tienda</a>
-        </div>
-
-        <div class="sectionRight">
-            <div class="dropdown">
-                <span class="burgerMenu" onclick="toggleMenu()">&#9776;</span>
-                <div id="dropdownContent" class="dropdownContent">
-                <a href="./modulos.html">Módulos</a>
-                <a href="./biblioteca.html">Biblioteca</a>
-                <a href="./profesores.html">Profesores</a>
-                <a href="./calificaciones.html">Calificaciones</a>
-                <a href="./videojuego.html">Videojuego</a>
-                <a href="./envivos.html">En Vivos</a>
-                <a href="./laboratorio.html">Laboratorio</a>
-                <a href="./tienda.html">Tienda</a>
-                </div>
             </div>
              <!-- Menú desplegable de perfil -->
             <div class="profileMenu">
@@ -55,9 +45,7 @@
                 </div>
             </div>
         </div>
-
-
-
+        <img class="banner" src="../sources/banner pqr_Mesa de trabajo 1.png">
 
         <footer class="footer text-white py-4">
             <div class="container">

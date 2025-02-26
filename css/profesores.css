@@ -17,6 +17,11 @@ body {
 .sectionRight {
     position: relative;
 }
+.banner{
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Estilos del botón de hamburguesa */
 .burgerMenu {

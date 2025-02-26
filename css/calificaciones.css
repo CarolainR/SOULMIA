@@ -23,6 +23,10 @@ h1{
     text-shadow: 2px 2px black;
     font-family:'Franklin Gothic Medium';   
 }
+
+.banner{
+    max-width: 1350px;
+}
 .nav {
     justify-content: center;
     display: flex;
@@ -35,6 +39,8 @@ h1{
 }
 
 .navBar{
+    max-width: 1200px;
+    gap:20px;
     text-decoration-line: underline;
     text-decoration-color: white;
     display: flex;
@@ -152,6 +158,7 @@ h1{
     
 }
 .containerDescription{
+    max-width: 1200px;
 width: 100%;
 margin: auto;
 color: white;

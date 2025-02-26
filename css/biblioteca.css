@@ -14,23 +14,50 @@ body {
     font-family:'Franklin Gothic Medium';
     
 }
-.logo{
-    width: 100px;
-    height:100px ;
-    box-shadow: 0px 8px 16px 0px #b30af7;
-}
+    .logo{
+        width: 100px;
+        height:300px ;
+        box-shadow: 0px 8px 16px 0px #b30af7;
+    }
 h1{
     color: white;
     text-shadow: 2px 2px black;
     font-family:'Franklin Gothic Medium';
     
 }
+.bannerr{
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+
+}
+.nav {
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    width: 90%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+    font-size:large;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.navBar{
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium';
+    gap: 40px; }
 .sectionRight{
     display: flex;
-    justify-content: right;
-    margin-right: 190px;
-    margin-top: 10px;
-    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 20vh;
     font-family:'Franklin Gothic Medium';
 }
 .burgerMenu{
