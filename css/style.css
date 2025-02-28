@@ -1,7 +1,7 @@
 body {
     height: 100%; 
     min-height: 100hv;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
     padding: 0;
     position: relative;
   
@@ -10,6 +10,7 @@ body {
     background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
     padding: 10px;
     text-align: center;
+    font-family:'roboto';
 }
 
 .greeting {
@@ -28,20 +29,11 @@ body {
 }
 .sectionRight{
     display: flex;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
     font-size: 25px ;
     gap: 7px ;
 }
-.container-fluid{
-    max-width: 1450px;
-}
 
-.bannerr{
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    border: 2px8#000000;
-}
 .navbar-nav{
     text-shadow:#b30af7;
 }
@@ -57,7 +49,7 @@ body {
     box-shadow: 0px 8px 16px 0px #660144;
 }
 .navbar-brand{
-    box-shadow:0px 10px 18px 0px #660144 ;
+    box-shadow:0px 10px 18px 0px #660144 ; /* le da la sombra al contenedor del logo */
 
 }
 
@@ -107,7 +99,6 @@ body {
 .logo{
     width: 100px;
     height:180px ;
-    box-shadow: 0px 8px 16px 0px #ffffff;
 }
 
 }
@@ -127,7 +118,7 @@ body {
     box-shadow: 0px 8px 16px 0px #660144;
     z-index: 1;
     padding: 1%;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
     border-radius: 4px;
 }
 .profileMenuContent a {
@@ -135,18 +126,27 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
 }
-.profileMenuContent a:hover {background-color: #b30af7; text-shadow:#660144;}
+.profileMenuContent {
+    a:hover {
+    color: purple;}
+    a:active{
+    color: rgb(72, 255, 0);
+    };
+    
+    a:link{
+    color: white;
+    }}
 
 .profileMenu:hover .profileMenuContent {
     display: block;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
 }
 .profileIcon {
     cursor: pointer;
     color: white;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
     
 }
 /* imagen Promocion */
@@ -197,33 +197,37 @@ margin: 40px;
 }
 /* FOOTER*/
 .footer {
-    position:unset ; /*este es el que siempre tendra mi footer abajo*/
-    bottom: 0;
+    /*position:unset ; este es el que siempre tendra mi footer abajo*/
     width: 100%;
     background-color: rgb(128, 49,182 );
     color: white;
     text-align: center;
     align-items: center;
-    margin: 0%;
-    font-family:'Franklin Gothic Medium';
-    
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 3px solid #000000; */
+    font-family:'roboto';
   }
   /*style para links*/
-  .footer >div:first-child {
+  .linksFooter {
     color: #ffffff; 
     font-family:'Franklin Gothic Medium';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a:hover {
+        color: rgb(0, 0, 0);}
+        a:active{
+        color: rgb(72, 255, 0);
+        };
+        
+        a:link{
+        color: white;
+        }
   }
   .footerLink{
-    margin-left: 60px;
-    margin-right: 60px;
+    text-align: center;
     color: white;
-    font-family:'Franklin Gothic Medium';
-
+    font-family:'roboto';
+    text-decoration: none;
+    font-size: 20px;
   }
 
   /* Estilo para los íconos y el texto en el 2 div */
@@ -249,11 +253,5 @@ margin: 40px;
     
     
 }
-/* #endFooter{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-  } */
+
  
