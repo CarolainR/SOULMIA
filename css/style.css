@@ -7,10 +7,19 @@ body {
   
 }
 .header {
-    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
     padding: 10px;
     text-align: center;
     font-family:'roboto';
+} 
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+
+#container-banner{
+    width: 100%;
 }
 
 .greeting {
@@ -147,6 +156,7 @@ body {
     cursor: pointer;
     color: white;
     font-family:'roboto';
+    margin-right: 10px;
     
 }
 /* imagen Promocion */
@@ -184,7 +194,7 @@ body {
     height: 100px;
     margin-bottom: 40px;
     border: 1px solid black;
-    background-image: url(../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg) ;
+    background-image: url(../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg) ;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -197,9 +207,8 @@ margin: 40px;
 }
 /* FOOTER*/
 .footer {
-    /*position:unset ; este es el que siempre tendra mi footer abajo*/
     width: 100%;
-    background-color: rgb(128, 49,182 );
+    background-color: rgb(12, 12, 12);
     color: white;
     text-align: center;
     align-items: center;
@@ -213,7 +222,7 @@ margin: 40px;
     flex-direction: row;
     justify-content: space-around;
     a:hover {
-        color: rgb(0, 0, 0);}
+        color: rgb(240, 15, 183);}
         a:active{
         color: rgb(72, 255, 0);
         };
@@ -250,8 +259,6 @@ margin: 40px;
     justify-content: space-around;
     margin: 0;
     font-family:'Franklin Gothic Medium';
-    
-    
 }
 
  

@@ -1,0 +1,308 @@
+body {
+    height: 100%; 
+    min-height: 100hv;
+    font-family:'roboto';
+    padding: 0;
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+  
+}
+.header {
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+    padding: 10px;
+    text-align: center;
+    font-family:'roboto';
+}
+.bannerr{
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 180px;
+}
+.texto {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centrar perfectamente */
+    color: white; /* Cambia el color del texto */
+    font-size: 130px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.6); /* Sombra opcional para que el texto se vea mejor */
+}
+.fixed-top, .sb-nav-fixed .sb-nav-fixed .sb-topnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    
+  }
+
+
+  /* Espacio para que el contenido principal no quede cubierto por el nav */
+  #layoutSidenav_content {
+    margin-left: 250px; /* Deja espacio para el nav */
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%; /*ancho de la card */
+    height: 100%;
+  }
+  .card-footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+.greeting {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.greeting span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.sectionRight{
+    display: flex;
+    font-family:'roboto';
+    font-size: 25px ;
+    gap: 7px ;
+}
+.container-fluid{
+    position: relative;
+    display: inline-block;
+    flex-grow: 1;
+}
+.navbar-nav{
+    text-shadow:#b30af7;
+}
+.navbar-nav a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    text-shadow: #b30af7;
+}
+.navbar-nav a:hover{
+    background-color:black;
+    color: black;
+    box-shadow: 0px 8px 16px 0px #660144;
+}
+.navbar-brand{
+    box-shadow:0px 10px 18px 0px #660144 ; /* le da la sombra al contenedor del logo */
+
+}
+
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item{
+        flex-direction: column;
+        margin-top: 10px;
+        margin: 80px;
+        box-shadow: 0px 8px 16px 0px #b30af7;
+    }
+    .profileMenuContent {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: #000000;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px #660144;
+        z-index: 1;
+        padding: 1%;
+        font-family:'Franklin Gothic Medium';
+        border-radius: 4px;
+    }
+    
+    .profileMenu {
+        display: none; /* Oculta el menú de perfil en móviles */
+    }
+    
+    .navbar-toggler {
+        display: block; /* Muestra el botón de menú en móviles */
+        background-color: floralwhite;
+    }
+    -navbar-toggler-icon {
+        background-color:white;
+    }
+
+    .navbar-collapse {
+        background-color: #f70ac4;
+    
+    .profileIcon {
+        display: block;
+        margin-left: auto;
+    }
+}
+.logo{
+    width: 100px;
+    height:180px ;
+}
+
+}
+/* menú desplegable del perfil */
+.profileMenu{
+    position: relative;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium';
+}
+.profileMenuContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #660144;
+    z-index: 1;
+    padding: 1%;
+    font-family:'roboto';
+    border-radius: 4px;
+}
+.profileMenuContent a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family:'roboto';
+}
+.profileMenuContent {
+    a:hover {
+    color: purple;}
+    a:active{
+    color: rgb(72, 255, 0);
+    };
+    
+    a:link{
+    color: white;
+    }}
+
+.profileMenu:hover .profileMenuContent {
+    display: block;
+    font-family:'roboto';
+}
+.profileIcon {
+    cursor: pointer;
+    color: white;
+    font-family:'roboto';
+    
+}
+/* imagen Promocion */
+.imgPromotion{
+    width:100%;
+    max-width: 1000px;
+    height: auto;
+    overflow: hidden;
+    display: grid;
+    padding:0%;
+    margin: auto;
+    box-sizing: border-box; /*Incluye padding y border en el ancho total*/
+    border: 3px solid black;
+    
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+
+.imgProm{
+    height:auto;
+    width: 100%;
+} 
+}
+/* div nuestros aliados*/
+.nuestros{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size:large;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+}
+.aliados{
+    width: 1330px;
+    height: 100px;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    background-image: url(../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg) ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.imagen{
+width: 80px;
+margin: 40px;
+}
+/* FOOTER*/
+.footer {
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-family:'roboto';
+    margin-top: auto;
+  }
+  /*style para links*/
+  .linksFooter {
+    color: #ffffff; 
+    font-family:'Franklin Gothic Medium';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a:hover {
+        color: rgb(240, 15, 183);}
+        a:active{
+        color: rgb(72, 255, 0);
+        };
+        
+        a:link{
+        color: white;
+        }
+  }
+  .footerLink{
+    text-align: center;
+    color: white;
+    font-family:'roboto';
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  /* Estilo para los íconos y el texto en el 2 div */
+.footer > div:nth-child(2) {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    font-family:'Franklin Gothic Medium';
+    
+}
+#brands{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+/* estilo para INFOFOOTER*/
+.infoFooter{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+}

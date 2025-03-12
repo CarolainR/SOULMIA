@@ -1,14 +1,14 @@
 body {
     height: 100%; 
     min-height: 100hv;
-    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+   /*  background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg"); */
     font-family:'Franklin Gothic Medium';
     padding: 0;
     position: relative;
   
 }
 .header {
-    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
     /* padding: 10px; */
     text-align: center;
     font-family:'Franklin Gothic Medium';
@@ -25,7 +25,7 @@ h1{
     font-family:'Franklin Gothic Medium';
     
 }
-.bannerr{
+.img-fluid{
     align-items: center;
     justify-content: center;
     max-width: 100%;
@@ -150,51 +150,57 @@ h1{
 }
 /* FOOTER*/
 .footer {
-    position:unset ; /*este es el que siempre tendra mi footer abajo*/
-    bottom: 0;
+    /* position:unset ; este es el que siempre tendra mi footer abajo */
     width: 100%;
-    background-color: rgb(128, 49,182 );
-    color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     align-items: center;
-    margin: 0%;
-    font-family:'Franklin Gothic Medium';
-    
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 3px solid #000000; */
+    font-family:'roboto';
+    margin-top: 15px;
   }
+
   /*style para links*/
-  .footer >div:first-child {
+  .linksFooter {
     color: #ffffff; 
     font-family:'Franklin Gothic Medium';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+  
   }
-  .footerLink{
-    margin-left: 60px;
-    margin-right: 60px;
-    color: white;
-    font-family:'Franklin Gothic Medium';
 
+  .linksFooter a:hover {
+    color: rgb(235, 18, 162);}
+    a:active{
+    color: rgb(72, 255, 0);
+    };
+    
+    a:link{
+    color: white;
+    }
+  .footerLink{
+   text-align: center;
+    color: white;
+    font-family:'roboto';
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 15px;
   }
 
   /* Estilo para los íconos y el texto en el 2 div */
-.footer > div:nth-child(2) {
+.iconsBrands {
     display:flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
     font-family:'Franklin Gothic Medium';
-    
-}
-banner.{
-    max-width: 100%;
+    margin: 0 20px;
 }
 #brands{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 30px;
+
   }
 /* estilo para INFOFOOTER*/
 .infoFooter{
@@ -202,23 +208,7 @@ banner.{
     justify-content: space-around;
     margin: 0;
     font-family:'Franklin Gothic Medium';
-    
-    
 }
-/* #endFooter{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-  } */
-
- /*  h2{
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    text-align: center;
-    background-color: #b30af7;
-    width: 200px;} */
   
   .biblioteca{
     font-family: 'Franklin Gothic Medium';

@@ -1,14 +1,14 @@
 body {
     height: 100%; 
     min-height: 100hv;
-    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+   /*  background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg"); */
     font-family:'roboto';
     padding: 0;
     position: relative;
   
 }
 .header {
-    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
     padding: 10px;
     text-align: center;
     font-family:'roboto';
@@ -35,11 +35,6 @@ body {
     font-size: 25px ;
     gap: 7px ;
 }
-/* .logo{
-    width: 100px;
-    height:100px ;
-    box-shadow: 0px 8px 16px 0px #b30af7;
-} */
 
 .nav {
     justify-content: space-between;
@@ -367,7 +362,7 @@ color: white;
 .footer {
     /* position:unset ; este es el que siempre tendra mi footer abajo */
     width: 100%;
-    background-color: rgb(128, 49,182 );
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
     align-items: center;
@@ -381,17 +376,20 @@ color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    a:hover {
-        color: rgb(0, 0, 0);}
-        a:active{
-        color: rgb(72, 255, 0);
-        };
-        
-        a:link{
-        color: white;
-        }
+    margin-top: 15px;
+    
   
   }
+
+  .linksFooter a:hover {
+    color: rgb(218, 21, 152);}
+    a:active{
+    color: rgb(72, 255, 0);
+    };
+    
+    a:link{
+    color: white;
+    }
   .footerLink{
    text-align: center;
     color: white;
@@ -419,5 +417,5 @@ color: white;
     display: flex;
     justify-content: space-around;
     margin: 0;
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
 }
