@@ -34,7 +34,7 @@
             // Obtener nombre de usuario del localStorage
             const user = JSON.parse(localStorage.getItem('user'));
             if (user) {
-                usernameSpan.textContent = user.email || user.username; // Ajusta esto según el formato del usuario
+                usernameSpan.textContent =  user.fullName; // Ajusta esto según el formato del usuario
                 greetingDiv.style.display = 'block';
             }
         }

@@ -51,34 +51,34 @@
                         </div>
                     </div>
                     <div class="col-4 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
-                        <div class="sectionRight d-flex align-items-center">
-                            <!-- Menú desplegable de perfil -->
-                            <div class="profileMenu">
-                                <!-- fila de saludo -->
-                                <div class="row">
-                                    <div class="col-12 text-white text-center p-5">
-                                        <div class="greeting bg-dark d-flex " id="greeting" style="display: none;">
-                                            <span id="welcomeMessage">Hola</span>
-                                            <span id="username"></span>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- fila de icono de perfil y menu dropdown -->
-                                <div class="row">
-                                    <div class="col-12 text-white text-center p-5">
-                                        <span class="profileIcon" onclick="toggleProfileMenu()">
-                                            <i class="fas fa-user"></i>
-                                        </span>
-                                        <div id="profileMenuContent" class="profileMenuContent">
-                                            <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
-                                            <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
-                                            <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                        </div>
-                                    </div>
+                        <!-- Menú desplegable de perfil -->
+                        <div class="d-flex">
+                            <!-- fila de saludo -->
+
+                            <div class="text-white text-center">
+                                <div class="greeting bg-dark d-flex " id="greeting" style="display: none;">
+                                    <span id="welcomeMessage">Hola <span id="username"></span></span>
+
                                 </div>
                             </div>
+
+
+                            <!-- fila de icono de perfil y menu dropdown -->
+
+                            <div class="text-white text-center d-flex align-items-center px-3">
+                                <span class="profileIcon" onclick="toggleProfileMenu()">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <div id="profileMenuContent" class="profileMenuContent">
+                                    <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
+                                    <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
+                                    <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
 
@@ -86,10 +86,10 @@
 
     </div>
 
-    <div  id="container-banner">
+    <div id="container-banner">
 
-                <img class="img-fluid " src="./sources/Banner Modulo 4 clases de cocteleria_Mesa de trabajo 1.png">
-  
+        <img class="img-fluid " src="./sources/Banner Modulo 4 clases de cocteleria_Mesa de trabajo 1.png">
+
     </div>
 
     <div class="imgPromotion mt-4">
