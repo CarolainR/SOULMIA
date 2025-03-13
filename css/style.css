@@ -1,3 +1,10 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     height: 100%; 
     min-height: 100hv;
@@ -40,7 +47,9 @@ body {
     display: flex;
     font-family:'roboto';
     font-size: 25px ;
-    gap: 7px ;
+    gap: 20px ; /* espacio entre elemtnos */
+    align-items: center; /* centra los elemtnos verticalmente */
+    justify-content: space-between; /* alineacion de elementos horizontalmente */
 }
 
 .navbar-nav{
@@ -72,21 +81,22 @@ body {
         box-shadow: 0px 8px 16px 0px #b30af7;
     }
     .profileMenuContent {
-        display: none;
+        display: none; /* oculta el menu inicialmente, se programa con javascript */
         position: absolute;
         right: 0;
-        top: 100%;
+        top: 50px;
         background-color: #000000;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px #660144;
+        box-shadow: 0px 8px 16px 0px #ffffff;
         z-index: 1;
-        padding: 1%;
-        font-family:'Franklin Gothic Medium';
+        padding: 10px;
+        font-family:'roboto';
         border-radius: 4px;
     }
     
     .profileMenu {
-        display: none; /* Oculta el menú de perfil en móviles */
+        display: flex; /* Oculta el menú de perfil en móviles */
+        flex-direction: column; /* menu apilado verticalmente */
     }
     
     .navbar-toggler {
