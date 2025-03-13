@@ -14,9 +14,27 @@ document.getElementById('registerBtn').addEventListener('click', function() {
     localStorage.setItem('user', JSON.stringify({
         fullName: fullName,
         email: email,
-        password: password
-    }));
+        password: password,
+        userLogged: false
+    }
+  
+));
+     /*  enviar información aq local storage */
+
+  /*   let usuarios = JSON.parce(localStorage.getItem("usuarios")) || [] */ /*  esto es un array, es decir usuarios es un array */
+
+/*    for (let i = 0; i < usuarios.length; i++) {
+    if (fullName.value === usuarios[i].email){
+        alert("el usuario ya se encuentra registrado🚀")
+        return
+    } */
     
+/*    }
+   usuarios.push(user)
+   localStorage.setItem ("usuarios", JSON.stringify(usuarios));
+   formulario.reset() *//*  formulario refiere explicitamente a un array donde estan los usuarios que se van registrando */
+
+
     alert('Registro exitoso');
     window.location.href = './login.html'; // Redirigir al login después del registro
 });
@@ -54,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    // Aquí deberías validar las credenciales del usuario
+    //validar las credenciales del usuario
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     
