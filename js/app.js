@@ -1,25 +1,13 @@
+/*
+ 1. cuando inicie sesion, no se vea registro, solo logout.
+ 2. Al hacer logout vuelva a aparecer en el profilemenu  login y registro
+ 3. Al hacer click al logo, links e iconos me redireccionen a lo que informa, es decir, si doy click al icono de whatsApp me direccione al whatsApp de la empresa,
+ 4. En sobre nosotros ira la revista virtual en 3D
+ 5.
+ 6.
+*/
 
-/*     window.onload = function() {
-        const loggedIn = localStorage.getItem('loggedIn');
-        if (!loggedIn) {
-            window.location.href = './';
-        }
-    };
- */
-/* logout--------------------------------------------------------------------- */
 
-/*     document.addEventListener('DOMContentLoaded', function() {
-        const logoutBtn = document.getElementById('logoutBtn');
-    
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', function(event) {
-                event.preventDefault(); // Evitar la acción por defecto del enlace
-                localStorage.removeItem('loggedIn'); // Eliminar el estado de autenticación
-                alert('Has cerrado sesión exitosamente');
-                window.location.href = '../index.html'; 
-            });
-        }
-    }); */
     function toggleProfileMenu() {
         var profileMenu = document.getElementById("profileMenuContent");
         profileMenu.classList.toggle("open");
