@@ -78,15 +78,15 @@
                                     <div class="row"> Nombre del Estudiante</div>
                                 </div>
                                 <img class="img-fluid" src="../sources/alexis velasco.jpeg" alt="Imagen de estudiante">
-                                <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item text-dark"> Usuario:</li>
-                                    <li class="breadcrumb-item text-dark"> Correo:</li>
-                                    <li class="breadcrumb-item text-dark"> Cellphone:</li>
-                                    <li class="breadcrumb-item text-dark"> País:</li>
-                                    <li class="breadcrumb-item text-dark"> Ciudad:</li>
-                                </ol>
+
                                 <div class="card-footer d-flex flex-column; align-items-center justify-content-between">
-                                    <p>barra de progreso</p>
+                                    <ol class="breadcrumb mb-4">
+                                        <li class="breadcrumb-item text-dark"> Usuario:</li>
+                                        <li class="breadcrumb-item text-dark"> Correo:</li>
+                                        <li class="breadcrumb-item text-dark"> Cellphone:</li>
+                                        <li class="breadcrumb-item text-dark"> País:</li>
+                                        <li class="breadcrumb-item text-dark"> Ciudad:</li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,10 @@
                                                 <i class="fas fa-chart-area me-1"></i>
                                                 Graficos de Progreso General <!-- (poner grafico de progreso general del curso dependiendo de los modulos cursados) -->
                                             </div>
-                                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas>
+                                                <h1>Tu progreso</h1>
+                                                <p id="progreso">0%</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
@@ -118,54 +121,49 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-table me-1"></i>
-                                        DataTable Example
+                                        DataTable Modulos
                                     </div>
                                     <div class="card-body">
                                         <table id="datatablesSimple">
                                             <thead>
                                                 <tr>
-                                                    <th>Nombre</th>
+                                                    <th>Nombre de Modulo</th>
                                                     <th>Modulo</th>
                                                     <th>Estado</th>
-                                                    <th>Age</th>
                                                     <th>Fecha de Inicio</th>
                                                     <th>Fecha de Terminación</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>Nombre</th>
+                                                    <th>Nombre de Modulo</th>
                                                     <th>Modulo</th>
                                                     <th>Estado <!-- (aprobado, denegado o activo) --></th>
-                                                    <th>Age</th>
                                                     <th>Fecha de Inicio</th>
                                                     <th>Fecha de Terminación</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <tr>
-                                                    <td>Tiger Nixon</td>
+                                                    <td>Introducción e Historía de la Mixología</td>
                                                     <td>1</td>
-                                                    <td>activo</td>
-                                                    <td>33</td>
-                                                    <td>12/03/2025</td>
-                                                    <td>03/2025</td>
+                                                    <td>inactivo</td>
+                                                    <td>00/00/0000</td>
+                                                    <td>00/00/0000</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Garrett Winters</td>
-                                                    <td>3</td>
+                                                    <td>2</td>
                                                     <td>activo</td>
-                                                    <td>41</td>
-                                                    <td>10/03/2025</td>
-                                                    <td>03/2025</td>
+                                                    <td>00/00/0000</td>
+                                                    <td>00/00/0000</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Ashton Cox</td>
-                                                    <td>4</td>
-                                                    <td>activo</td>
-                                                    <td>27</td>
-                                                    <td>08/03/2025</td>
-                                                    <td>03/2025</td>
+                                                    <td>3</td>
+                                                    <td>inactivo</td>
+                                                    <td>00/00/0000</td>
+                                                    <td>00/00/0000</td>
                                                 </tr>
                                            
                                             </tbody>
@@ -222,7 +220,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="./js/app.js"></script>
+<script src="../js/dashboard.js"></script>
 </div>
 </body>
 </html>
