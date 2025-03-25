@@ -14,6 +14,7 @@ document.getElementById('registerBtn').addEventListener('click', function() {
     localStorage.setItem('user', JSON.stringify({
         fullName: fullName,
         email: email,
+        progreso: 0,
         password: password,
         userLogged: false
     }

@@ -19,10 +19,10 @@
     <div class="header">
         <div class="navBar">
             <img class="logo" src="../sources/LOGO SOULMIA DEFINITIVO_Mesa de trabajo 1.jpg" alt="Logo Soulmia">
-            <a  href="#modulos">Módulos</a>
-            <a  href="#biblioteca">Biblioteca</a>
-            <a  href="#profesores">Profesores</a>
-            <a  href="#calificaciones">Calificaciones</a>
+            <a  href="./modulos.html">Módulos</a>
+            <a  href="./biblioteca.html">Biblioteca</a>
+            <a  href="./profesores.html">Profesores</a>
+            <a  href="./calificaciones.html">Calificaciones</a>
             </div>
       
     </div>
@@ -48,8 +48,8 @@
     <div class="videoContainer">
         <h1>FILOSOFÍA Y PSICOLOGÍA DETRAS DE LA BARRA</h1>
 <video class="videoorigen" width="320" height="240" controls>
-    <source src="movie.mp4" type="video/mp4">
-    <source src="movie.ogg" type="video/ogg">
+    <source src="" type="video/mp4">
+    <source src="" type="video/ogg">
 detras de la barra
   </video>
   <h3>ANIMACIÓN: PSICOLOGÍA Y FILOSOFÍA DETRAS DE LA BARRA</h3>
@@ -60,8 +60,8 @@ detras de la barra
     barras!</p>
     <img src="../sources/manhattanMix.jpg" alt="">
     <audio controls>
-        <source src="horse.ogg" type="audio/ogg">
-        <source src="horse.mp3" type="audio/mpeg">
+        <source src="" type="audio/ogg">
+        <source src="" type="audio/mpeg">
       Your browser does not support the audio element.
       </audio>
 
@@ -85,220 +85,121 @@ detras de la barra
         <br>
         Al finalizar el examen, recuerde hacer click en enviar.
     </p>
-    <div class="containerExam">
+    <form class="containerExam d-flex flex-wrap">
         <div class="question">
             <h4>1. ¿Pregunta 1?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q1a" type="checkbox">
-                    <label for="q1a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q1b" type="checkbox">
-                    <label for="q1b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q1c" type="checkbox">
-                    <label for="q1c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q1d" type="checkbox">
-                    <label for="q1d">d</label>
-                </div>
+                    <label for="pregunta1">¿Cuál es tu color favorito?</label><br>
+                    <input type="radio" id="color1" name="color" value="Rojo"> Rojo<br>
+                    <input type="radio" id="color2" name="color" value="Azul"> Azul<br>
+                    <input type="radio" id="color3" name="color" value="Verde"> Verde<br>
+                    <input type="radio" id="color4" name="color" value="Amarillo"> Amarillo<br>
             </div>
         </div>
-
+        <!-- Repite el bloque anterior para las demás preguntas -->
         <div class="question">
             <h4>2. ¿Pregunta 2?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+                <label for="pregunta2">¿Qué deporte prefieres?</label><br>
+                <input type="radio" id="deporte1" name="deporte" value="Fútbol"> Fútbol<br>
+                <input type="radio" id="deporte2" name="deporte" value="Baloncesto"> Baloncesto<br>
+                <input type="radio" id="deporte3" name="deporte" value="Natación"> Natación<br>
+                <input type="radio" id="deporte4" name="deporte" value="Correr"> Correr<br>
             </div>
         </div>
         <div class="question">
             <h4>3. ¿Pregunta 3?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+                <label for="pregunta3">¿Cuál es tu comida favorita?</label><br>
+                <input type="radio" id="comida1" name="comida" value="Pizza"> Pizza<br>
+                <input type="radio" id="comida2" name="comida" value="Sushi"> Sushi<br>
+                <input type="radio" id="comida3" name="comida" value="Hamburguesa"> Hamburguesa<br>
+                <input type="radio" id="comida4" name="comida" value="Tacos"> Tacos<br>
             </div>
         </div>
         <div class="question">
             <h4>4. ¿Pregunta 4?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+                <label for="pregunta4">¿Te gustan los animales?</label><br>
+            <input type="radio" id="animales1" name="animales" value="Sí"> Sí<br>
+            <input type="radio" id="animales2" name="animales" value="No"> No<br>
             </div>
         </div>
         <div class="question">
             <h4>5. ¿Pregunta 5?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+                    <label for="pregunta5">¿Cuál es tu estación del año preferida?</label><br>
+                    <input type="radio" id="estacion1" name="estacion" value="Primavera"> Primavera<br>
+                    <input type="radio" id="estacion2" name="estacion" value="Verano"> Verano<br>
+                    <input type="radio" id="estacion3" name="estacion" value="Otoño"> Otoño<br>
+                    <input type="radio" id="estacion4" name="estacion" value="Invierno"> Invierno<br>
+               
             </div>
         </div>
         <div class="question">
             <h4>6. ¿Pregunta 6?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+              
+                    <label for="pregunta5">¿Cuál es tu cancion preferida?</label><br>
+                    <input type="radio" id="cancion1" name="cancion" value="Castle of Glass"> Castle of Glass<br>
+                    <input type="radio" id="cancion2" name="cancion" value="Burn It Down"> Burn It Down<br>
+                    <input type="radio" id="cancion3" name="cancion" value="Breacking the habit"> Breacking the habit<br>
+                    <input type="radio" id="cancion4" name="cancion" value="Somewhere I belong"> Somewhere I belong<br>
+               
             </div>
         </div>
         <div class="question">
             <h4>7. ¿Pregunta 7?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+                
+                    <label for="pregunta5">¿Cuál es tu banda preferida?</label><br>
+                    <input type="radio" id="banda1" name="banda" value="Linkin Park"> Linkin Park<br>
+                    <input type="radio" id="banda2" name="banda" value="Metallica"> Metallica<br>
+                    <input type="radio" id="banda3" name="banda" value="Muse"> Muse<br>
+                    <input type="radio" id="banda4" name="banda" value="Slipknot"> Slipknot<br>
+                
             </div>
         </div>
         <div class="question">
             <h4>8. ¿Pregunta 8?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+               
+                    <label for="pregunta5">¿Cuál es tu pais preferido?</label><br>
+                    <input type="radio" id="pais1" name="pais" value="Mexico"> Mexico<br>
+                    <input type="radio" id="pais2" name="pais" value="Argentina"> Argentina<br>
+                    <input type="radio" id="pais3" name="pais" value="Peru"> Peru<br>
+                    <input type="radio" id="pais4" name="pais" value="Chile"> Chile<br>
+               
             </div>
         </div>
         <div class="question">
             <h4>9. ¿Pregunta 9?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+              
+                    <label for="pregunta5">¿Cuál es tu ciudad preferida?</label><br>
+                    <input type="radio" id="ciudad1" name="ciudad" value="Munich"> Munich<br>
+                    <input type="radio" id="ciudad2" name="ciudad" value="Tokio"> Tokio<br>
+                    <input type="radio" id="ciudad3" name="ciudad" value="Madrid"> Madrid<br>
+                    <input type="radio" id="ciudad4" name="ciudad" value="Medellin"> Medellin<br>
+               
             </div>
         </div>
         <div class="question">
             <h4>10. ¿Pregunta 10?</h4>
             <div class="options">
-                <div class="option">
-                    <input id="q2a" type="checkbox">
-                    <label for="q2a">a</label>
-                </div>
-                <div class="option">
-                    <input id="q2b" type="checkbox">
-                    <label for="q2b">b</label>
-                </div>
-                <div class="option">
-                    <input id="q2c" type="checkbox">
-                    <label for="q2c">c</label>
-                </div>
-                <div class="option">
-                    <input id="q2d" type="checkbox">
-                    <label for="q2d">d</label>
-                </div>
+              
+                    <label for="pregunta5">¿Cuál es tu libro predilecto?</label><br>
+                    <input type="radio" id="libro1" name="libro" value="Crimen y Castigo"> Crimen y Castigo<br>
+                    <input type="radio" id="libro2" name="libro" value="El carrusel"> El carrusel<br>
+                    <input type="radio" id="libro3" name="libro" value="Camino a la servidumbre"> Camino a la servidumbre<br>
+                    <input type="radio" id="libro4" name="libro" value="El olvido que seremos"> El olvido que seremos<br>
+             
             </div>
         </div>
+        <!-- Agrega aquí las preguntas restantes -->
         <button class="submit-button">ENVIAR</button>
-    </div>
+    </form>
+</div>
 
     <footer class="footer text-white py-4">
         <div class="container">
