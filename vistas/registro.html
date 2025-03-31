@@ -15,55 +15,69 @@
 
 </head>
 <body>
- <!-- ENCABEZADO -->
- <div class="header">
-    <div class="col-12 text-white text-center p-3">
-        <div class="greeting" id="greeting" style="display: none;">
-        <span id="welcomeMessage">Bienvenido/a, </span>
-        <span id="username"></span>
-        </div>
-    </div>
-       
-<nav class="navbar navbar-expand-lg bg-none">
-        <div class="container">
-                <a class="navbar-brand" href="../index.html">
-                  <img class="logo" src="../sources/Logo final febrero 2025.png"  alt="Logo Soulmia" style="max-height: 50px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                  <div class="collapse navbar-collapse text-white" id="navbarNav">
-                    <ul class="navbar-nav mx-auto ">
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="../vistas/modulos.html">Módulos</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="../vistas/biblioteca.html">Biblioteca</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="../vistas/profesores.html">Profesores</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="../vistas/calificaciones.html">Calificaciones</a></li>
-                    </ul>
-                  </div>
-                  <div class="sectionRight">
-                    <!-- Menú desplegable de perfil -->
-                            <div class="profileMenu">
+    <!-- ENCABEZADO -->
+    <div class="header">
+
+
+        <nav class="navbar navbar-expand-lg bg-none">
+            <div class="container">
+                <div class="row w-100 align-items-start">
+                    <!-- columna de logo -->
+                    <div class="col-2 d-flex justify-content-start">
+                        <a class="navbar-brand" href="../index.html">
+                            <img class="logo" src="../sources/Logo final febrero 2025.png" alt="Logo Soulmia"
+                                style="max-height: 50px;">
+                        </a>
+
+                    </div>
+                    <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
+                        <div class="collapse navbar-collapse text-white" id="navbarNav">
+                            <ul class="navbar-nav mx-auto ">
+                                <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                        href="../vistas/modulos.html">Módulos</a></li>
+                                <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                        href="../vistas/biblioteca.html">Biblioteca</a></li>
+                                <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                        href="../vistas/profesores.html">Profesores</a></li>
+                                <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                        href="../vistas/calificaciones.html">Calificaciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
+
+                        <!-- Menú desplegable de perfil -->
+                        <div class="d-flex">
+                            <!-- fila de saludo -->
+
+
+                            <!-- fila de icono de perfil y menu dropdown -->
+
+                            <div class="profileMenu text-white text-center d-flex align-items-center px-3">
                                 <span class="profileIcon" onclick="toggleProfileMenu()">
                                     <i class="fas fa-user"></i>
                                 </span>
                                 <div id="profileMenuContent" class="profileMenuContent">
-                                <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
-                                <a href="../vistas/registro.html" aria-label="Ir a Registro">Registro</a>
-                                <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+                                    <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
                                 </div>
                             </div>
-                        </div>
-        
-</nav>
-      
-</div>
 
-<div class="container-fluid">
-    <div class="row">
-<img class="banner" src="../sources/banner Registro_Mesa de trabajo 1.png">
-</div>
-</div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </nav>
+
+    </div>
+
+
+    <div id="container-banner">
+
+        <img class="banner" src="../sources/banner Registro_Mesa de trabajo 1.png">
+
+    </div>
     
     <div class="divRegistro">
      

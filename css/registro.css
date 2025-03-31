@@ -1,12 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     height: 100%; 
     min-height: 100hv;
-    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
-    font-family:'Franklin Gothic Medium';
+    font-family:'roboto';
     padding: 0;
     position: relative;
   
 }
+
+.header {
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
+    padding: 9px;
+    text-align: center;
+    font-family:'roboto';
+} 
 .logo{
     width: 100px;
     height:100px ;
@@ -41,24 +54,17 @@ body {
 .nav a:hover {
     background-color: #b30af7;
 }
-.searchBar {
-    margin: 20px;
-    text-align: center;
-    font-family:'Franklin Gothic Medium';
-    border-radius: 30%;
+
+.sectionRight{
+    display: flex;
+    font-family:'roboto';
+    font-size: 25px ;
+    gap: 20px ; /* espacio entre elemtnos */
+    align-items: center; /* centra los elemtnos verticalmente */
+    justify-content: space-between; /* alineacion de elementos horizontalmente */
 }
 
-.searchBar input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 15%;
-    border-color: #000000;
-    background-color: rgb(255, 255, 255);
-    font-family:'Franklin Gothic Medium';
-}
+
 .navBar{
     text-decoration-line: underline;
     text-decoration-color: white;
@@ -287,15 +293,13 @@ body {
 
 /* FOOTER*/
 .footer {
-    /* position:unset ; este es el que siempre tendra mi footer abajo */
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(12, 12, 12);
+    color: white;
     text-align: center;
     align-items: center;
     font-family:'roboto';
-    margin-top: 15px;
   }
-
   /*style para links*/
   .linksFooter {
     color: #ffffff; 
@@ -303,41 +307,37 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 15px;
-  
+    a:hover {
+        color: rgb(240, 15, 183);}
+        a:active{
+        color: rgb(72, 255, 0);
+        };
+        
+        a:link{
+        color: white;
+        }
   }
-
-  .linksFooter a:hover {
-    color: rgb(235, 18, 162);}
-    a:active{
-    color: rgb(72, 255, 0);
-    };
-    
-    a:link{
-    color: white;
-    }
   .footerLink{
-   text-align: center;
+    text-align: center;
     color: white;
     font-family:'roboto';
     text-decoration: none;
     font-size: 20px;
-    margin-top: 15px;
   }
 
   /* Estilo para los íconos y el texto en el 2 div */
-.iconsBrands {
+.footer > div:nth-child(2) {
     display:flex;
     justify-content: center;
     align-items: center;
-    font-family:'Franklin Gothic Medium';
     margin: 0 20px;
+    font-family:'Franklin Gothic Medium';
+    
 }
 #brands{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 30px;
-
   }
 /* estilo para INFOFOOTER*/
 .infoFooter{
@@ -345,4 +345,8 @@ body {
     justify-content: space-around;
     margin: 0;
     font-family:'Franklin Gothic Medium';
+}
+.siguenos{
+    color: rgb(126, 2, 105);
+    font-size: 30px;
 }

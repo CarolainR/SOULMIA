@@ -125,23 +125,6 @@ function capturarRespuestas(){
             }
             console.log(acumulado)
 
-         /*    if (respuestasCorrectas.p1 === respuestasUser.p1) {
-                acumulado++
-            }
-
-            if(respuestasCorrectas.p2 === respuestasUser.p2) {
-                acumulado++
-            }
-            if(respuestasCorrectas.p3 === respuestasUser.p3) {
-                acumulado++
-            }
-            if(respuestasCorrectas.p4 === respuestasUser.p4) {
-                acumulado++
-            }
-            if(respuestasCorrectas.p5 === respuestasUser.p5) {
-                acumulado++
-            } */
-
             console.log ("Tu acumulado es: ", acumulado)
 
             for (const key in respuestasCorrectas) {
