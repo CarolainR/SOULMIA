@@ -1,14 +1,13 @@
 body {
     height: 100%; 
     min-height: 100hv;
-    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
     font-family:'Franklin Gothic Medium';
     padding: 0;
     position: relative;
   
 }
 .header {
-    background-image: url("../sources/FONDO\ 1\ \ DEGRADADO\ GAUSSIANO\ PARA\ MOOC\ SOULMIA\ EN\ JPG.jpg");
+    background-image: url("../sources/FONDO\ 3\ NUBES\ CON\ RUIDOO.jpg");
     /* padding: 10px; */
     text-align: center;
     font-family:'Franklin Gothic Medium';

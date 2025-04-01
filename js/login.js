@@ -1,4 +1,4 @@
-document.querySelector('.btn').addEventListener('click', function() {
+/* document.querySelector('.btn').addEventListener('click', function() {
     const email = document.querySelector('.correo').value;
     const password = document.querySelector('.contraseña').value;
 
@@ -12,7 +12,7 @@ document.querySelector('.btn').addEventListener('click', function() {
     } else {
         alert('Correo o contraseña incorrecta');
     }
-});
+}); */
 
     // greeting user
 
@@ -43,12 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+let usuarios = JSON.parse(localStorage.getItem("user")) || [];
+
+document.querySelector('.btn').addEventListener('submit', function(event) {
     event.preventDefault();
-    
-    // Aquí deberías validar las credenciales del usuario
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
+
+   // Aquí deberías validar las credenciales del usuario
+   const username = document.getElementById('email').value;
+   const password = document.getElementById('password').value;
+
+    for (let i = 0; i < usuarios.length; i++) {
+
+        if(usuarios [i].username.value.trim()&& usuarios[i].userP === password.value.trim())
+        {
+            //localStorage.setItem para usuario activo y JSON.stringify para usuarios encontrados
+            alert(`Bienvenido, ${usuarios[i].username}!`);
+            window.location.href = "../index.html";
+            usuarios[i].logged = true;
+            console.log(usuarios)
+            localStorage.setItem("usuarios", JSON.stringify(usuarios))
+            return
+        }
+    }
     
     // Guardar información del usuario en localStorage
     localStorage.setItem('loggedIn', 'true');

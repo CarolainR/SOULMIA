@@ -2,64 +2,95 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/biblioteca.css">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Biblioteca📚</title>
+    <title>BIBLIOTECA 📚</title>
     <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 
 </head>
 <body>
     
-<!-- ENCABEZADO -->
-<div class="header">
-    <div class="col-12 text-white text-center p-3">
-        <div class="greeting" id="greeting" style="display: none;">
-        <span id="welcomeMessage">Bienvenido/a, </span>
-        <span id="username"></span>
-        </div>
-    </div>
-       
-<nav class="navbar navbar-expand-lg bg-none">
-        <div class="container">
-                <a class="navbar-brand" href="./index.html">
-                  <img class="logo" src="../sources/Logo final febrero 2025.png"  alt="Logo Soulmia" style="max-height: 50px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+ <!-- ENCABEZADO -->
+ <div class="header">
 
-                  <div class="collapse navbar-collapse text-white" id="navbarNav">
-                    <ul class="navbar-nav mx-auto ">
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/modulos.html">Módulos</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/biblioteca.html">Biblioteca</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/profesores.html">Profesores</a></li>
-                      <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/calificaciones.html">Calificaciones</a></li>
-                    </ul>
-                  </div>
-                  <div class="sectionRight">
+
+    <nav class="navbar navbar-expand-lg bg-none">
+        <div class="container">
+            <div class="row w-100 align-items-start">
+                <!-- columna de logo -->
+                <div class="col-2 d-flex justify-content-start">
+                    <a class="navbar-brand" href="../index.html">
+                        <img class="logo" src="../sources/Logo final febrero 2025.png" alt="Logo Soulmia"
+                            style="max-height: 50px;">
+                    </a>
+
+                </div>
+                <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
+                    <div class="collapse navbar-collapse text-white" id="navbarNav">
+                        <ul class="navbar-nav mx-auto ">
+                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                    href="./vistas/modulos.html">Home</a></li>
+                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                    href="../vistas/">Modulos</a></li>
+                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                    href="./vistas/profesores.html">Profesores</a></li>
+                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
+                                    href="./vistas/calificaciones.html">Calificaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
+
                     <!-- Menú desplegable de perfil -->
-                            <div class="profileMenu">
-                                <span class="profileIcon" onclick="toggleProfileMenu()">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                                <div id="profileMenuContent" class="profileMenuContent">
+                    <div class="d-flex">
+                        <!-- fila de saludo -->
+
+                   
+                            <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
+                                <span id="welcomeMessage"><span id="username"></span></span>
+
+                            </div>
+                     
+
+
+                        <!-- fila de icono de perfil y menu dropdown -->
+
+                        <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+                            <span class="profileIcon" onclick="toggleProfileMenu()">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <div id="profileMenuContent" class="profileMenuContent">
                                 <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
                                 <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
                                 <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                </div>
                             </div>
                         </div>
-        
-</nav>
-      
+
+                    </div>
+
+                </div>
+            </div>
+
+    </nav>
+
 </div>
-    <img class="bannerr" src="../sources/Biblioteca soulmia banner_Mesa de trabajo 1.png">
+   
+<div id="container-banner">
+
+    <img class="img-fluid " src="./sources/Banner Modulo 4 clases de cocteleria_Mesa de trabajo 1.png">
+
+</div>
 
     <div class="searchBar">
         <input type="text" id="searchInput" placeholder="Buscar" onkeyup="searchFunction()">
@@ -201,13 +232,18 @@
 
 <!-- ..................footer.................... -->
 <footer class="footer text-white py-4">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
-                <a href="./vistas/encuestadesatisfaccion.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
-                <a href="./vistas/terminosycondiciones.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
-                <a href="./vistas/politicasdeprivacidad.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
-                <a href="./vistas/sobrenosotros.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Sobre Nosotros</a>
+            <div
+                class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
+                <a href="./vistas/encuestadesatisfaccion.html"
+                    class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
+                <a href="./vistas/terminosycondiciones.html"
+                    class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
+                <a href="./vistas/politicasdeprivacidad.html"
+                    class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
+                <a href="./vistas/sobrenosotros.html"
+                    class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Sobre Nosotros</a>
                 <a href="./vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
             </div>
         </div>
@@ -222,16 +258,15 @@
             <i id="brands" class="fa-brands fa-twitter mx-2"></i>
             <i id="brands" class="fa-brands fa-whatsapp mx-2"></i>
         </div>
-        <p class="text-center mt-2">¡Síguenos!</p>
+        <p class="siguenos text-center mt-2">¡Síguenos!</p>
 
         <!-- Información de contacto -->
         <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
             <address class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                El Chagualo, Medellín, Antioquia, COLOMBIA
+                <i class="bi bi-geo-alt-fill fs-5"> Chagualo, Medellín, Antioquia, COLOMBIA </i>
             </address>
-            <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                <i class="fa-regular fa-envelope"> soulmiacontacto@gmail.com </i><br>
-                <i class="fa-solid fa-phone"> +57 305 232 9341 </i>
+            <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start text-white">
+                <i class="bi bi-envelope-at-fill fs-5"> soulmiacontacto@gmail.com </i>
             </div>
         </div>
 
@@ -239,8 +274,13 @@
         <p class="text-center mt-3">&copy; Since 2024</p>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 <script src="../js/biblioteca.js"></script>
 <script src="../js/bdbiblioteca.js"></script>
 </body>
