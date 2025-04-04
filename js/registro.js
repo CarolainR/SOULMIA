@@ -10,12 +10,12 @@ document.getElementById('registerBtn').addEventListener('click', function() {
         return;
     }
 
-    const user = JSON.parse(localStorage.getItem('user')) || []
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
 
     //usamos .push para agregar elementos al array <user> del localstorage
 
-    user.push( {fullName: fullName,
+    usuarios.push( {fullName: fullName,
         email: email,
         progreso: 0,
         password: password,
@@ -23,7 +23,7 @@ document.getElementById('registerBtn').addEventListener('click', function() {
         progreso: 0})
 
     // Guardar datos en localStorage
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
 
     alert('Registro exitoso');

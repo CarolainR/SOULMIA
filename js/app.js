@@ -6,11 +6,45 @@
  5.
  6.
 */
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener el formulario de login
+    const loginForm = document.querySelector('.loginForm');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
 
+            // Obtener los valores ingresados en los campos de correo y contraseña
+            const emailInput = document.querySelector('.correo');
+            const passwordInput = document.querySelector('.contraseña');
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
 
-// greeting user
+            // Validar que los campos no estén vacíos
+            if (!email || !password) {
+                alert('Por favor, ingrese su correo y contraseña');
+                return;
+            }
 
-document.addEventListener('DOMContentLoaded', function() {
+            // Obtener la lista de usuarios almacenados en localStorage
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            
+            // Buscar un usuario que coincida con el correo y la contraseña ingresados
+            const usuarioEncontrado = usuarios.find(user => user.email === email && user.password === password);
+            
+            if (usuarioEncontrado) {
+                // Guardar la sesión del usuario en localStorage
+                localStorage.setItem('loggedIn', 'true');
+                localStorage.setItem('user', JSON.stringify(usuarioEncontrado));
+                alert(`Bienvenido, ${usuarioEncontrado.email}`);
+                window.location.href = 'index.html'; // Redirigir a la página principal
+            } else {
+                alert('Correo o contraseña incorrectos');
+            }
+        });
+    }
+
+    // Manejar el saludo del usuario
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
     const greetingDiv = document.getElementById('greeting');
     const usernameSpan = document.getElementById('username');
@@ -18,59 +52,95 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isLoggedIn) {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) {
-            usernameSpan.textContent = user.email || user.username; // Ajusta según el formato del usuario
+            // Mostrar el nombre de usuario o correo en el saludo
+            usernameSpan.textContent = user.fullName || user.email;
             greetingDiv.style.display = 'block';
         }
     }
 
-    //  logout
+    // Manejar el logout (cerrar sesión)
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(event) {
+        logoutBtn.addEventListener('click', function (event) {
             event.preventDefault();
+            // Eliminar la sesión del usuario de localStorage
             localStorage.removeItem('loggedIn');
             localStorage.removeItem('user');
             greetingDiv.style.display = 'none'; // Ocultar saludo
             alert('Has cerrado sesión exitosamente');
-            window.location.href = '../index.html'; // Redirigir al index después del logout
+            window.location.href = 'index.html'; // Redirigir a la página principal
+        });
+    }
+    // Obtener el formulario de registro
+    const registerForm = document.querySelector('.registerForm');
+    
+    if (registerForm) {
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtener los valores ingresados en los campos de correo y contraseña
+            const emailInput = document.querySelector('.correo');
+            const passwordInput = document.querySelector('.contraseña');
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            // Validar que los campos no estén vacíos
+            if (!email || !password) {
+                alert('Por favor, complete todos los campos');
+                return;
+            }
+
+            // Obtener la lista de usuarios almacenados en localStorage
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+            // Verificar si el usuario ya existe
+            const usuarioExistente = usuarios.find(user => user.email === email);
+            if (usuarioExistente) {
+                alert('El correo ya está registrado');
+                return;
+            }
+
+            // Crear el nuevo usuario y guardarlo en localStorage
+            const nuevoUsuario = { email, password };
+            usuarios.push(nuevoUsuario);
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            alert('Registro exitoso. Ahora puede iniciar sesión.');
+            window.location.href = 'login.html'; // Redirigir a la página de login
         });
     }
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    //validar las credenciales del usuario
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    
-    // Guardar información en localStorage
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('user', JSON.stringify({ username, email }));
-    
-    // Redirigir 
-    window.location.href = './index.html';
+/* // BLOQUEAR PAGINAS BIBLIOTECA Y CALIFICACIONES SI NO ESTA REGISTRADO NI LOGGEADO
+document.addEventListener('DOMContentLoaded', function () {
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+
+    // Lista de páginas restringidas
+    const paginasRestringidas = [
+        './vistas/biblioteca.html',
+        './vistas/calificaciones.html'
+    ];
+
+    // Verificar si el usuario está intentando acceder a una de las páginas restringidas sin estar logueado
+    if (!isLoggedIn) {
+        const paginaActual = window.location.pathname.split('/').pop(); // Obtiene solo el nombre del archivo
+        if (paginasRestringidas.includes(paginaActual)) {
+            alert('Debes iniciar sesión para acceder a esta página.');
+            window.location.href = 'login.html'; // Redirige al login
+        }
+    }
+}); */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const calificaciones = document.querySelector('.calificaciones');
+    const biblioteca = document.querySelector('.biblioteca');
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+
+    if (isLoggedIn) {
+        calificaciones.style.display = 'block';
+        biblioteca.style.display = 'block';
+    } else {
+        calificaciones.style.display = 'none';
+        biblioteca.style.display = 'none';
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
