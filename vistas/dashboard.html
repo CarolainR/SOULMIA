@@ -52,7 +52,6 @@
                                 </span>
                                 <div id="profileMenuContent" class="profileMenuContent">
                                 <a href="../vistas/login.html" aria-label="Ir a Login">Login</a>
-                                <a href="../vistas/registro.html" aria-label="Ir a Registro">Registro</a>
                                 <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
                                 </div>
                             </div>
@@ -65,114 +64,54 @@
     <div class="row">
       
 <img class="bannerr" src="../sources/banner dashboard final_Mesa de trabajo 1.png" >
-<div class="texto">  DASHBOARD </div>
+<div class="dashboard texto" id="">  DASHBOARD </div>
     </div>
 </div>
 
 
-                <div class="nav container-fluid;">
-                    <div class="row">
-                        <div class="col-xl-12 col-md-12 flex">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body"> 
-                                    <div class="row"> Nombre del Estudiante</div>
-                                </div>
-                                <img class="img-fluid" src="../sources/alexis velasco.jpeg" alt="Imagen de estudiante">
+                <div class="nav container-fluid">
 
-                                <div class="card-footer d-flex flex-column; align-items-center justify-content-between">
-                                    <ol class="breadcrumb mb-4">
-                                        <li class="breadcrumb-item text-dark"> Usuario:</li>
-                                        <li class="breadcrumb-item text-dark"> Correo:</li>
-                                        <li class="breadcrumb-item text-dark"> Cellphone:</li>
-                                        <li class="breadcrumb-item text-dark"> País:</li>
-                                        <li class="breadcrumb-item text-dark"> Ciudad:</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="layoutSidenav_content">
+                    
                         <main>
-                            <div class="container-fluid px-4">
-                
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="card mb-4">
-                                            <div class="card-header">
-                                                <i class="fas fa-chart-area me-1"></i>
-                                                Graficos de Progreso General <!-- (poner grafico de progreso general del curso dependiendo de los modulos cursados) -->
-                                            </div>
-                                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas>
-                                                <h1>Tu progreso</h1>
-                                                <p id="progreso">0%</p>
-                                            </div>
-                                        </div>
+                            
+                                <section class="dashboard-content">
+
+
+                                <div class="top-widgets">
+                                    <div class="student-card">
+                                        <h2 class="student-name">Andres Pérez</h2>
+                                        
+                                        <img 
+                                          src="../sources/andresKisic.jpg"
+                                          alt="Foto de estudiante"
+                                          class="student-photo"
+                                        />
+                                      
+                                        <p><strong class="label">Correo:</strong> andresKisic@gmail.com</p>
+                                        <p><strong class="label">Usuario:</strong> AndresK</p>
+                                        <p><strong class="label">Teléfono:</strong> 305 2329341</p>
+                                        <p><strong class="label">Edad:</strong> 29 años</p>
+                                      </div>
+                                    <div class="widget progress">
+                                        <h1>Tu progreso</h1>
+                                        <div class="progress-circle"><p id="progreso">0%</p></div>
                                     </div>
-                                    <div class="col-xl-6">
-                                        <div class="card mb-4">
-                                            <div class="card-header">
-                                                <i class="fas fa-chart-bar me-1"></i>
-                                                Barra de Progreso por Modulos <!-- (es por cada modulo) -->
-                                            </div>
-                                            <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                        </div>
-                                    </div>
+                                    <div class="widget current-module">
+                                        <p id="moduloactual"></p>
+                                        <h2>Módulo Actual</h2>
+                                        <p>nombre del modulo</p>
+                                      </div>
                                 </div>
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-table me-1"></i>
-                                        DataTable Modulos
-                                    </div>
-                                    <div class="card-body">
-                                        <table id="datatablesSimple">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nombre de Modulo</th>
-                                                    <th>Modulo</th>
-                                                    <th>Estado</th>
-                                                    <th>Fecha de Inicio</th>
-                                                    <th>Fecha de Terminación</th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>Nombre de Modulo</th>
-                                                    <th>Modulo</th>
-                                                    <th>Estado <!-- (aprobado, denegado o activo) --></th>
-                                                    <th>Fecha de Inicio</th>
-                                                    <th>Fecha de Terminación</th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Introducción e Historía de la Mixología</td>
-                                                    <td>1</td>
-                                                    <td>inactivo</td>
-                                                    <td>00/00/0000</td>
-                                                    <td>00/00/0000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>2</td>
-                                                    <td>activo</td>
-                                                    <td>00/00/0000</td>
-                                                    <td>00/00/0000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ashton Cox</td>
-                                                    <td>3</td>
-                                                    <td>inactivo</td>
-                                                    <td>00/00/0000</td>
-                                                    <td>00/00/0000</td>
-                                                </tr>
-                                           
-                                            </tbody>
-                                        </table>
-                                    </div>
+
+                                <div class="stats">
+                                <div class="stat-box">0<br><small>Módulos Completados</small></div>
+                                <div class="stat-box">0<br><small>Tiempo Invertido</small></div>
+                                <div class="stat-box">0<br><small>Lecciones Vistas</small></div>
                                 </div>
-                            </div>
+                                </section>
+                            
+                            
                         </main>
-                    </div>
                 </div>
                 </div>       
 

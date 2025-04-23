@@ -41,3 +41,17 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Redirigir al usuario a la página principal o donde desees
     window.location.href = './index.html';
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+    const modulos = document.querySelectorAll('.contMod button, .contMod2 button');
+
+    if (!isLoggedIn) {
+        modulos.forEach(btn => {
+            btn.disabled = true;
+            btn.style.opacity = '0.5';
+            btn.style.cursor = 'not-allowed';
+            btn.querySelector('a').removeAttribute('href'); // quita el link para que no redirija
+        });
+    }
+});

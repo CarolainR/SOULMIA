@@ -48,19 +48,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
     const greetingDiv = document.getElementById('greeting');
     const usernameSpan = document.getElementById('username');
-
+     console.log(greetingDiv)
+    
+    
     if (isLoggedIn) {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) {
-            // Mostrar el nombre de usuario o correo en el saludo
             usernameSpan.textContent = user.fullName || user.email;
             greetingDiv.style.display = 'block';
+        } else {
+            greetingDiv.classList.add('d-none')
         }
+    } else {
+        greetingDiv.classList.add('d-none') //aqui me ayuda a ocultar la clase de boostrap que le daba color al div de saludo classlist .add es para las clases de boostrap
     }
 
     // Manejar el logout (cerrar sesión)
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
+        logoutBtn.style.display = isLoggedIn ? 'block' : 'none';
+
         logoutBtn.addEventListener('click', function (event) {
             event.preventDefault();
             // Eliminar la sesión del usuario de localStorage
@@ -134,13 +141,16 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const calificaciones = document.querySelector('.calificaciones');
     const biblioteca = document.querySelector('.biblioteca');
+    const dashboard = document.querySelector('.dashboard')
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
 
     if (isLoggedIn) {
         calificaciones.style.display = 'block';
         biblioteca.style.display = 'block';
+        dashboard.style.display = 'block';
     } else {
         calificaciones.style.display = 'none';
         biblioteca.style.display = 'none';
+        dashboard.style.display = 'none'
     }
 });

@@ -1,7 +1,22 @@
-body {
+:root {
+    --color-bg: #1b0f24;
+    --color-sidebar: #140a1b;
+    --color-primary: #a020f0; /* púrpura */
+    --color-accent: #ff2ec2; /* fucsia */
+    --color-white: #ffffff;
+    --color-text: #e0d6eb;
+    --color-contrast: #2a1538;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
     height: 100%; 
-    min-height: 100hv;
-    font-family:'roboto';
+    font-family: 'Roboto Slab', serif;
+    background-color: #181027;
+    color: #f2f2f2;
     padding: 0;
     position: relative;
     display: flex;
@@ -31,6 +46,117 @@ body {
     text-align: center;
     text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.6); /* Sombra opcional para que el texto se vea mejor */
 }
+.dashboard-content {
+    background-color: var(--color-bg); /* Fondo negro */
+    color: var(--color-white); /* Texto blanco */
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+}
+  .main {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  .dashboard-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .top-widgets {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .student-card {
+    background-color: #1c1c1e;
+    color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    padding: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 1rem auto;
+  }
+  
+  .student-name {
+    color: fuchsia;
+    margin-bottom: 1rem;
+  }
+  
+  .student-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    color: fuchsia;
+  }
+  
+  .widget {
+    background: var(--color-contrast);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    flex: 1; /* <- hace que todos los widgets ocupen el mismo ancho */
+    max-width: none; /* <- quita límite de ancho */
+    text-align: center;
+  }
+.widget.progress {
+    background: var(--color-contrast);
+    color: var(--color-white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 430px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.widget h1,
+.widget p {
+    color: white;
+}
+  
+.progress-circle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.05); /* opcional: sutil fondo */
+    padding: 1rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-box {
+    flex: 1;
+    background: var(--color-contrast);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 16px;
+    font-size: 1.5rem;
+  }
+  
+  .stat-box small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-text);
+  }
 .fixed-top, .sb-nav-fixed .sb-nav-fixed .sb-topnav {
     position: fixed;
     top: 0;
@@ -40,29 +166,6 @@ body {
     
   }
 
-
-  /* Espacio para que el contenido principal no quede cubierto por el nav */
-  #layoutSidenav_content {
-    margin-left: 250px; /* Deja espacio para el nav */
-    padding: 20px;
-  }
-
-  .card {
-    width: 100%; /*ancho de la card */
-    height: 100%;
-  }
-  .card-footer {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  .card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
 
 .greeting {
     position: absolute;

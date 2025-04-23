@@ -228,6 +228,43 @@ color: white;
     margin-bottom: 150px;
    
 }
+.modulo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .mod-desc {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    width: 280px;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 12px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .modulo-wrapper:hover .mod-desc {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+  
+  .mod-desc img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
 .contMod{
     display: flex;
     gap: 100px;

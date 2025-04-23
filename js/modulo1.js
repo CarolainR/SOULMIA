@@ -27,20 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/* document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Aquí deberías validar las credenciales del usuario
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    
-    // Guardar información del usuario en localStorage
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('user', JSON.stringify({ username, email }));
-    
-    // Redirigir al usuario a la página principal o donde desees
-    window.location.href = './index.html';
-}); */
 
 
 //VALIDACION DE EXAMEN POR MODULO Y Y PROGRESO GENERAL EN DASHBOARD
@@ -106,7 +92,7 @@ function capturarRespuestas(){
             //RECORRER EL ARRAY DE RESPUESTAS USER Y EL DE RESPUESTAS CORRECTAS E INCORRECTAS y las compara
 
             for (let i = 0; i <arrayRespuestasUser.length; i++){
-                if(arrayRespuestasUser[i] == arrayRespuestasCorrectas [i]) {
+                if(arrayRespuestasUser [i] == arrayRespuestasCorrectas [i]) {
                     acumulado++
                 }
             }
@@ -119,6 +105,13 @@ function capturarRespuestas(){
 
                 console.log("Ganaste el examen😀");
                 user.progreso += 12.5
+                user.leccionesVistas = (user.leccionesVistas || 0) + 1; // Incrementar lecciones vistas
+                user.tiempoInvertido = (user.tiempoInvertido || 0) + 30; // Suponiendo 30 minutos por módulo
+                 // Actualizar el progreso en el DOM
+                document.querySelector("#progreso").textContent = `${user.progreso}%`;
+                document.querySelector(".stat-box:nth-child(1)").textContent = user.leccionesVistas; // Lecciones vistas
+                document.querySelector(".stat-box:nth-child(2)").textContent = user.tiempoInvertido; // Tiempo invertido
+                document.querySelector(".current-module h2").textContent = `Módulo ${user.leccionesVistas}`; // Actualizar módulo actual
                 localStorage.setItem("user",JSON.stringify(user))
             }else{
                 console.log("Debes repetir el examen 😭")
