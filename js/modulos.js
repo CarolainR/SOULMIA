@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    if (!isLoggedIn && greetingDiv) {
+        greetingDiv.style.display = 'none';
+    }
+
     //  logout
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
@@ -23,6 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
             greetingDiv.style.display = 'none'; // Ocultar saludo
             alert('Has cerrado sesión exitosamente');
             window.location.href = '../index.html'; // Redirigir al index después del logout
+        });
+    }
+
+    // Ocultar links de nav si no hay sesión
+    if (!isLoggedIn) {
+        const linksToHide = [
+            document.querySelector('.nav-link2'), // Biblioteca
+            document.querySelector('.nav-link3'), // Calificaciones
+            document.querySelector('.nav-link4')  // Dashboard
+        ];
+        linksToHide.forEach(link => {
+            if (link) link.style.display = 'none';
         });
     }
 });

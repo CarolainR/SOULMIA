@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/nivel1.css">
+    <title>Bartender Profesional - Nivel 1 | SOULMIA🍸</title>
+    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+</head>
+<body class="bg-black">
+    <!-- Header -->
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex" href="../index.html">
+              <img class="logo" src="../sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Logo Soulmia" style="max-height: 50px;">
+            </a>
+            <!-- Links -->
+            <div class="col-7 d-flex justify-content-center">
+              <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link1 fs-4 text-white" href="../vistas/modulos.html">Módulos</a></li>
+                  <li class="nav-item"><a class="biblioteca nav-link2 fs-4 text-white" href="../vistas/biblioteca.html">Biblioteca</a></li>
+                  <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white" href="../vistas/calificaciones.html">Calificaciones</a></li>
+                  <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white" href="../vistas/dashboard.html">Dashboard</a></li>
+                  <li class="nav-item"><a class="nav-link5 fs-4 text-white" href="../vistas/profesores.html">Profesores</a></li>
+                  <li class="nav-item"><a class="nav-link6 fs-4 text-white" href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                  <li class="nav-item"><a class="nav-link7 fs-4 text-white" href="../vistas/tienda.html">Tienda</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Perfil -->
+            <div class="col-3 d-flex justify-content-end align-items-center">
+              <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+                <span class="profileIcon" onclick="toggleProfileMenu()">
+                  <i class="fas fa-user"></i>
+                </span>
+                <div id="profileMenuContent" class="profileMenuContent">
+                  <a href="../vistas/login.html" aria-label="Ir a Login">Login</a>
+                  <a href="../vistas/registro.html" aria-label="Ir a Registro">Registro</a>
+                  <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+                </div>
+              </div>
+              <div class="greeting bg-dark d-flex text-center text-white ms-2" id="greeting" style="display: none;">
+                <span id="welcomeMessage"><span id="username"></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main class="container my-5">
+      <h1 class="nivel1-title text-center mb-4">NIVEL 1: BARTENDER PROFESIONAL</h1>
+      <p class="nivel1-desc text-center mb-5">
+        <img src="../sources/certificacion bartender profesional banner publicitario.png" alt="Imagen del módulo 1" class="card-image-n1 mb-2">
+        <br><br>📚 Recursos de aprendizaje: <br>
+Videos, animaciones, infografías, PDFs, fichas técnicas y ejercicios prácticos.
+
+<br><br>🧠 Evaluación: <br>
+Prueba teórica + ejecución práctica + reto creativo de 5 cócteles clásicos IBA.
+
+<br><br>✨ Al finalizar serás capaz de: <br>
+✅ Aplicar normas higiénicas y protocolos de servicio <br>
+✅ Usar correctamente herramientas y cristalería <br>
+✅ Preparar cócteles clásicos con técnica y presentación profesional
+</p>
+        <!-- Card 1 -->
+        <div class="col-12 d-flex flex-column align-items-center mb-4">
+          <div class="modulo-card-n1">
+            <div class="modulo-card-inner-n1">
+              <div class="modulo-card-front-n1" style="background-image: url('../sources/nivel1mod1front.jpg');">
+                <div class="icon-cocktail-n1 mb-2"><i class="fas fa-glass-cheers"></i></div>
+                
+                <h3 class="modulo-title-n1">MODULO 1</h3>
+                <div class="modulo-subtitle-n1">Fundamentos del Bar y del Bartender</div>
+                <div id="estado-modulo7" class="estado-modulo estado-completado" style="display:none;">Estado: ✅ Completado</div>
+                <div id="estado-modulo7-progreso" class="estado-modulo estado-progreso" style="display:none;">Estado: ⏳ En progreso</div>
+              
+              </div>
+              <div class="modulo-card-back-n1" style="background-image: url('../sources/nivel1mod1back.jpg');">
+                <div class="modulo-desc-n1">
+                  <p>🎯 Domina las bases históricas, técnicas y éticas del mundo del bar.</p>
+                    <p><br>✅Historia <br>✅composición de un cocktail <br>✅tipos de bares <br>✅ servicio <br>✅ higiene
+                    <br>✅mise en place <br>✅ética <br>✅filosofía y psicología</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="../vistas/Modulo1.html" class="btn btn-primary btn-neon mt-3">Ir a módulo 1</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-12 d-flex flex-column align-items-center mb-4">
+          <div class="modulo-card-n1">
+            <div class="modulo-card-inner-n1">
+              <div class="modulo-card-front-n1" style="background-image: url('../sources/nivel1mod2front.jpg');">
+                <div class="icon-martini-n2 mb-2"><i class="fas fa-martini-glass"></i></div>
+                <h3 class="modulo-title-n1">MODULO 2</h3>
+                <div class="modulo-subtitle-n2">Herramientas, Técnicas y Cristalería</div>
+                <div id="estado-modulo7" class="estado-modulo estado-completado" style="display:none;">Estado: ✅ Completado</div>
+                <div id="estado-modulo7-progreso" class="estado-modulo estado-progreso" style="display:none;">Estado: ⏳ En progreso</div>
+                <div id="estado-modulo7-bloqueado" class="estado-modulo estado-bloqueado">Estado: 🔒 Bloqueado</div>
+              </div>
+              <div class="modulo-card-back-n1" style="background-image: url('../sources/nivel1mod2back.jpg');">
+                <div class="modulo-desc-n1">
+                  <p>🎯 Perfecciona tus habilidades con técnicas, utensilios y presentación profesional.</p>
+                    <p><br>✅Herramientas <br>✅técnicas <br>✅tipología <br>✅cristalería <br>✅garnish <br>✅costeo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="../vistas/modulo2.html" class="btn btn-primary btn-neon mt-3">Ir a módulo 2</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 d-flex flex-column align-items-center mb-4">
+          <div class="modulo-card-n1">
+            <div class="modulo-card-inner-n1">
+              <div class="modulo-card-front-n1" style="background-image: url('../sources/nivel1mod3front.jpg');">
+                <div class="icon-bottle-n3 mb-2"><i class="fas fa-wine-bottle"></i></div>
+                <h3 class="modulo-title-n1">MODULO 3</h3>
+                <div class="modulo-subtitle-n3">Licores Base y Coctelería Clásica</div>
+                <div id="estado-modulo7" class="estado-modulo estado-completado" style="display:none;">Estado: ✅ Completado</div>
+                <div id="estado-modulo7-progreso" class="estado-modulo estado-progreso" style="display:none;">Estado: ⏳ En progreso</div>
+                <div id="estado-modulo7-bloqueado" class="estado-modulo estado-bloqueado">Estado: 🔒 Bloqueado</div>
+              </div>
+              <div class="modulo-card-back-n1" style="background-image: url('../sources/nivel1mod3back.jpg');">
+                <div class="modulo-desc-n1">
+                  <p>🎯 Conoce los destilados esenciales y domina los clásicos de la mixología.</p>
+                  <p><br>✅Licores <br>✅fermentación <br>✅destilación <br>✅cocteles <br>✅decoración <br>✅servicio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="../vistas/modulo3.html" class="btn btn-primary btn-neon mt-3">Ir a módulo 3</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div
+                    class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
+                    <a href="../vistas/encuestadesatisfaccion.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
+                    <a href="../vistas/terminosycondiciones.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
+                    <a href="../vistas/politicasdeprivacidad.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
+                    <a href="../vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
+                </div>
+            </div>
+
+            <!-- Iconos de redes sociales -->
+            <div class="social-links iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-6">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank"><i id="brands" class="fa-brands fa-facebook-f mx-2"></i></a>
+                <a href="https://www.instagram.com/soulmiaacademy/profilecard/?igsh=eXI5OGw2djVueXIx" target="_blank"><i id="brands" class="fa-brands fa-instagram mx-2"></i></a>
+                <a href="https://www.youtube.com/@SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-youtube mx-2"></i></a>
+                <a href="https://t.me/SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-telegram mx-2"></i></a>
+                <a href="https://wa.me/+57 3052329341" target="_blank"><i id="brands" class="fa-brands fa-whatsapp mx-2"></i></a>
+                <a href="https://www.tiktok.com/@soulmia.academy?_t=ZS-8xI627JPalE&_r=1" target="_blank"><i id="brands" class="fa-brands fa-tiktok mx-2"></i></a>
+            </div>
+            <h5 class="social-title siguenos text-center mt-2">¡Síguenos!</h5>
+
+            <!-- Información de contacto -->
+            <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
+                <address class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
+                    <i class="bi bi-geo-alt-fill fs-5"> Chagualo, Medellín, Antioquia, COLOMBIA </i>
+                </address>
+                <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start text-white">
+                    <i class="bi bi-envelope-at-fill fs-5"> soulmiaacademy@gmail.com </i>
+                </div>
+            </div>
+
+            <!-- Derechos de autor -->
+            <p class="text-center mt-3">&copy; Since 2024</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/nivel1.js"></script>
+</body>
+</html> 

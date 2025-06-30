@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Certificado - Soulmia</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/certificado.css">
+</head>
+<body>
+    
+    <div class="certificate-buttons">
+        <button class="download-btn" onclick="generatePDF('bartender')">Certificado Bartender Profesional</button>
+        <button class="download-btn" onclick="generatePDF('internacional')">Certificado Bartender Internacional</button>
+        <button class="download-btn" onclick="generatePDF('mixologo')">Certificado Mixólogo</button>
+    </div>
+
+    <div class="certificate-container">
+        <div id="certificate" class="certificate">
+            <div class="logos">
+                <img src="../sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Soulmia">
+                
+            </div>
+
+            <h1>Soulmia Academy</h1>
+            <h2 id="curso-titulo">Bartendering Mastery: De aprendiz a mixólogo</h2>
+
+            <div class="content">
+                <p><strong>Colombia – Medellín</strong></p>
+                <p>Certifica a</p>
+                <div class="student-name" id="nombre-estudiante">[Nombre del estudiante]</div>
+                <p>por haber culminado el curso de <strong id="tipo-curso">bartender profesional</strong> en <span id="horas-curso">80</span> horas</p>
+                <p>desde <strong id="fecha-inicio">[Fecha de inicio]</strong> hasta <strong id="fecha-fin">[Fecha de finalización]</strong>.</p>
+                <p>Este curso fue dirigido por el MOOC de Soulmia Academy bajo los parámetros y lineamientos educativos de la IBA y el Ministerio de Educación Colombiano.</p>
+
+                <div class="location-date">Expedido en Medellín, Colombia</div>
+            </div>
+
+            <div class="signatures">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Carolain Rincón<br><em>Directora Legal</em></p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Firma del estudiante</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Función para cargar datos del estudiante (simulando una base de datos)
+        function loadStudentData() {
+            // Aquí se conectaría con tu base de datos real
+            return {
+                nombre: "Juan Pérez",
+                fechaInicio: "01/01/2024",
+                fechaFin: "01/03/2024"
+            };
+        }
+
+        // Función para generar el PDF según el tipo de certificado
+        function generatePDF(tipo) {
+            const studentData = loadStudentData();
+            document.getElementById('nombre-estudiante').textContent = studentData.nombre;
+            document.getElementById('fecha-inicio').textContent = studentData.fechaInicio;
+            document.getElementById('fecha-fin').textContent = studentData.fechaFin;
+
+            // El título del curso se mantiene igual para todos los niveles
+            document.getElementById('curso-titulo').textContent = "Bartendering Mastery: De aprendiz a mixólogo";
+
+            switch(tipo) {
+                case 'bartender':
+                    document.getElementById('tipo-curso').textContent = "bartender profesional - Nivel I";
+                    document.getElementById('horas-curso').textContent = "80";
+                    break;
+                case 'internacional':
+                    document.getElementById('tipo-curso').textContent = "bartender internacional - Nivel II";
+                    document.getElementById('horas-curso').textContent = "120";
+                    break;
+                case 'mixologo':
+                    document.getElementById('tipo-curso').textContent = "mixólogo profesional - Nivel III";
+                    document.getElementById('horas-curso').textContent = "100";
+                    break;
+            }
+
+            const element = document.getElementById('certificate');
+            const opt = {
+                margin: 1,
+                filename: `certificado_${tipo}_${studentData.nombre.replace(' ', '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+
+        // Cargar header y footer
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html> 

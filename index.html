@@ -5,19 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>SOULMIA🍸</title>
-    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SOULMIA🍸</title>
+    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
+    <style>
+        .icon-ciencia-animada {
+            color: #BF0C73;
+            text-shadow: 0 0 12px #BF0C73, 0 0 24px #BF0C73, 0 0 48px #BF0C73;
+            animation: neon-ciencia-flicker 1.5s infinite alternate;
+            transition: all 0.3s ease;
+        }
+        .valor-card:hover .icon-ciencia-animada {
+            transform: scale(1.2);
+            color: #BF0C73;
+        }
+        @keyframes neon-ciencia-flicker {
+            0% {
+                text-shadow: 0 0 8px #BF0C73, 0 0 16px #BF0C73, 0 0 32px #BF0C73;
+                filter: brightness(1.1);
+            }
+            50% {
+                text-shadow: 0 0 24px #BF0C73, 0 0 48px #BF0C73, 0 0 96px #BF0C73;
+                filter: brightness(1.4);
+            }
+            100% {
+                text-shadow: 0 0 12px #BF0C73, 0 0 24px #BF0C73, 0 0 48px #BF0C73;
+                filter: brightness(1.2);
+            }
+        }
+        .valor-icon {
+            color: #8031B6;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            animation: neon-ciencia-flicker 1.5s infinite alternate;
+        }
+        .valor-card:hover .valor-icon {
+            transform: scale(1.2);
+            color: #BF0C73;
+        }
+        @keyframes neon-ciencia-flicker {
+            0% {
+                text-shadow: 0 0 8px #BF0C73, 0 0 16px #BF0C73, 0 0 32px #BF0C73;
+                filter: brightness(1.1);
+            }
+            50% {
+                text-shadow: 0 0 24px #BF0C73, 0 0 48px #BF0C73, 0 0 96px #BF0C73;
+                filter: brightness(1.4);
+            }
+            100% {
+                text-shadow: 0 0 12px #BF0C73, 0 0 24px #BF0C73, 0 0 48px #BF0C73;
+                filter: brightness(1.2);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +86,7 @@
                     <!-- columna de logo -->
 
                         <a class="navbar-brand d-flex" href="./index.html">
-                            <img class="logo" src="./sources/Logo final febrero 2025.png" alt="Logo Soulmia"
+                            <img class="logo" src="./sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Logo Soulmia"
                                 style="max-height: 50px;">
                         </a>
 
@@ -63,7 +116,10 @@
                                         href="./vistas/dashboard.html">Dashboard</a></li>
                                 <li class="nav-item"><a class="nav-link5 fs-4 text-white"
                                         href="./vistas/profesores.html">Profesores</a></li>
-                                        
+                                <li class="nav-item"><a class="nav-link6 fs-4 text-white"
+                                        href="./vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link7 fs-4 text-white"
+                                        href="./vistas/tienda.html">Tienda</a></li>
                             </ul>
                         </div>
                     </div>
@@ -104,33 +160,300 @@
 
     </div>
 
-    <div id="container-banner">
+                                                         <!-- INICIO DEL CONTENIDO -->
 
-        <img class="img-fluid " src="./sources/Banner Modulo 4 clases de cocteleria_Mesa de trabajo 1.png">
 
+    <div class="container">
+    <!-- Carrusel Principal -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./sources/coctelera manhatan y copa helada.png" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Descubre el Arte de la Mixología</h2>
+                    <p class="lead">Aprende técnicas profesionales desde la comodidad de tu hogar</p>
+                    <a href="#" class="btn btn-primary btn-lg">Comenzar Ahora</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./sources/bartenders.png" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Crea Cócteles Únicos</h2>
+                    <p class="lead">Desarrolla tu creatividad y sorprende a tus invitados</p>
+                    <a href="#" class="btn btn-primary btn-lg">Explorar Cursos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./sources/bartender mujer.png" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Conviértete en un Mixólogo Profesional</h2>
+                    <p class="lead">Certificación internacional y mentoría personalizada</p>
+                    <a href="#" class="btn btn-primary btn-lg">Más Información</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
     </div>
 
-    <div class="imgPromotion mt-4">
-        <div class="row">
-            <img class="imgProm col-xl-12 col-lg-10 col-md-8 col-sm-2"
-                src="./sources/Banner principal index_Mesa de trabajo 1.png">
+    <!-- Sección de Texto Animado -->
+    <div class="container-fluid py-5" id="about-section">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-start">
+                <div class="about-text">
+                    <h2 class="display-4 mb-4 text-white">Soulmia Academy</h2>
+                    <p class="lead text-white">
+                        Soulmia Academy es una experiencia educativa inmersiva donde la ciencia, 
+                        el arte y la libertad creativa se encuentran en el ritual de la mixología.
+                    </p>
+                    <p class="lead text-white">
+                        Aprende, crea y transforma tu relación con el cóctel desde casa.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="about-image">
+                    <img src="./sources/scarlett cat comic.png" alt="Ilustración Soulmia" class="img-fluid">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container-fluid text-white text-center d-flex justify-content-center flex-wrap align-items-center">
-        <h3 class="nuestros"> ¡Nuestros Aliados!</h3>
-        <div
-            class="aliados d-flex justify-content-center flex-wrap align-items-center mt-2 mb-2 col-12 col-xl-12 col-lg-12 col-md-10">
-            <img src="./sources/BosqueDeIndias.jpg" class="imagen mx-4" alt="Aliado 1">
-            <img src="./sources/institutoDelCoctel.jpg" class="imagen mx-4 " alt="Aliado 2">
-            <img src="./sources/sena.jpg" class="imagen mx-4" alt="Aliado 3 ">
-            <img src="./sources/antaño.png" class="imagen mx-4" alt="Aliado 4 ">
-            <img src="./sources/nativo.jpg" class="imagen mx-4" alt="Aliado 5 ">
-            <img src="./sources/Aguardiente Blanco del Valle.png" class="imagen mx-4 col-1" alt="Aliado 6">
-            <img src="./sources/descarga.png" class="imagen mx-4" alt="Aliado 7">
+    <!-- Sección de Niveles -->
+    <div class="container-fluid py-5" id="niveles-section">
+        <h2 class="text-center text-white mb-5 display-4">Explora Nuestros Niveles</h2>
+        <div class="row justify-content-center g-4">
+            <!-- Nivel 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="nivel-card">
+                    <div class="nivel-card-inner">
+                        <div class="nivel-card-front">
+                            <div class="nivel-icon">
+                                <i class="bi bi-cup-hot-fill"></i>
+                            </div>
+                            <h3>Bartender Profesional</h3>
+                            <p class="nivel-subtitle">Nivel 1</p>
+                        </div>
+                        <div class="nivel-card-back">
+                            <h4>¿Qué aprenderás?</h4>
+                            <ul class="nivel-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Fundamentos de la mixología</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Técnicas básicas de preparación</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Manejo de herramientas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Recetas clásicas</li>
+                            </ul>
+                            <a href="./vistas/modulos.html" class="btn btn-primary btn-lg mt-3">Ver Módulos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nivel 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="nivel-card">
+                    <div class="nivel-card-inner">
+                        <div class="nivel-card-front">
+                            <div class="nivel-icon">
+                                <i class="bi bi-globe-americas"></i>
+                            </div>
+                            <h3>Bartender Internacional</h3>
+                            <p class="nivel-subtitle">Nivel 2</p>
+                        </div>
+                        <div class="nivel-card-back">
+                            <h4>¿Qué aprenderás?</h4>
+                            <ul class="nivel-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Técnicas avanzadas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Cócteles internacionales</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Gestión de bar</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Atención al cliente</li>
+                            </ul>
+                            <a href="./vistas/modulos.html" class="btn btn-primary btn-lg mt-3">Ver Módulos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nivel 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="nivel-card">
+                    <div class="nivel-card-inner">
+                        <div class="nivel-card-front">
+                            <div class="nivel-icon">
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <h3>Mixólogo</h3>
+                            <p class="nivel-subtitle">Nivel 3</p>
+                        </div>
+                        <div class="nivel-card-back">
+                            <h4>¿Qué aprenderás?</h4>
+                            <ul class="nivel-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Creación de cócteles</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Técnicas de vanguardia</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Gestión de eventos</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Emprendimiento</li>
+                            </ul>
+                            <a href="./vistas/modulos.html" class="btn btn-primary btn-lg mt-3">Ver Módulos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Sección de Valores -->
+    <div class="container-fluid py-5" id="valores-section">
+        <h2 class="text-center text-white mb-5 display-4">¿Por qué Soulmia es diferente?</h2>
+        <div class="row justify-content-center g-4">
+            <!-- Educación Inmersiva -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="bi bi-joystick"></i>
+                    </div>
+                    <h3>Educación Inmersiva y Sensorial</h3>
+                    <p>Aprende a través de experiencias interactivas que estimulan todos tus sentidos</p>
+                </div>
+            </div>
+
+            <!-- Creatividad -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h3>Creatividad sin Límites</h3>
+                    <p>Explora tu potencial creativo y desarrolla tu propio estilo en la mixología</p>
+                </div>
+            </div>
+
+            <!-- Alquimia -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon icon-ciencia-animada">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Alquimia y Ciencia</h3>
+                    <p>Descubre la ciencia detrás de cada cóctel y domina las técnicas más avanzadas</p>
+                </div>
+            </div>
+
+            <!-- Conciencia -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="bi bi-globe"></i>
+                    </div>
+                    <h3>Conciencia Social y Ambiental</h3>
+                    <p>Practica la mixología responsable y sostenible con el medio ambiente</p>
+                </div>
+            </div>
+
+            <!-- Multimedia -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="bi bi-camera-video"></i>
+                    </div>
+                    <h3>Producción Multimedia Interactiva</h3>
+                    <p>Contenido audiovisual de alta calidad para una experiencia de aprendizaje única</p>
+                </div>
+            </div>
+
+            <!-- Certificación -->
+            <div class="col-lg-4 col-md-6">
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3>Certificación Progresiva</h3>
+                    <p>Avanza a tu ritmo y obtén certificaciones reconocidas internacionalmente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Video Teaser -->
+    <div class="container-fluid py-5" id="video-section">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID" 
+                            title="Soulmia Academy Teaser"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-overlay">
+                        <div class="play-button">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-white text-center py-5">
+        <h3 class="nuestros mb-4">¡Nuestros Aliados!</h3>
+        <div id="aliadosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#aliadosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#aliadosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#aliadosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="./sources/BosqueDeIndias.jpg" class="imagen mx-4" alt="Aliado 1">
+                        <img src="./sources/institutoDelCoctel.jpg" class="imagen mx-4" alt="Aliado 2">
+                        <img src="./sources/sena.jpg" class="imagen mx-4" alt="Aliado 3">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="./sources/antaño.png" class="imagen mx-4" alt="Aliado 4">
+                        <img src="./sources/nativo.jpg" class="imagen mx-4" alt="Aliado 5">
+                        <img src="./sources/Aguardiente Blanco del Valle.png" class="imagen mx-4" alt="Aliado 6">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="./sources/descarga.png" class="imagen mx-4" alt="Aliado 7">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#aliadosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aliadosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    </div>
+    <!-- FIN DEL CONTENIDO PRINCIPAL  -->
 
     <footer class="footer text-white py-4">
         <div class="container-fluid">
@@ -143,23 +466,20 @@
                         class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
                     <a href="./vistas/politicasdeprivacidad.html"
                         class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
-                    <a href="./vistas/sobrenosotros.html"
-                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Sobre Nosotros</a>
                     <a href="./vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
                 </div>
             </div>
 
             <!-- Iconos de redes sociales -->
-            <div class="iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-3">
-                <i id="brands" class="fa-brands fa-facebook-f mx-2"></i>
-                <i id="brands" class="fa-brands fa-instagram mx-2"></i>
-                <i id="brands" class="fa-brands fa-youtube mx-2"></i>
-                <i id="brands" class="fa-brands fa-twitch mx-2"></i>
-                <i id="brands" class="fa-brands fa-telegram mx-2"></i>
-                <i id="brands" class="fa-brands fa-twitter mx-2"></i>
-                <i id="brands" class="fa-brands fa-whatsapp mx-2"></i>
+            <div class="social-links iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-6">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank"><i id="brands" class="fa-brands fa-facebook-f mx-2"></i></a>
+                <a href="https://www.instagram.com/soulmiaacademy/profilecard/?igsh=eXI5OGw2djVueXIx" target="_blank"><i id="brands" class="fa-brands fa-instagram mx-2"></i></a>
+                <a href="https://www.youtube.com/@SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-youtube mx-2"></i></a>
+                <a href="https://t.me/SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-telegram mx-2"></i></a>
+                <a href="https://wa.me/+57 3052329341" target="_blank"><i id="brands" class="fa-brands fa-whatsapp mx-2"></i></a>
+                <a href="https://www.tiktok.com/@soulmia.academy?_t=ZS-8xI627JPalE&_r=1" target="_blank"><i id="brands" class="fa-brands fa-tiktok mx-2"></i></a>
             </div>
-            <p class="siguenos text-center mt-2">¡Síguenos!</p>
+            <h5 class="social-title siguenos text-center mt-2">¡Síguenos!</h5>
 
             <!-- Información de contacto -->
             <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
@@ -167,7 +487,7 @@
                     <i class="bi bi-geo-alt-fill fs-5"> Chagualo, Medellín, Antioquia, COLOMBIA </i>
                 </address>
                 <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start text-white">
-                    <i class="bi bi-envelope-at-fill fs-5"> soulmiacontacto@gmail.com </i>
+                    <i class="bi bi-envelope-at-fill fs-5"> soulmiaacademy@gmail.com </i>
                 </div>
             </div>
 
@@ -175,13 +495,8 @@
             <p class="text-center mt-3">&copy; Since 2024</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script src="./js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

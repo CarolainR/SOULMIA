@@ -1,6 +1,0 @@
-solo se puede acceder a biblioteca, calificaciones, dashboard y a modulos si se inicio sesión.
-al cerrar sesión no se podrá acceder a estas sesiones del mooc.
-
-al realizar exámenes del modulo, se pondrá la calificación numérica en calificaciones, donde cada pregunta es relacionada a un tema en especifico y también saldrá la nota que será 1.0 o 5.0
-
-solo se puede acceder al siguiente modulo si el modulo que se esta cursando o se curso es mayor a 4.5.

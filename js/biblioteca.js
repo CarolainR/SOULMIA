@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Manejar el logout
+    //  logout
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', function(event) {
@@ -23,6 +23,25 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Has cerrado sesión exitosamente');
             window.location.href = '../index.html'; // Redirigir al index
         });
+    }
+
+    // Función para manejar la descarga de PDFs
+    function downloadPDF(titulo) {
+        // Por ahora todos los PDFs apuntan al mismo archivo, pero debo remplazar esto según el título cuando pueda tener listos los pdfs
+        const pdfUrl = '../sources/1862theBarTendersGuide.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = `${titulo}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Función para visualizar PDFs en nueva pestaña
+    function viewPDF(titulo) {
+    
+        const pdfUrl = '../sources/1862theBarTendersGuide.pdf';
+        window.open(pdfUrl, '_blank');
     }
 
     // Mostrar todos los elementos al cargar la página
@@ -36,11 +55,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img class="imgsColumns" src="${medio.image}" alt="${medio.titulo}">
                 <p>${medio.titulo}</p>
                 <div class="icons">
-                    ${medio.medio === 'pdf' ? '<i class="fas fa-download"></i>' : '<i class="fas fa-play"></i>'}
-                    <i class="fas fa-book"></i>
+                    ${medio.medio === 'pdf' ? 
+                        `<a href="#" class="download-btn" data-titulo="${medio.titulo}">
+                            <i class="fas fa-download"></i>
+                         </a>` : 
+                        `<i class="fas fa-play"></i>`
+                    }
+                    <a href="#" class="view-btn" data-titulo="${medio.titulo}">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             `;
             container.appendChild(item);
+        });
+
+        // Agregar event listeners después de crear los elementos
+        addEventListeners();
+    }
+
+    // Función event listeners a los botones
+    function addEventListeners() {
+        // Event listeners para botones de descarga
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const titulo = this.getAttribute('data-titulo');
+                downloadPDF(titulo);
+            });
+        });
+
+        // Event listeners para botones de visualización
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const titulo = this.getAttribute('data-titulo');
+                viewPDF(titulo);
+            });
         });
     }
 
@@ -66,24 +116,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img class="imgsColumns" src="${medio.image}" alt="${medio.titulo}">
                     <p>${medio.titulo}</p>
                     <div class="icons">
-                        ${medio.medio === 'pdf' ? '<i class="fas fa-download"></i>' : '<i class="fas fa-play"></i>'}
-                        <i class="fas fa-book"></i>
+                        ${medio.medio === 'pdf' ? 
+                            `<a href="#" class="download-btn" data-titulo="${medio.titulo}">
+                                <i class="fas fa-download"></i>
+                             </a>` : 
+                            `<i class="fas fa-play"></i>`
+                        }
+                        <a href="#" class="view-btn" data-titulo="${medio.titulo}">
+                            <i class="fas fa-book"></i>
+                        </a>
                     </div>
                 `;
                 
                 container.appendChild(item);
             }
         });
+
+        // se agregan event listeners después de filtrar
+        addEventListeners();
     }
 
-    // Asignar la función de búsqueda al input
+    // función de búsqueda al input
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
 
     /* Login */
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Aquí deberías validar las credenciales del usuario
+        // validar las credenciales del usuario
         const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         
@@ -91,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('user', JSON.stringify({ username, email }));
         
-        // Redirigir al usuario a la página principal o donde desees
+        // Redirigir al usuario a la página principal
         window.location.href = './index.html';
     });
 });

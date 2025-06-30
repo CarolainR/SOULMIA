@@ -154,3 +154,22 @@ document.addEventListener('DOMContentLoaded', function () {
         dashboard.style.display = 'none'
     }
 });
+
+// Animación para la sección about
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutText = document.querySelector('.about-text');
+    const aboutImage = document.querySelector('.about-image');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    if (aboutText) observer.observe(aboutText);
+    if (aboutImage) observer.observe(aboutImage);
+});

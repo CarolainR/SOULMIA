@@ -4,92 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/biblioteca.css">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>BIBLIOTECA 📚</title>
-    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <title>SOULMIA🍸</title>
+    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
 </head>
-<body>
+
+<body class="bg-black">
     
  <!-- ENCABEZADO -->
  <div class="header">
 
 
-    <nav class="navbar navbar-expand-lg bg-none">
-        <div class="container">
-            <div class="row w-100 align-items-start">
-                <!-- columna de logo -->
-                <div class="col-2 d-flex justify-content-start">
-                    <a class="navbar-brand" href="../index.html">
-                        <img class="logo" src="../sources/Logo final febrero 2025.png" alt="Logo Soulmia"
-                            style="max-height: 50px;">
-                    </a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center w-100">
 
-                </div>
-                <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
-                    <div class="collapse navbar-collapse text-white" id="navbarNav">
-                        <ul class="navbar-nav mx-auto ">
-                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
-                                    href="./vistas/modulos.html">Home</a></li>
-                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
-                                    href="../vistas/">Modulos</a></li>
-                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
-                                    href="./vistas/profesores.html">Profesores</a></li>
-                            <li class="nav-item mx-4"><a class="nav-link fs-4 text-white"
-                                    href="./vistas/calificaciones.html">Calificaciones</a></li>
-                        </ul>
+                    <!-- columna de logo -->
+
+                        <a class="navbar-brand d-flex" href="./index.html">
+                            <img class="logo" src="../sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Logo Soulmia"
+                                style="max-height: 50px;">
+                        </a>
+
+                    <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
+                    <button class="navbar-toggler mx-auto " 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                   <!--  Links del Nav -->
+
+                    <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
+                        <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                        href="./vistas/modulos.html">Módulos</a></li>
+                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                        href="./vistas/biblioteca.html">Biblioteca</a></li>
+                                <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white"
+                                        href="./vistas/calificaciones.html">Calificaciones</a></li>
+                                <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
+                                        href="./vistas/dashboard.html">Dashboard</a></li>
+                                <li class="nav-item"><a class="nav-link5 fs-4 text-white"
+                                        href="./vistas/profesores.html">Profesores</a></li>
+                                <li class="nav-item"><a class="nav-link6 fs-4 text-white"
+                                        href="./vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link7 fs-4 text-white"
+                                        href="./vistas/tienda.html">Tienda</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
+                    <!-- Columna de icono de perfil y greeting -->
+                    <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
 
-                    <!-- Menú desplegable de perfil -->
-                    <div class="d-flex">
-                        <!-- fila de saludo -->
+                        <!-- Menú desplegable de perfil -->
+                        <div class="d-flex">
+                            <!-- fila de saludo -->
 
-                   
-                            <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
-                                <span id="welcomeMessage"><span id="username"></span></span>
+                       
+                                <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
+                                    <span id="welcomeMessage"><span id="username"></span></span>
 
+                                </div>
+                         
+
+
+                            <!-- fila de icono de perfil y menu dropdown -->
+
+                            <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+                                <span class="profileIcon" onclick="toggleProfileMenu()">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <div id="profileMenuContent" class="profileMenuContent">
+                                    <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+                                </div>
                             </div>
-                     
 
-
-                        <!-- fila de icono de perfil y menu dropdown -->
-
-                        <div class="profileMenu text-white text-center d-flex align-items-center px-3">
-                            <span class="profileIcon" onclick="toggleProfileMenu()">
-                                <i class="fas fa-user"></i>
-                            </span>
-                            <div id="profileMenuContent" class="profileMenuContent">
-                                <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
-                                <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
-                                <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                            </div>
                         </div>
 
                     </div>
-
                 </div>
-            </div>
 
-    </nav>
+        </nav>
 
-</div>
+    </div>
    
 <div id="container-banner">
-
-    <img class="img-fluid " src="./sources/Banner Modulo 4 clases de cocteleria_Mesa de trabajo 1.png">
-
+    <div class="banner-title-container">
+        <h2 class="biblioteca">Books and Podcasts</h2>
+    </div>
+    
+    <div class="svg-container">
+        <img class="img-fluid banner-img left-svg" src="../sources/Campbell Biblioteca_Mesa de trabajo 1.svg">
+        <img class="img-fluid banner-img right-svg" src="../sources/scarlett biblioteca_Mesa de trabajo 1.svg">
+    </div>
 </div>
 
     <div class="searchBar">
@@ -100,72 +125,96 @@
 
     </div>
     <br>
-    <h2 class="biblioteca">Books and Podcasts</h2>
-    <br>
     <div class="divContentTitles">
         <div class="grid-container" id="contentContainer">
             <!-- Columna de PDFs -->
           <!--<div class="column pdfs-column">
             <h1 class="pdfTitle">PDFS</h1>
             <div class="row">
-                <img class="imgsColumns" src="../sources/academia mixologia soulmia mooc.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/introduccion a la mixologia.png" alt="pdf">
                 <p>Introducción a la Mixología</p>
                 <div class="icons">
-                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide" class="download-btn">
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
                         <i class="fas fa-download"></i>
                     </a>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image2.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/producción y transformación.png" alt="pdf">
                 <p>Producción y Transformación</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image1.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/Tecnicas de mixologia.png" alt="pdf">
                 <p>Tecnicas de Mixología</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image1.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/clasificacion de la cocteleria.png" alt="pdf">
                 <p>Clasificaciones de la Cocteleria</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image1.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/Formatos y protocolos.png" alt="pdf">
                 <p>Formatos y Protocolos</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image1.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/tendencias de la mixologia.png" alt="pdf">
                 <p>Tendencias de la Mixología</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <img class="imgsColumns" src="path/to/pdf-image1.jpg" alt="pdf">
+                <img class="imgsColumns" src="../sources/cocteleria tiki y del pacifico.png" alt="pdf">
                 <p>Mixología Tiki y del Pacifico</p>
                 <div class="icons">
-                    <i class="fas fa-download"></i>
-                    <i class="fas fa-book"></i>
+                    <a href="../sources/1862theBarTendersGuide.pdf" download="1862theBarTendersGuide.pdf" class="download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="../sources/1862theBarTendersGuide.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-book"></i>
+                    </a>
                 </div>
             </div>
-        </div> -->
+        </div>-->
         <!-- Columna de Podcasts -->
 <!--         <div class="column podcast-column">
             <h1 class="pdfTitle">PODCASTS</h1>
@@ -226,7 +275,7 @@
                 </div>
             </div>
         </div> -->
-    </div>
+        </div>
 
 
 
@@ -236,29 +285,26 @@
         <div class="row justify-content-center">
             <div
                 class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
-                <a href="./vistas/encuestadesatisfaccion.html"
+                <a href="./encuestadesatisfaccion.html"
                     class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
-                <a href="./vistas/terminosycondiciones.html"
+                <a href="./terminosycondiciones.html"
                     class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
-                <a href="./vistas/politicasdeprivacidad.html"
+                <a href="./politicasdeprivacidad.html"
                     class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
-                <a href="./vistas/sobrenosotros.html"
-                    class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Sobre Nosotros</a>
-                <a href="./vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
+                <a href="./pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
             </div>
         </div>
 
         <!-- Iconos de redes sociales -->
-        <div class="iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-3">
-            <i id="brands" class="fa-brands fa-facebook-f mx-2"></i>
-            <i id="brands" class="fa-brands fa-instagram mx-2"></i>
-            <i id="brands" class="fa-brands fa-youtube mx-2"></i>
-            <i id="brands" class="fa-brands fa-twitch mx-2"></i>
-            <i id="brands" class="fa-brands fa-telegram mx-2"></i>
-            <i id="brands" class="fa-brands fa-twitter mx-2"></i>
-            <i id="brands" class="fa-brands fa-whatsapp mx-2"></i>
+        <div class="social-links iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-6">
+            <a href="https://www.facebook.com/tu_pagina" target="_blank"><i id="brands" class="fa-brands fa-facebook-f mx-2"></i></a>
+            <a href="https://www.instagram.com/soulmiaacademy/profilecard/?igsh=eXI5OGw2djVueXIx" target="_blank"><i id="brands" class="fa-brands fa-instagram mx-2"></i></a>
+            <a href="https://www.youtube.com/@SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-youtube mx-2"></i></a>
+            <a href="https://t.me/SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-telegram mx-2"></i></a>
+            <a href="https://wa.me/+57 3052329341" target="_blank"><i id="brands" class="fa-brands fa-whatsapp mx-2"></i></a>
+            <a href="https://www.tiktok.com/@soulmia.academy?_t=ZS-8xI627JPalE&_r=1" target="_blank"><i id="brands" class="fa-brands fa-tiktok mx-2"></i></a>
         </div>
-        <p class="siguenos text-center mt-2">¡Síguenos!</p>
+        <h5 class="social-title siguenos text-center mt-2">¡Síguenos!</h5>
 
         <!-- Información de contacto -->
         <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
@@ -266,7 +312,7 @@
                 <i class="bi bi-geo-alt-fill fs-5"> Chagualo, Medellín, Antioquia, COLOMBIA </i>
             </address>
             <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start text-white">
-                <i class="bi bi-envelope-at-fill fs-5"> soulmiacontacto@gmail.com </i>
+                <i class="bi bi-envelope-at-fill fs-5"> soulmiaacademy@gmail.com </i>
             </div>
         </div>
 
@@ -284,4 +330,5 @@
 <script src="../js/biblioteca.js"></script>
 <script src="../js/bdbiblioteca.js"></script>
 </body>
+</html>
 </html>

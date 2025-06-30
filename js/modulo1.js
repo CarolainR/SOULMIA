@@ -109,9 +109,9 @@ function capturarRespuestas(){
                 user.tiempoInvertido = (user.tiempoInvertido || 0) + 30; // Suponiendo 30 minutos por módulo
                  // Actualizar el progreso en el DOM
                 document.querySelector("#progreso").textContent = `${user.progreso}%`;
-                document.querySelector(".stat-box:nth-child(1)").textContent = user.leccionesVistas; // Lecciones vistas
+                /* document.querySelector(".stat-box:nth-child(1)").textContent = user.leccionesVistas; // Lecciones vistas
                 document.querySelector(".stat-box:nth-child(2)").textContent = user.tiempoInvertido; // Tiempo invertido
-                document.querySelector(".current-module h2").textContent = `Módulo ${user.leccionesVistas}`; // Actualizar módulo actual
+                document.querySelector(".current-module h2").textContent = `Módulo ${user.leccionesVistas}`; // Actualizar módulo actual */
                 localStorage.setItem("user",JSON.stringify(user))
             }else{
                 console.log("Debes repetir el examen 😭")
