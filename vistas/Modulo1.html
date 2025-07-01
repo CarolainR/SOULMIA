@@ -1,320 +1,430 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="../css/modulo1.css">
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>SOULMIA🍸</title>
-        <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modulo1.css">
+    <title>SOULMIA🍸</title>
+    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
+</head>
 
     </div>
         </div>
     </div>
 
-    <body>
+    <body class="bg-black">
 
-        <!-- ENCABEZADO -->
-        <div class="header">
-    
-    
-            <nav class="navbar navbar-expand-lg navbar-dark bg-none">
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-between align-items-center w-100">
-    
-                        <!-- columna de logo -->
-    
-                            <a class="navbar-brand d-flex" href="./index.html">
-                                <img class="logo" src="../sources/Logo final febrero 2025.png" alt="Logo Soulmia"
-                                    style="max-height: 50px;">
-                            </a>
-    
-                        <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
-                        <button class="navbar-toggler mx-auto " 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" 
-                            aria-expanded="false" 
-                            aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-    
-                       <!--  Links del Nav -->
-    
-                        <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
-                            <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a class="nav-link1 fs-4 text-white"
-                                            href="../vistas/modulos.html">Módulos</a></li>
-                                    <li class="nav-item"><a class="biblioteca nav-link2 fs-4 text-white"
-                                            href="../vistas/biblioteca.html">Biblioteca</a></li>
-                                    <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white"
-                                            href="../vistas/calificaciones.html">Calificaciones</a></li>
-                                    <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
-                                            href="../vistas/dashboard.html">Dashboard</a></li>
-                                    <li class="nav-item"><a class="nav-link5 fs-4 text-white"
-                                            href="../vistas/profesores.html">Profesores</a></li>
-                                            
-                                </ul>
-                            </div>
+        <!-- Header -->
+    <div class="header">
+      <div class="logo-col">
+        <a class="navbar-brand d-flex mx-0" href="../index.html">
+          <img class="logo" src="../sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.png" alt="Logo Soulmia" style="max-height:90px; width:auto;">
+        </a>
+      </div>
+      <div class="navbar-center-col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-none w-100">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="biblioteca nav-link2 fs-4 text-white" href="../vistas/biblioteca.html">Biblioteca</a></li>
+                <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white" href="../vistas/calificaciones.html">Calificaciones</a></li>
+                <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white" href="../vistas/dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link5 fs-4 text-white" href="../vistas/profesores.html">Profesores</a></li>
+                <li class="nav-item"><a class="nav-link6 fs-4 text-white" href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link7 fs-4 text-white" href="../vistas/tienda.html">Tienda</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="profile-col">
+        <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+          <span class="profileIcon" onclick="toggleProfileMenu()">
+            <i class="fas fa-user"></i>
+          </span>
+          <div id="profileMenuContent" class="profileMenuContent">
+            <a href="../vistas/login.html" aria-label="Ir a Login">Login</a>
+            <a href="../vistas/registro.html" aria-label="Ir a Registro">Registro</a>
+            <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+          </div>
+        </div>
+        <div class="greeting bg-dark d-flex text-center text-white ms-2" id="greeting" style="display: none;">
+          <span id="welcomeMessage"><span id="username"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Temas del Módulo 1 :) -->
+    <div class="container temas-modulo1 my-5">
+        <h1 class="titulo-modulo1">MÓDULO 1</h1>
+        <div class="text-center mb-2">
+            <i class="fa-solid fa-martini-glass-citrus icono-bienvenida fa-4x"></i>
+            <i class="fa-solid fa-star icono-bienvenida fa-4x"></i>
+        </div>
+        <div class="text-center">
+            <span class="bienvenida-animada">¡Bienvenidos al Módulo 1!</span>
+        </div>
+        <h3 class="fw-bold text-center subtitulo-bienvenida">Fundamentos del Bar y del Bartender!</h3>
+        <p class="parrafo-bienvenida"> <span class="imagina-resaltado"> IMAGINA... </span> que acabas de cruzar 
+            las puertas de un bar legendario🍻, donde cada botella guarda una
+            historia y cada herramienta es una extensión del arte🍾. Aquí no vienes solo a preparar cócteles… 
+            vienes a descubrir los secretos milenarios que han dado forma a la coctelería moderna, 🚀😀a dominar 
+            los rituales detrás de la barra y a forjar tu propia ética como bartender profesional.🤵‍♂️👩‍🔬👨‍🍳 Este módulo 
+            es como tu primer trago: intenso, equilibrado y con un final largo de conocimientos que te transformarán🥃. 
+            Con animaciones, infografías y dinámicas interactivas, conocerás desde la historia de la mixología y la 
+            composición de un cóctel, hasta las normas higiénicas del INVIMA, el mise en place y la filosofía que guía 
+            a los mejores. Prepárate para agitar tu mente, servir con propósito y brindar por un aprendizaje inolvidable.
+             </p>
+             
+             <h4 class="aventura-animada">¡La aventura comienza ahora!</h4>
+             <br>
+             <br>
+             <br>
+             <br>
+        <div class="tema-modulo1" id="historia-cocteleria">
+            <h2>Historia de la coctelería a mixología</h2>
+                <p></p>
+                <img src="../sources/infog 1.png" alt="" class="img-70">
+                <img src="../sources/infog 2.png" alt="" class="img-70">
+                <img src="../sources/infog 3.png" alt="" class="img-70">
+                <img src="../sources/infog 4.png" alt="" class="img-70">
+                <img src="../sources/infog 5.png" alt="" class="img-70">
+                <img src="../sources/infog 6.png" alt="" class="img-70">
+                <img src="../sources/infog 7.png" alt="" class="img-70">
+                <img src="../sources/infog 8.png" alt="" class="img-70">
+                <img src="../sources/infg 9.png" alt="" class="img-70">
+                <img src="../sources/infg 10...png" alt="" class="img-70">
+        </div>
+        <div class="tema-modulo1" id="composicion-cocktail">
+            <hr class="separador-sesion">
+            <h2>Composición de un cocktail</h2>
+            <p class="parrafo-sesion">Aprende los elementos esenciales que conforman un cóctel: bases alcohólicas, modificadores, saborizantes y decoración. Descubre el equilibrio entre aroma, sabor y presentación.</p>
+            <img src="../sources/composicion de un cocktail parte 2_Mesa de trabajo 1.png" alt="Composición de cocktail 1" class="img-fluid my-2 shadow-tema-modulo1 img-70">
+            <img src="../sources/composicion de un cocktail parte 1_Mesa de trabajo 1.png" alt="Composición de cocktail 2" class="img-fluid my-2 shadow-tema-modulo1 img-70">
+            <div class="ratio ratio-16x9 my-3 shadow-tema-modulo1">
+                <iframe src="https://www.youtube.com/embed/8lR7o6eQFfA" title="Video de composición de cocktail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="tema-modulo1" id="tipos-bares-organizacion">
+            <hr class="separador-sesion">
+            <h2>Tipos de bares y organización</h2>
+            <p class="parrafo-sesion">El mundo del bar es tan diverso como los sabores en un cóctel bien preparado. En este tema exploraremos 
+                los diferentes tipos de bares que existen: desde los elegantes bares de hotel, pasando por los pubs 
+                irlandeses llenos de historia, los bares tiki tropicales, hasta los speakeasies secretos que reviven 
+                la era de la Prohibición. Cada uno tiene su identidad, su atmósfera, y su tipo de cliente… ¡y también 
+                su manera de organizarse!</p>
+            <img src="../sources/ejemplo-tipos-bares.png" alt="Ejemplo Tipos de Bares" class="img-70">
+        </div>
+        <div class="tema-modulo1" id="servicio-cliente-protocolo-etiqueta">
+            <hr class="separador-sesion">
+            <h2>Servicio al cliente, protocolo y etiqueta</h2>
+            <p class="parrafo-sesion">El Arte Invisible de la Hospitalidad
+                Ser bartender no es solo mezclar tragos: es crear experiencias memorables. En este tema aprenderás 
+                que el verdadero secreto detrás de una barra exitosa no está en la receta del cóctel, sino en cómo 
+                lo sirves.
+                Exploraremos las bases del servicio al cliente con excelencia, entendiendo cómo leer a cada persona, 
+                anticiparse a sus necesidades y hacer que cada interacción sea cálida, respetuosa y profesional. Verás 
+                cómo el protocolo y la etiqueta no son reglas rígidas, sino herramientas que elevan el ambiente del bar 
+                y comunican confianza, respeto y elegancia.</p>
+            <img src="../sources/ejemplo-servicio-cliente.png" alt="Ejemplo Servicio al Cliente" class="img-70">
+        </div>
+        <div class="tema-modulo1" id="higiene-invima">
+            <hr class="separador-sesion">
+            <h2>Higiene (normativa colombiana INVIMA)</h2>
+            <p class="parrafo-sesion">El Sabor Comienza con la Limpieza.
+                En este tema entraremos en uno de los pilares fundamentales del bar profesional: la higiene. Porque antes de hablar de técnica, creatividad o presentación, debemos garantizar una base sólida de seguridad e inocuidad alimentaria.
+                Exploraremos las normativas clave que todo bartender en Colombia debe conocer, incluyendo la Resolución 2674 de 2013, el rol del INVIMA y la aplicación práctica de conceptos como las Buenas Prácticas de Manufactura (BPM), los Procedimientos Operativos Estandarizados de Saneamiento (POES) y el sistema HACCP (Análisis de Peligros y Puntos Críticos de Control).
+                Te guiaremos por los protocolos que aseguran la limpieza de utensilios, la correcta manipulación de alimentos y bebidas, el control de plagas, la higiene personal y el mantenimiento de instalaciones. Todo esto no solo para cumplir la ley, sino para proteger la salud del cliente y tu reputación como bartender.
+                Porque un bar limpio no se nota... hasta que deja de serlo. Y en este módulo, aprenderás cómo hacer que la higiene sea parte de tu identidad profesional. 🧴🍋✨
+            </p>
+            <img src="../sources/ejemplo-higiene1.png" alt="Ejemplo Higiene 1" class="img-70">
+            <img src="../sources/ejemplo-higiene2.png" alt="Ejemplo Higiene 2" class="img-70">
+            <div class="pdf-container-grid" style="width:90%;margin:auto;display:flex;flex-direction:column;gap:2rem;">
+                <div class="row d-flex justify-content-center" style="gap:2rem;">
+                    <div class="pdf-item" style="flex:1;min-width:300px;max-width:100%;position:relative;">
+                        <p class="titulo-pdf">HIGIENE ALIMENTARIA</p>
+                        <div class="iframe-wrapper" style="position:relative;">
+                            <iframe src="../sources/Higiene_Alimentaria_Reglamentacion.pdf1.pdf" width="100%" height="480" style="border-radius:12px;border:2px solid #8031B6;background:#fff;" allowfullscreen></iframe>
+                            <img src="../sources/higiene alimentaria.png"
+                                 alt="Abrir PDF"
+                                 class="img-portada-pdf"
+                                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;cursor:pointer;opacity:0.95;z-index:3;border-radius:12px;"
+                                 onclick="window.open('../sources/Higiene_Alimentaria_Reglamentacion.pdf1.pdf','_blank')">
                         </div>
-                        <!-- Columna de icono de perfil y greeting -->
-                        <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
-    
-                            <!-- Menú desplegable de perfil -->
-                            <div class="d-flex">
-                                <!-- fila de saludo -->
-    
-                           
-                                    <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
-                                        <span id="welcomeMessage"><span id="username"></span></span>
-    
-                                    </div>
-                             
-    
-    
-                                <!-- fila de icono de perfil y menu dropdown -->
-    
-                                <div class="profileMenu text-white text-center d-flex align-items-center px-3">
-                                    <span class="profileIcon" onclick="toggleProfileMenu()">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                    <div id="profileMenuContent" class="profileMenuContent">
-                                        <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                    </div>
-                                </div>
-    
-                            </div>
-    
+                        <div class="text-center mt-2">
+                            <a href="../sources/Higiene_Alimentaria_Reglamentacion.pdf1.pdf" download class="btn btn-primary" style="background:#8031B6;border:none;">Descargar PDF</a>
                         </div>
                     </div>
-    
-            </nav>
-    
-        </div>
-    
-
-
-<div class="videoContainer">
-<h1 class="text-center text-white">¡ ORIGEN E HISTORIA DE LA MIXOLOGIA !</h1>
-<video class="videoorigen" width="320" height="240" controls>
-    <source src="" type="video/mp4">
-    <source src="" type="video/ogg">
- Origen e Historia de la Mixología
-  </video>
-  <h3>Animación/Mundo Soulmia</h3>
-  <p>En esta animacion se detalla el origen e Historia de la Mixología
-    a través de una linea de tiempo, la cual solo tomara 14 minutos
-    excepto si quieres pausar por momentos para digerir mejor los datos, 
-    ya que son demasiados.
-  </p>
-
-  <h1>EVOLUCIÓN DE LA COCTELERIA EN MIXOLOGÍA</h1>
-  <h3>COMIC: De la cocteleria a la Mixología</h3>
-  <img src="../sources/mixmolecular.jpg" alt="">
-
-  <h1>HERRAMIENTAS DE TRABAJO Y PARTES DE LA BARRA</h1>
-  <h3>INFOGRAFÍA: Herramientas de Trabajo</h3>
-  <img src="../sources/mixmolecular.jpg" alt="">
-  <h3>INFOGRAFÍA: Partes de la Barra</h3>
-  <img src="../sources/mixmolecular.jpg" alt="">
-
-  <h1>COMPOSICIÓN DE UN COCKTAIL</h1>
-  <h3>INFOGRAFÍA: Anatomia de un cocktail</h3>
-  <img src="../sources/mixmolecular.jpg" alt="">
-
-  <h1>IMPORTANCIA DE LA CRISTALERIA</h1>
-  <h3>INFOGRAFÍA: La cristaleria y sus clases</h3>
-  <img src="../sources/mixmolecular.jpg" alt="">
-  <h1>EL GARNISH</h1>
-  <video class="videoorigen" width="320" height="240" controls>
-    <source src="" type="video/mp4">
-    <source src="" type="video/ogg">
-  </video>
-  <h3>VIDEO DOCUMENTAL: El Garnish y su Importancia en la Mixología</h3>
-  <p>En este documental, te sumergiras por una creatividad casi infinita
-    en la que veras tecnicas,modelos, tendencias, frutas y hierbas que te 
-    haran estallar la creatividad para tus cocktails.
-  </p>
-</div>
-<div class="">
-    <h1>EXAMEN DEL MODULO 1</h1>
-    <p class="parrafoExam">Este examen consta de 10 preguntas con multiples respuestas,
-         en las que solo hay una respuesta verdadera.
-         <br>
-        Debera elegir la respuesta correcta segun sus conocimientos adquiridos durante el modulo.
-        <br>
-        Al finalizar el examen, recuerde hacer click en enviar.
-    </p>
-    <form class="containerExam d-flex flex-wrap">
-        <div class="question">
-            <h4>1. ¿Pregunta 1?</h4>
-            <div class="options">
-                    <label for="pregunta1">¿Cuál es tu color favorito?</label><br>
-                    <input type="radio" id="color1" name="color" value="Rojo"> Rojo<br>
-                    <input type="radio" id="color2" name="color" value="Azul"> Azul<br>
-                    <input type="radio" id="color3" name="color" value="Verde"> Verde<br>
-                    <input type="radio" id="color4" name="color" value="Amarillo"> Amarillo<br>
-            </div>
-        </div>
-        <!-- Repite el bloque anterior para las demás preguntas -->
-        <div class="question">
-            <h4>2. ¿Pregunta 2?</h4>
-            <div class="options">
-                <label for="pregunta2">¿Qué deporte prefieres?</label><br>
-                <input type="radio" id="deporte1" name="deporte" value="Fútbol"> Fútbol<br>
-                <input type="radio" id="deporte2" name="deporte" value="Baloncesto"> Baloncesto<br>
-                <input type="radio" id="deporte3" name="deporte" value="Natación"> Natación<br>
-                <input type="radio" id="deporte4" name="deporte" value="Correr"> Correr<br>
-            </div>
-        </div>
-        <div class="question">
-            <h4>3. ¿Pregunta 3?</h4>
-            <div class="options">
-                <label for="pregunta3">¿Cuál es tu comida favorita?</label><br>
-                <input type="radio" id="comida1" name="comida" value="Pizza"> Pizza<br>
-                <input type="radio" id="comida2" name="comida" value="Sushi"> Sushi<br>
-                <input type="radio" id="comida3" name="comida" value="Hamburguesa"> Hamburguesa<br>
-                <input type="radio" id="comida4" name="comida" value="Tacos"> Tacos<br>
-            </div>
-        </div>
-        <div class="question">
-            <h4>4. ¿Pregunta 4?</h4>
-            <div class="options">
-                <label for="pregunta4">¿Te gustan los animales?</label><br>
-            <input type="radio" id="animales1" name="animales" value="Sí"> Sí<br>
-            <input type="radio" id="animales2" name="animales" value="No"> No<br>
-            </div>
-        </div>
-        <div class="question">
-            <h4>5. ¿Pregunta 5?</h4>
-            <div class="options">
-                    <label for="pregunta5">¿Cuál es tu estación del año preferida?</label><br>
-                    <input type="radio" id="estacion1" name="estacion" value="Primavera"> Primavera<br>
-                    <input type="radio" id="estacion2" name="estacion" value="Verano"> Verano<br>
-                    <input type="radio" id="estacion3" name="estacion" value="Otoño"> Otoño<br>
-                    <input type="radio" id="estacion4" name="estacion" value="Invierno"> Invierno<br>
-               
-            </div>
-        </div>
-        <div class="question">
-            <h4>6. ¿Pregunta 6?</h4>
-            <div class="options">
-              
-                    <label for="pregunta5">¿Cuál es tu cancion preferida?</label><br>
-                    <input type="radio" id="cancion1" name="cancion" value="Castle of Glass"> Castle of Glass<br>
-                    <input type="radio" id="cancion2" name="cancion" value="Burn It Down"> Burn It Down<br>
-                    <input type="radio" id="cancion3" name="cancion" value="Breacking the habit"> Breacking the habit<br>
-                    <input type="radio" id="cancion4" name="cancion" value="Somewhere I belong"> Somewhere I belong<br>
-               
-            </div>
-        </div>
-        <div class="question">
-            <h4>7. ¿Pregunta 7?</h4>
-            <div class="options">
-                
-                    <label for="pregunta5">¿Cuál es tu banda preferida?</label><br>
-                    <input type="radio" id="banda1" name="banda" value="Linkin Park"> Linkin Park<br>
-                    <input type="radio" id="banda2" name="banda" value="Metallica"> Metallica<br>
-                    <input type="radio" id="banda3" name="banda" value="Muse"> Muse<br>
-                    <input type="radio" id="banda4" name="banda" value="Slipknot"> Slipknot<br>
-                
-            </div>
-        </div>
-        <div class="question">
-            <h4>8. ¿Pregunta 8?</h4>
-            <div class="options">
-               
-                    <label for="pregunta5">¿Cuál es tu pais preferido?</label><br>
-                    <input type="radio" id="pais1" name="pais" value="Mexico"> Mexico<br>
-                    <input type="radio" id="pais2" name="pais" value="Argentina"> Argentina<br>
-                    <input type="radio" id="pais3" name="pais" value="Peru"> Peru<br>
-                    <input type="radio" id="pais4" name="pais" value="Chile"> Chile<br>
-               
-            </div>
-        </div>
-        <div class="question">
-            <h4>9. ¿Pregunta 9?</h4>
-            <div class="options">
-              
-                    <label for="pregunta5">¿Cuál es tu ciudad preferida?</label><br>
-                    <input type="radio" id="ciudad1" name="ciudad" value="Munich"> Munich<br>
-                    <input type="radio" id="ciudad2" name="ciudad" value="Tokio"> Tokio<br>
-                    <input type="radio" id="ciudad3" name="ciudad" value="Madrid"> Madrid<br>
-                    <input type="radio" id="ciudad4" name="ciudad" value="Medellin"> Medellin<br>
-               
-            </div>
-        </div>
-        <div class="question">
-            <h4>10. ¿Pregunta 10?</h4>
-            <div class="options">
-              
-                    <label for="pregunta5">¿Cuál es tu libro predilecto?</label><br>
-                    <input type="radio" id="libro1" name="libro" value="Crimen y Castigo"> Crimen y Castigo<br>
-                    <input type="radio" id="libro2" name="libro" value="El carrusel"> El carrusel<br>
-                    <input type="radio" id="libro3" name="libro" value="Camino a la servidumbre"> Camino a la servidumbre<br>
-                    <input type="radio" id="libro4" name="libro" value="El olvido que seremos"> El olvido que seremos<br>
-             
-            </div>
-        </div>
-        <!-- Agrega aquí las preguntas restantes -->
-        <button class="submit-button">ENVIAR</button>
-    </form>
-
-    <footer class="footer text-white py-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
-                    <a href="./vistas/encuestadesatisfaccion.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
-                    <a href="./vistas/terminosycondiciones.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
-                    <a href="./vistas/politicasdeprivacidad.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
-                    <a href="./vistas/sobrenosotros.html" class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Sobre Nosotros</a>
-                    <a href="./vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
+                    <div class="pdf-item" style="flex:1;min-width:300px;max-width:100%;position:relative;">
+                        <p class="titulo-pdf">SISTEMA HACCP</p>
+                        <div class="iframe-wrapper" style="position:relative;">
+                            <iframe src="../sources/HACCP_Guia_Educativa.pdf" width="100%" height="480" style="border-radius:12px;border:2px solid #8031B6;background:#fff;" allowfullscreen></iframe>
+                            <img src="../sources/sistema haccp.png"
+                                 alt="Abrir PDF"
+                                 class="img-portada-pdf"
+                                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;cursor:pointer;opacity:0.95;z-index:3;border-radius:12px;"
+                                 onclick="window.open('../sources/HACCP_Guia_Educativa.pdf','_blank')">
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="../sources/HACCP_Guia_Educativa.pdf" download class="btn btn-primary" style="background:#8031B6;border:none;">Descargar PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center" style="gap:2rem;">
+                    <div class="pdf-item" style="flex:1;min-width:300px;max-width:100%;position:relative;">
+                        <p class="titulo-pdf">CURSO BPM</p>
+                        <div class="iframe-wrapper" style="position:relative;">
+                            <iframe src="RUTA_DEL_PDF_1.pdf" width="100%" height="480" style="border-radius:12px;border:2px solid #8031B6;background:#fff;" allowfullscreen></iframe>
+                            <img src="../sources/bpm.png"
+                                 alt="Abrir PDF"
+                                 class="img-portada-pdf"
+                                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;cursor:pointer;opacity:0.95;z-index:3;border-radius:12px;"
+                                 onclick="window.open('RUTA_DEL_PDF_1.pdf','_blank')">
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="RUTA_DEL_PDF_1.pdf" download class="btn btn-primary" style="background:#8031B6;border:none;">Descargar PDF</a>
+                        </div>
+                    </div>
+                    <div class="pdf-item" style="flex:1;min-width:300px;max-width:100%;position:relative;">
+                        <p class="titulo-pdf">POES</p>
+                        <div class="iframe-wrapper" style="position:relative;">
+                            <iframe src="RUTA_DEL_PDF_2.pdf" width="100%" height="480" style="border-radius:12px;border:2px solid #8031B6;background:#fff;" allowfullscreen></iframe>
+                            <img src="../sources/poes.png"
+                                 alt="Abrir PDF"
+                                 class="img-portada-pdf"
+                                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;cursor:pointer;opacity:0.95;z-index:3;border-radius:12px;"
+                                 onclick="window.open('RUTA_DEL_PDF_2.pdf','_blank')">
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="RUTA_DEL_PDF_2.pdf" download class="btn btn-primary" style="background:#8031B6;border:none;">Descargar PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center" style="gap:2rem;">
+                    <div class="pdf-item" style="flex:1;min-width:300px;max-width:600px;position:relative;margin:auto;">
+                        <p class="titulo-pdf">LA TRAZABILIDAD</p>
+                        <div class="iframe-wrapper" style="position:relative;">
+                            <iframe src="RUTA_DEL_PDF_3.pdf" width="100%" height="480" style="border-radius:12px;border:2px solid #8031B6;background:#fff;" allowfullscreen></iframe>
+                            <img src="../sources/trazabilidad.png"
+                                 alt="Abrir PDF"
+                                 class="img-portada-pdf"
+                                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;cursor:pointer;opacity:0.95;z-index:3;border-radius:12px;"
+                                 onclick="window.open('RUTA_DEL_PDF_3.pdf','_blank')">
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="RUTA_DEL_PDF_3.pdf" download class="btn btn-primary" style="background:#8031B6;border:none;">Descargar PDF</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-            <!-- Iconos de redes sociales -->
-            <div class="iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-3">
-                <i id="brands" class="fa-brands fa-facebook-f mx-2"></i>
-                <i id="brands" class="fa-brands fa-instagram mx-2"></i>
-                <i id="brands" class="fa-brands fa-youtube mx-2"></i>
-                <i id="brands" class="fa-brands fa-twitch mx-2"></i>
-                <i id="brands" class="fa-brands fa-telegram mx-2"></i>
-                <i id="brands" class="fa-brands fa-twitter mx-2"></i>
-                <i id="brands" class="fa-brands fa-whatsapp mx-2"></i>
+        </div>
+        <div class="tema-modulo1" id="mise-en-place">
+            <hr class="separador-sesion">
+            <h2>Mise en place</h2>
+            <p class="parrafo-sesion">Prepararse Como un Bartender de Alto Nivel
+                Antes de que se sirva el primer cóctel, antes de que el cliente llegue a la barra... el verdadero trabajo ya comenzó. Mise en place, una expresión francesa que significa "poner en su lugar", es mucho más que una rutina: es una ceremonia de preparación, orden y dominio del espacio.
+                En este tema aprenderás cómo los bartenders profesionales organizan cada ingrediente, herramienta y estación de trabajo para lograr eficiencia, limpieza y precisión durante el servicio. Desde cortar los garnish con elegancia, preparar los jugos y jarabes, revisar los niveles de licor y hielo, hasta asegurarte de que cada utensilio esté exactamente donde debe estar.
+                Verás que un buen mise en place no solo facilita el trabajo: eleva tu concentración, tu ritmo y tu presencia profesional. Porque cuando la barra está lista, tú también lo estás. Es la diferencia entre improvisar… y ejecutar como un artista.
+                Aquí, cada detalle cuenta. El mise en place es el punto de partida para ofrecer cocteles consistentes, rápidos y con alma. Y como dicen en la barra: "quien organiza bien, sirve mejor." 🍸📐✨</p>
+            <img src="../sources/ejemplo-mise-en-place.png" alt="Ejemplo Mise en Place" class="img-70">
+        </div>
+        <div class="tema-modulo1" id="etica-bartender">
+            <hr class="separador-sesion">
+            <h2>Ética del bartender / filosofía y psicología detrás de la barra</h2>
+            <p class="parrafo-sesion">Ser bartender es mucho más que servir tragos: es comprender personas, leer emociones y actuar con propósito. En este tema explorarás los valores que definen a un verdadero profesional: respeto, integridad, empatía y responsabilidad frente al consumo. Desde la filosofía del servicio hasta la psicología de la hospitalidad, entenderás cómo tu actitud, tu energía y tu capacidad de escucha transforman la barra en un espacio de conexión humana. Aquí, cada gesto cuenta. Y tu presencia detrás de la barra puede ser tan sanadora como un buen cóctel. Porque el gran bartender no solo domina recetas, también entiende almas. 🍷💡💬</p>
+            <img src="../sources/ejemplo-filosofia.png" alt="Ejemplo Filosofía" class="img-70">
+            <div class="pdf-container my-3" style="width:40vw; max-width:40%; margin:auto; min-width:200px; height:480px;">
+                <iframe src="../sources/ejemplo-libro.pdf" width="100%" height="100%" style="border-radius:12px; border:2px solid #8031B6; background:#fff;" allowfullscreen></iframe>
             </div>
-            <p class="text-center mt-2">¡Síguenos!</p>
-    
+            <div class="text-center">
+                <a href="../sources/ejemplo-libro.pdf" download class="btn btn-primary mt-2" style="background:#8031B6; border:none;">
+                    Descargar libro PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Examen del módulo 1 -->
+    <div class="examen-modulo1-wrapper" style="width:70%;margin:0 auto;">
+        <h1>EXAMEN DEL MODULO 1</h1>
+        <p class="parrafoExam">Este examen consta de 10 preguntas con multiples respuestas,
+             en las que solo hay una respuesta verdadera.
+             <br>
+            Debera elegir la respuesta correcta segun sus conocimientos adquiridos durante el modulo.
+            <br>
+            Al finalizar el examen, recuerde hacer click en enviar.
+        </p>
+        <form class="containerExam d-flex flex-wrap">
+            <div class="question">
+                <h4>1. ¿Pregunta 1?</h4>
+                <div class="options">
+                        <label for="pregunta1">¿Cuál es tu color favorito?</label><br>
+                        <input type="radio" id="color1" name="color" value="Rojo"> Rojo<br>
+                        <input type="radio" id="color2" name="color" value="Azul"> Azul<br>
+                        <input type="radio" id="color3" name="color" value="Verde"> Verde<br>
+                        <input type="radio" id="color4" name="color" value="Amarillo"> Amarillo<br>
+                </div>
+            </div>
+            <!-- Repite el bloque anterior para las demás preguntas -->
+            <div class="question">
+                <h4>2. ¿Pregunta 2?</h4>
+                <div class="options">
+                    <label for="pregunta2">¿Qué deporte prefieres?</label><br>
+                    <input type="radio" id="deporte1" name="deporte" value="Fútbol"> Fútbol<br>
+                    <input type="radio" id="deporte2" name="deporte" value="Baloncesto"> Baloncesto<br>
+                    <input type="radio" id="deporte3" name="deporte" value="Natación"> Natación<br>
+                    <input type="radio" id="deporte4" name="deporte" value="Correr"> Correr<br>
+                </div>
+            </div>
+            <div class="question">
+                <h4>3. ¿Pregunta 3?</h4>
+                <div class="options">
+                    <label for="pregunta3">¿Cuál es tu comida favorita?</label><br>
+                    <input type="radio" id="comida1" name="comida" value="Pizza"> Pizza<br>
+                    <input type="radio" id="comida2" name="comida" value="Sushi"> Sushi<br>
+                    <input type="radio" id="comida3" name="comida" value="Hamburguesa"> Hamburguesa<br>
+                    <input type="radio" id="comida4" name="comida" value="Tacos"> Tacos<br>
+                </div>
+            </div>
+            <div class="question">
+                <h4>4. ¿Pregunta 4?</h4>
+                <div class="options">
+                    <label for="pregunta4">¿Te gustan los animales?</label><br>
+                <input type="radio" id="animales1" name="animales" value="Sí"> Sí<br>
+                <input type="radio" id="animales2" name="animales" value="No"> No<br>
+                </div>
+            </div>
+            <div class="question">
+                <h4>5. ¿Pregunta 5?</h4>
+                <div class="options">
+                        <label for="pregunta5">¿Cuál es tu estación del año preferida?</label><br>
+                        <input type="radio" id="estacion1" name="estacion" value="Primavera"> Primavera<br>
+                        <input type="radio" id="estacion2" name="estacion" value="Verano"> Verano<br>
+                        <input type="radio" id="estacion3" name="estacion" value="Otoño"> Otoño<br>
+                        <input type="radio" id="estacion4" name="estacion" value="Invierno"> Invierno<br>
+                   
+                </div>
+            </div>
+            <div class="question">
+                <h4>6. ¿Pregunta 6?</h4>
+                <div class="options">
+                  
+                        <label for="pregunta5">¿Cuál es tu cancion preferida?</label><br>
+                        <input type="radio" id="cancion1" name="cancion" value="Castle of Glass"> Castle of Glass<br>
+                        <input type="radio" id="cancion2" name="cancion" value="Burn It Down"> Burn It Down<br>
+                        <input type="radio" id="cancion3" name="cancion" value="Breacking the habit"> Breacking the habit<br>
+                        <input type="radio" id="cancion4" name="cancion" value="Somewhere I belong"> Somewhere I belong<br>
+                   
+                </div>
+            </div>
+            <div class="question">
+                <h4>7. ¿Pregunta 7?</h4>
+                <div class="options">
+                    
+                        <label for="pregunta5">¿Cuál es tu banda preferida?</label><br>
+                        <input type="radio" id="banda1" name="banda" value="Linkin Park"> Linkin Park<br>
+                        <input type="radio" id="banda2" name="banda" value="Metallica"> Metallica<br>
+                        <input type="radio" id="banda3" name="banda" value="Muse"> Muse<br>
+                        <input type="radio" id="banda4" name="banda" value="Slipknot"> Slipknot<br>
+                    
+                </div>
+            </div>
+            <div class="question">
+                <h4>8. ¿Pregunta 8?</h4>
+                <div class="options">
+                   
+                        <label for="pregunta5">¿Cuál es tu pais preferido?</label><br>
+                        <input type="radio" id="pais1" name="pais" value="Mexico"> Mexico<br>
+                        <input type="radio" id="pais2" name="pais" value="Argentina"> Argentina<br>
+                        <input type="radio" id="pais3" name="pais" value="Peru"> Peru<br>
+                        <input type="radio" id="pais4" name="pais" value="Chile"> Chile<br>
+                   
+                </div>
+            </div>
+            <div class="question">
+                <h4>9. ¿Pregunta 9?</h4>
+                <div class="options">
+                  
+                        <label for="pregunta5">¿Cuál es tu ciudad preferida?</label><br>
+                        <input type="radio" id="ciudad1" name="ciudad" value="Munich"> Munich<br>
+                        <input type="radio" id="ciudad2" name="ciudad" value="Tokio"> Tokio<br>
+                        <input type="radio" id="ciudad3" name="ciudad" value="Madrid"> Madrid<br>
+                        <input type="radio" id="ciudad4" name="ciudad" value="Medellin"> Medellin<br>
+                   
+                </div>
+            </div>
+            <div class="question">
+                <h4>10. ¿Pregunta 10?</h4>
+                <div class="options">
+                  
+                        <label for="pregunta5">¿Cuál es tu libro predilecto?</label><br>
+                        <input type="radio" id="libro1" name="libro" value="Crimen y Castigo"> Crimen y Castigo<br>
+                        <input type="radio" id="libro2" name="libro" value="El carrusel"> El carrusel<br>
+                        <input type="radio" id="libro3" name="libro" value="Camino a la servidumbre"> Camino a la servidumbre<br>
+                        <input type="radio" id="libro4" name="libro" value="El olvido que seremos"> El olvido que seremos<br>
+                 
+                </div>
+            </div>
+            <!-- Agrega aquí las preguntas restantes -->
+            <button class="submit-button">ENVIAR</button>
+        </form>
+    </div>
+
+    <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div
+                    class="linksFooter d-flex justify-content-center align-items-center flex-wrap mt-3  col-1 col-sm-1 col-md-10 col-lg-12 col-xl-12">
+                    <a href="../vistas/encuestadesatisfaccion.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Encuesta de Satisfacción</a>
+                    <a href="../vistas/terminosycondiciones.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Términos y Condiciones</a>
+                    <a href="../vistas/politicasdeprivacidad.html"
+                        class="footerLink mb-2 mb-sm-0 col-12 col-sm-2 text-center">Políticas de Privacidad</a>
+                    <a href="../vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
+                </div>
+            </div>
+
+            <!-- Iconos de redes sociales -->
+            <div class="social-links iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-6">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank"><i id="brands" class="fa-brands fa-facebook-f mx-2"></i></a>
+                <a href="https://www.instagram.com/soulmiaacademy/profilecard/?igsh=eXI5OGw2djVueXIx" target="_blank"><i id="brands" class="fa-brands fa-instagram mx-2"></i></a>
+                <a href="https://www.youtube.com/@SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-youtube mx-2"></i></a>
+                <a href="https://t.me/SoulmiaAcademy" target="_blank"><i id="brands" class="fa-brands fa-telegram mx-2"></i></a>
+                <a href="https://wa.me/+57 3052329341" target="_blank"><i id="brands" class="fa-brands fa-whatsapp mx-2"></i></a>
+                <a href="https://www.tiktok.com/@soulmia.academy?_t=ZS-8xI627JPalE&_r=1" target="_blank"><i id="brands" class="fa-brands fa-tiktok mx-2"></i></a>
+            </div>
+            <h5 class="social-title siguenos text-center mt-2">¡Síguenos!</h5>
+
             <!-- Información de contacto -->
             <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
                 <address class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                    El Chagualo, Medellín, Antioquia, COLOMBIA
+                    <i class="bi bi-geo-alt-fill fs-5"> Chagualo, Medellín, Antioquia, COLOMBIA </i>
                 </address>
-                <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                    <i class="fa-regular fa-envelope"> soulmiacontacto@gmail.com </i><br>
-                    <i class="fa-solid fa-phone"> +57 305 232 9341 </i>
+                <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start text-white">
+                    <i class="bi bi-envelope-at-fill fs-5"> soulmiaacademy@gmail.com </i>
                 </div>
             </div>
-    
+
             <!-- Derechos de autor -->
             <p class="text-center mt-3">&copy; Since 2024</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/modulo1.js"></script>
 </body>
 </html>

@@ -35,11 +35,12 @@ p, span, a, li {
     min-width: 100vw;
     max-width: 100vw;
     box-sizing: border-box;
-    padding: 0 0.5rem;
+    padding: 1rem 1.5rem !important;
     background-color: var(--black) !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 120px !important;
 }
 
 .navbar {
@@ -47,12 +48,13 @@ p, span, a, li {
     display: flex;
     align-items: center;
     background-color: var(--black) !important;
-    padding: 0;
+    padding: 1rem 0 !important;
+    min-height: 100px !important;
 }
 
 .navbar-brand {
-    min-width: 120px;
-    max-width: 220px;
+    min-width: 150px;
+    max-width: 280px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -61,7 +63,7 @@ p, span, a, li {
 }
 
 .navbar-brand img {
-    max-height: 110px !important;
+    max-height: 140px !important;
     width: auto !important;
     margin: 0;
     padding: 0;
@@ -320,7 +322,7 @@ p, span, a, li {
     }
 
     .navbar-brand img {
-        max-height: 80px !important;
+        max-height: 100px !important;
     }
 }
 
