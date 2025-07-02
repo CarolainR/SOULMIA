@@ -2,72 +2,119 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/calificaciones.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Calificaciones📝</title>
-    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/calificaciones.css">
+    <title>SOULMIA🍸</title>
+    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
 </head>
-<body>
+<body class="bg-black">
     <!-- ENCABEZADO -->
-    <div class="header">
-        <div class="col-12 text-white text-center p-3">
-            <div class="greeting" id="greeting" style="display: none;">
-            <span id="welcomeMessage">Bienvenido/a, </span>
-            <span id="username"></span>
-            </div>
-        </div>
-           
-    <nav class="navbar navbar-expand-lg bg-none">
-            <div class="container">
-                    <a class="navbar-brand" href="./index.html">
-                      <img class="logo" src="../sources/Logo final febrero 2025.png"  alt="Logo Soulmia" style="max-height: 50px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+ <div class="header">
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center w-100">
+
+                    <!-- columna de logo -->
+
+                        <a class="navbar-brand d-flex" href="../index.html">
+                            <img class="logo" src="../sources/LOGO SOULMIA  1 JUL 25_Mesa de trabajo 1.png" alt="Logo Soulmia"
+                                style="max-height: 50px;">
+                        </a>
+
+                    <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
+                    <button class="navbar-toggler mx-auto " 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                     </button>
 
-                      <div class="collapse navbar-collapse text-white" id="navbarNav">
-                        <ul class="navbar-nav mx-auto ">
-                          <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/modulos.html">Módulos</a></li>
-                          <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/biblioteca.html">Biblioteca</a></li>
-                          <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/profesores.html">Profesores</a></li>
-                          <li class="nav-item mx-4"><a class="nav-link fs-4 text-white" href="./vistas/calificaciones.html">Calificaciones</a></li>
-                        </ul>
-                      </div>
-                      <div class="sectionRight">
+                   <!--  Links del Nav -->
+
+                    <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
+                        <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                        href="../vistas/modulos.html">Módulos</a></li>
+                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                        href="../vistas/biblioteca.html">Biblioteca</a></li>
+                                <li class="nav-item"><a class="nav-link3 fs-4 text-white"
+                                        href="../vistas/calificaciones.html">Calificaciones</a></li>
+                                <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
+                                        href="../vistas/dashboard.html">Dashboard</a></li>
+                                <li class="nav-item"><a class="nav-link5 fs-4 text-white"
+                                        href="../vistas/profesores.html">Profesores</a></li>
+                                <li class="nav-item"><a class="nav-link6 fs-4 text-white"
+                                        href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link7 fs-4 text-white"
+                                        href="../vistas/tienda.html">Tienda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Columna de icono de perfil y greeting -->
+                    <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
+
                         <!-- Menú desplegable de perfil -->
-                                <div class="profileMenu">
-                                    <span class="profileIcon" onclick="toggleProfileMenu()">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                    <div id="profileMenuContent" class="profileMenuContent">
-                                    <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
-                                    <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
-                                    <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                    </div>
+                        <div class="d-flex">
+                            <!-- fila de saludo -->
+
+                       
+                                <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
+                                    <span id="welcomeMessage"><span id="username"></span></span>
+
+                                </div>
+                         
+
+
+                            <!-- fila de icono de perfil y menu dropdown -->
+
+                            <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+                                <span class="profileIcon" onclick="toggleProfileMenu()">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <div id="profileMenuContent" class="profileMenuContent">
+                                    <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
                                 </div>
                             </div>
-            
-    </nav>
-          
+
+                        </div>
+
+                    </div>
+                </div>
+
+        </nav>
+
     </div>
-    <img class="banner" src="../sources/banner modulo 8_Mesa de trabajo 1.png">
-    <br>
+
+     <div class="banner-title-container">
+        <h2 class="calificaciones">CALIFICACIONES</h2>
+    </div>
 
 
 <div id="containerDescription mt-3 mb-3" class="container-fluid">
 
-    <p> En esta sesión, podras visualizar tus notas por modulo. La calificacion es de 1 a 10 con
-        milesimas (9.8). En cada recuadro hay un modulo donde se despliegan los temas en orden y 
+    <p class="descripcion-calificaciones"> En esta sesión, podras visualizar tus notas por modulo. 
+        La calificacion es de 1 a 10. En cada recuadro hay un modulo donde se despliegan los temas en orden y 
         despues de cada tema un cuadro con su respectiva nota. Si encuentras el cuadro en 0.0
-        es porque no se ha visto el modulo o esta pendiente por calificar
+        es porque no se ha visto el modulo o esta pendiente por calificar.
     </p>
 </div>
 <!-- Sección de botones y divs -->
@@ -76,32 +123,35 @@
         <div class="button-section">
             <button class="button1">MODOLULO 1</button>
             <div class="content">
-                <div><p>Origen e Historia de la Mixología</p> <div class="nota">0.0</div> </div>
-                <div><p>Evolución de la Cocteleria en Mixología</p> <div class="nota">0.0</div> </div>
-                <div><p>Herramientas y Partes de la Barra</p> <div class="nota">0.0</div> </div>
-                <div><p>Composicion de un cocktail</p> <div class="nota">0.0</div> </div>
-                <div><p>Importancia de la Cristalería</p> <div class="nota">0.0</div> </div>
-                <div><p>El Garnish</p> <div class="nota">0.0</div> </div>
+                <div><p>Historia de la Mixología</p> <div class="nota">0.0</div> </div>
+                <div><p>Composición de un cocktail</p> <div class="nota">0.0</div> </div>
+                <div><p>Tipos de bares</p> <div class="nota">0.0</div> </div>
+                <div><p>Servicio al cliente</p> <div class="nota">0.0</div> </div>
+                <div><p>Hiegiene Alimentaria</p> <div class="nota">0.0</div> </div>
+                <div><p>Mise en place</p> <div class="nota">0.0</div> </div>
+                <div><p>Ética, Filosofía y Psicología del bartender</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
         <div class="button-section">
             <button class="button2">MODOLULO 2</button>
             <div class="content">
-                <div><p>La Fermentación</p> <div class="nota">0.0</div> </div>
-                <div><p>La Destilación</p> <div class="nota">0.0</div> </div>
-                <div><p>Clasificación de Espirituosos</p> <div class="nota">0.0</div> </div>
-                <div><p>Los Licores</p> <div class="nota">0.0</div> </div>
-                <div><p>Syrups, Chirubs y Cordiales</p> <div class="nota">0.0</div> </div>
-                <div><p>Maceraciones, Fermentos y Aromatizaciones</p> <div class="nota">0.0</div> </div>
+                <div><p>Herramientas y su uso</p> <div class="nota">0.0</div> </div>
+                <div><p>Técnicas básicas de cocteleria</p> <div class="nota">0.0</div> </div>
+                <div><p>Clasific y Tipologia de los cocktails</p> <div class="nota">0.0</div> </div>
+                <div><p>Cristaleria y su función</p> <div class="nota">0.0</div> </div>
+                <div><p>Garnish y presentación</p> <div class="nota">0.0</div> </div>
+                <div><p>Estandarización y costeo básico</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
         <!-- Botón 3 -->
         <div class="button-section">
         <button class="button3">MODOLULO 3</button>
             <div class="content">
-                <div><p>Tecnicas Basicas de Coctelería</p> <div class="nota">0.0</div> </div>
-                <div><p>Tecnicas Modernas de Coctelería</p> <div class="nota">0.0</div> </div>
-                <div><p>Mixología Molecular y Sus Tecnicas</p> <div class="nota">0.0</div> </div>
+                <div><p>Espirituosos clasificación</p> <div class="nota">0.0</div> </div>
+                <div><p>Spirits/Destilados</p> <div class="nota">0.0</div> </div>
+                <div><p>Destilación básica</p> <div class="nota">0.0</div> </div>
+                <div><p>Cocteleria Clasica</p> <div class="nota">0.0</div> </div>
+                <div><p>Decoración, presentación y servicio</p> <div class="nota">0.0</div> </div>
             
             </div>
         </div>
@@ -109,46 +159,56 @@
         <div class="button-section">
             <button class="button4">MODOLULO 4</button>
             <div class="content">
-                <div><p>Clasificación y Tipologia de los Cocktails</p> <div class="nota">0.0</div> </div>
-                <div><p>Cocteleria Clasica y Moderna</p> <div class="nota">0.0</div> </div>
-                <div><p>Cocteleria Evolutiva y Reconstruida</p> <div class="nota">0.0</div> </div>
-                <div><p>Coctelería Conceptual</p> <div class="nota">0.0</div> </div>
-                <div><p>Coctelería Tiki y del Pacifico</p> <div class="nota">0.0</div> </div>
-                <div><p>Catas y Maridajes</p> <div class="nota">0.0</div> </div>
+                <div><p>Coctelería moderna, conceptual y tiki</p> <div class="nota">0.0</div> </div>
+                <div><p>Clasificación de licores compuestos y bitters</p> <div class="nota">0.0</div> </div>
+                <div><p>Cócteles de autor y creación guiada</p> <div class="nota">0.0</div> </div>
+                <div><p>Recetas contemporáneas IBA</p> <div class="nota">0.0</div> </div>
+                
             </div>
         </div>
         <!-- Botón 5 -->
         <div class="button-section">
             <button class="button5">MODOLULO 5</button>
             <div class="content">
-                <div><p>Estandarización y Costeo de Recetas</p> <div class="nota">0.0</div> </div>
-                <div><p>Inventarios</p> <div class="nota">0.0</div> </div>
-                <div><p>Ética y Decalogo del Bartender</p> <div class="nota">0.0</div></div>
-                <div><p>Las Mermas</p> <div class="nota">0.0</div> </div>
-                <div><p>Étiqueta y Protocolo</p> <div class="nota">0.0</div> </div>
+                <div><p>Escandallos, fichas técnicas</p> <div class="nota">0.0</div> </div>
+                <div><p>Inventarios, rotación, mermas </p> <div class="nota">0.0</div> </div>
+                <div><p>Branding del bartender</p> <div class="nota">0.0</div></div>
+                <div><p>Marketing de cocteles y eventos</p> <div class="nota">0.0</div> </div>
+                <div><p>Costeo real vs precio sugerido</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
         <!-- Botón 6 -->
         <div class="button-section">
             <button class="button6">MODOLULO 6</button>
             <div class="content">
-                <div><p>Historia, Tecnicas y Evolución del Flair Bartendering</p> <div class="nota">0.0</div> </div>
+                <div><p>Atención a extranjeros</p> <div class="nota">0.0</div> </div>
+                <div><p>Cultura y sabores del mundo</p> <div class="nota">0.0</div> </div>
+                <div><p>Catas y maridajes</p> <div class="nota">0.0</div> </div>
+                <div><p>Eventos temáticos y catering</p> <div class="nota">0.0</div> </div>
+                <div><p>The flair and craft bartendering</p> <div class="nota">0.0</div> </div>
+                <div><p>Premios IBA y competencias internacionales</p> <div class="nota">0.0</div> </div>
+                <div><p>Referentes globales</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
         <!-- Botón 7 -->
         <div class="button-section">
             <button class="button7">MODOLULO 7</button>
             <div class="content">
-                <div><p>Filosofía y Psicología detras de la barra</p> <div class="nota">0.0</div> </div>
-                <div><p>Competencias y Premios para Bartenders</p> <div class="nota">0.0</div> </div>
-                <div><p>Referentes Nacionales e Internacionales</p> <div class="nota">0.0</div> </div>
+                <div><p>Aromatizaciones, infusiones, maceraciones y fermentos</p> <div class="nota">0.0</div> </div>
+                <div><p>Sous vide y técnicas moleculares</p> <div class="nota">0.0</div> </div>
+                <div><p>Sensorialidad y storytelling</p> <div class="nota">0.0</div> </div>
+                <div><p>Desarrollo de un cóctel de autor con identidad y propósito</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
         <!-- Botón 8 -->
         <div class="button-section">
             <button class="button8">MODOLULO 8</button>
             <div class="content">
-                <div><p>Proyecto Final</p> <div class="nota">0.0</div> </div>
+                <div><p>Uso de ingredientes locales y de temporada</p> <div class="nota">0.0</div> </div>
+                <div><p>Fermentaciones caseras</p> <div class="nota">0.0</div> </div>
+                <div><p>Zero waste: aprovechamiento integral</p> <div class="nota">0.0</div> </div>
+                <div><p>Syrups, shrubs, cordiales y bitters artesanales</p> <div class="nota">0.0</div> </div>
+                <div><p>Desarrollo de carta creativa sostenible</p> <div class="nota">0.0</div> </div>
             </div>
         </div>
     </div>
@@ -167,7 +227,6 @@
                 <a href="./vistas/pqr.html" class="footerLink mb-2  col-12 col-sm-2 text-center">PQR</a>
             </div>
         </div>
-
         <!-- Iconos de redes sociales -->
         <div class="iconsBrands d-flex justify-content-center align-items-center flex-wrap mt-3">
             <i id="brands" class="fa-brands fa-facebook-f mx-2"></i>
@@ -179,18 +238,16 @@
             <i id="brands" class="fa-brands fa-whatsapp mx-2"></i>
         </div>
         <p class="text-center mt-2">¡Síguenos!</p>
-
         <!-- Información de contacto -->
         <div class="infoFooter d-flex justify-content-between flex-wrap mt-3">
             <address class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                El Chagualo, Medellín, Antioquia, COLOMBIA
+                <i class="fa-solid fa-location-dot"></i> El Chagualo, Medellín, Antioquia, COLOMBIA
             </address>
             <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start">
-                <i class="fa-regular fa-envelope"> soulmiacontacto@gmail.com </i><br>
-                <i class="fa-solid fa-phone"> +57 305 232 9341 </i>
+                <i class="fa-regular fa-envelope"></i> soulmiacontacto@gmail.com <br>
+                <i class="fa-solid fa-phone"></i> +57 305 232 9341
             </div>
         </div>
-
         <!-- Derechos de autor -->
         <p class="text-center mt-3">&copy; Since 2024</p>
     </div>
