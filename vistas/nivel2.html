@@ -22,6 +22,15 @@
     <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
 </head>
 <body class="bg-black">
+<script>
+  if (localStorage.getItem('repetirExamenModulo3') !== 'false') {
+    document.body.innerHTML = '<div style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#18122B;color:#fff;font-size:2rem;text-align:center;">' +
+      '<i class="fa-solid fa-lock" style="font-size:4rem;color:#BF0C73;"></i><br>' +
+      'Este nivel está bloqueado.<br>Debes aprobar el examen del Módulo 3 para acceder a este nivel.' +
+      '</div>';
+    document.body.style.overflow = 'hidden';
+  }
+</script>
     <!-- Header -->
     <div class="header">
       <nav class="navbar navbar-expand-lg navbar-dark bg-none">

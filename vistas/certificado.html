@@ -2,57 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu Certificado - Soulmia</title>
+    <title>Tu Certificado Soulmia</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/certificado.css">
 </head>
 <body>
     
-    <div class="certificate-buttons">
-        <button class="download-btn" onclick="generatePDF('bartender')">Certificado Bartender Profesional</button>
-        <button class="download-btn" onclick="generatePDF('internacional')">Certificado Bartender Internacional</button>
-        <button class="download-btn" onclick="generatePDF('mixologo')">Certificado Mixólogo</button>
-    </div>
-
     <div class="certificate-container">
         <div id="certificate" class="certificate">
             <div class="logos">
-                <img src="../sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Soulmia">
-                
+                <img src="../sources/LOGO SOULMIA  3 JUL 25_Mesa de trabajo 1.png" alt="Soulmia">
             </div>
-
             <h1>Soulmia Academy</h1>
             <h2 id="curso-titulo">Bartendering Mastery: De aprendiz a mixólogo</h2>
-
             <div class="content">
-                <p><strong>Colombia – Medellín</strong></p>
                 <p>Certifica a</p>
                 <div class="student-name" id="nombre-estudiante">[Nombre del estudiante]</div>
-                <p>por haber culminado el curso de <strong id="tipo-curso">bartender profesional</strong> en <span id="horas-curso">80</span> horas</p>
-                <p>desde <strong id="fecha-inicio">[Fecha de inicio]</strong> hasta <strong id="fecha-fin">[Fecha de finalización]</strong>.</p>
-                <p>Este curso fue dirigido por el MOOC de Soulmia Academy bajo los parámetros y lineamientos educativos de la IBA y el Ministerio de Educación Colombiano.</p>
-
+                <p>por haber culminado el curso de <strong id="tipo-curso">bartender profesional</strong> en <span id="horas-curso">30</span> horas</p>
+                <p>acumulando</p><p><span id="tiempo-acumulado">00:00:00</span></p><p>en linea</p>
+                <p>Este curso fue dirigido por el MOOC de Soulmia Academy bajo los parámetros y lineamientos educativos de la IBA.</p>
                 <div class="location-date">Expedido en Medellín, Colombia</div>
-            </div>
-
-            <div class="signatures">
-                <div class="signature-box">
-                    <div class="signature-line"></div>
-                    <p>Carolain Rincón<br><em>Directora Legal</em></p>
-                </div>
-                <div class="signature-box">
-                    <div class="signature-line"></div>
-                    <p>Firma del estudiante</p>
+                <div class="location-date"><span id="fecha-descarga"></span></div>
+                <div class="firma-directora" style="text-align:center; margin-top:60px;">
+                  <div style="height:40px;"></div>
+                  <div style="width:220px; margin:0 auto 10px auto; border-top:2px solid #000;"></div>
+                  <div style="font-weight:bold; margin-top:10px;">Carolain Rincón</div>
+                  <div><em>Directora Legal</em></div>
                 </div>
             </div>
+            <div class="signatures"></div>
         </div>
     </div>
-
+    <div class="certificate-buttons">
+        <button class="download-btn" id="btn-nivel1" onclick="handleBtnClick('bartender')">Certificado Bartender Profesional</button>
+        <button class="download-btn" id="btn-nivel2" onclick="handleBtnClick('internacional')">Certificado Bartender Internacional</button>
+        <button class="download-btn" id="btn-nivel3" onclick="handleBtnClick('mixologo')">Certificado Mixólogo</button>
+    </div>
 
     <script>
         // Función para cargar datos del estudiante (simulando una base de datos)
-        function loadStudentData() {
-            // Aquí se conectaría con tu base de datos real
+        function loadStudentData(nombreManual) {
+            if (nombreManual) {
+                return {
+                    nombre: nombreManual,
+                    fechaInicio: "01/01/2024",
+                    fechaFin: "01/03/2024"
+                };
+            }
             return {
                 nombre: "Juan Pérez",
                 fechaInicio: "01/01/2024",
@@ -60,9 +56,46 @@
             };
         }
 
+        // manejar los clicks de los botones
+        function handleBtnClick(tipo) {
+            const btnNivel1 = document.getElementById('btn-nivel1');
+            const btnNivel2 = document.getElementById('btn-nivel2');
+            const btnNivel3 = document.getElementById('btn-nivel3');
+            if (tipo === 'bartender') {
+                if (btnNivel1.classList.contains('bloqueado')) {
+                    alert('Debes aprobar el examen para obtener el certificado de bartender profesional.');
+                    return;
+                }
+                askNameAndGenerate(tipo);
+            } else if (tipo === 'internacional') {
+                if (btnNivel2.classList.contains('bloqueado')) {
+                    alert('Debes aprobar el examen 6 para obtener el certificado de bartender internacional.');
+                    return;
+                }
+                askNameAndGenerate(tipo);
+            } else if (tipo === 'mixologo') {
+                if (btnNivel3.classList.contains('bloqueado')) {
+                    alert('Debes aprobar el examen 8 del módulo 8 para obtener el certificado de mixólogo.');
+                    return;
+                }
+                askNameAndGenerate(tipo);
+            }
+        }
+
+        // Función para pedir el nombre y generar el PDF
+        function askNameAndGenerate(tipo) {
+            let nombre = prompt('Por favor, ingresa tu nombre completo para el certificado:');
+            if (!nombre || nombre.trim().length < 3) {
+                alert('Debes ingresar un nombre válido.');
+                return;
+            }
+            window._nombreCertificado = nombre;
+            generatePDF(tipo);
+        }
+
         // Función para generar el PDF según el tipo de certificado
         function generatePDF(tipo) {
-            const studentData = loadStudentData();
+            const studentData = loadStudentData(window._nombreCertificado);
             document.getElementById('nombre-estudiante').textContent = studentData.nombre;
             document.getElementById('fecha-inicio').textContent = studentData.fechaInicio;
             document.getElementById('fecha-fin').textContent = studentData.fechaFin;
@@ -97,19 +130,66 @@
             html2pdf().set(opt).from(element).save();
         }
 
-        // Cargar header y footer
+        // Lógica para habilitar/deshabilitar botones según progreso
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                });
+            // Obtener usuario loggeado
+            let user = null;
+            if (localStorage.getItem('loggedIn') === 'true' && localStorage.getItem('user')) {
+                user = JSON.parse(localStorage.getItem('user'));
+            }
+            // Nivel 1: aprobadoExamenModulo1 o aprobadoExamenModulo3
+            const aprobadoExamen1 = localStorage.getItem('repetirExamenModulo1') === 'false';
+            const aprobadoExamen3 = localStorage.getItem('repetirExamenModulo3') === 'false';
+            const btnNivel1 = document.getElementById('btn-nivel1');
+            if (aprobadoExamen1 || aprobadoExamen3) {
+                btnNivel1.classList.remove('bloqueado');
+            } else {
+                btnNivel1.classList.add('bloqueado');
+            }
+            // Nivel 2: aprobadoExamenModulo6
+            const aprobadoExamen6 = localStorage.getItem('repetirExamenModulo6') === 'false';
+            // Nivel 3: aprobadoExamenModulo8
+            const aprobadoExamen8 = localStorage.getItem('repetirExamenModulo8') === 'false';
+            // Botones
+            const btnNivel2 = document.getElementById('btn-nivel2');
+            const btnNivel3 = document.getElementById('btn-nivel3');
+            if (aprobadoExamen6) {
+                btnNivel2.classList.remove('bloqueado');
+            } else {
+                btnNivel2.classList.add('bloqueado');
+            }
+            if (aprobadoExamen8) {
+                btnNivel3.classList.remove('bloqueado');
+            } else {
+                btnNivel3.classList.add('bloqueado');
+            }
 
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
+            // Mostrar tiempo acumulado en el certificado
+            let userKey = null;
+            if (user && (user.email || user.user || user.fullName)) {
+                userKey = user.email || user.user || user.fullName;
+            }
+            function formatTime(ms) {
+                const totalSeconds = Math.floor(ms / 1000);
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+                return `${hours.toString().padStart(2, '0')}:${minutes
+                    .toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            if (userKey) {
+                const tiempoGuardado = localStorage.getItem('tiempoEnLinea_' + userKey);
+                const tiempoMs = tiempoGuardado ? parseInt(tiempoGuardado, 10) : 0;
+                document.getElementById('tiempo-acumulado').textContent = formatTime(tiempoMs);
+            }
+
+            // Mostrar la fecha actual de descarga
+            const fechaDescarga = document.getElementById('fecha-descarga');
+            if (fechaDescarga) {
+                const hoy = new Date();
+                const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+                fechaDescarga.textContent = hoy.toLocaleDateString('es-CO', opciones);
+            }
         });
     </script>
 </body>

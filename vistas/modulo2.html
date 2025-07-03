@@ -9,7 +9,16 @@
     <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
 
 </head>
-<body>
+<body class="bg-black">
+<script>
+  if (localStorage.getItem('repetirExamenModulo1') !== 'false') {
+    document.body.innerHTML = '<div style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#18122B;color:#fff;font-size:2rem;text-align:center;">' +
+      '<i class="fa-solid fa-lock" style="font-size:4rem;color:#BF0C73;"></i><br>' +
+      'Este módulo está bloqueado.<br>Debes aprobar el examen del Módulo 1 para acceder al Módulo 2.' +
+      '</div>';
+    document.body.style.overflow = 'hidden';
+  }
+</script>
                <!-- saludo logeado -->
 
                <div class="container-fluid p-0">

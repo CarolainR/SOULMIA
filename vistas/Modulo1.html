@@ -42,9 +42,9 @@
                 <li class="nav-item"><a class="biblioteca nav-link2 fs-4 text-white" href="../vistas/biblioteca.html">Biblioteca</a></li>
                 <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white" href="../vistas/calificaciones.html">Calificaciones</a></li>
                 <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white" href="../vistas/dashboard.html">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link5 fs-4 text-white" href="../vistas/profesores.html">Profesores</a></li>
+               <!-- <li class="nav-item"><a class="nav-link5 fs-4 text-white" href="../vistas/profesores.html">Profesores</a></li>-->
                 <li class="nav-item"><a class="nav-link6 fs-4 text-white" href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link7 fs-4 text-white" href="../vistas/tienda.html">Tienda</a></li>
+                <!--<li class="nav-item"><a class="nav-link7 fs-4 text-white" href="../vistas/tienda.html">Tienda</a></li>-->
               </ul>
             </div>
           </div>
@@ -114,9 +114,9 @@
             <p class="parrafo-sesion">Aprende los elementos esenciales que conforman un cóctel: bases alcohólicas, modificadores, saborizantes y decoración. Descubre el equilibrio entre aroma, sabor y presentación.</p>
             <img src="../sources/composicion de un cocktail parte 2_Mesa de trabajo 1.png" alt="Composición de cocktail 1" class="img-fluid my-2 shadow-tema-modulo1 img-70">
             <img src="../sources/composicion de un cocktail parte 1_Mesa de trabajo 1.png" alt="Composición de cocktail 2" class="img-fluid my-2 shadow-tema-modulo1 img-70">
-            <div class="ratio ratio-16x9 my-3 shadow-tema-modulo1">
+            <!--<div class="ratio ratio-16x9 my-3 shadow-tema-modulo1">
                 <iframe src="https://www.youtube.com/embed/8lR7o6eQFfA" title="Video de composición de cocktail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            </div>-->
         </div>
         <div class="tema-modulo1" id="tipos-bares-organizacion">
             <hr class="separador-sesion">
@@ -257,129 +257,16 @@
         </div>
     </div>
 
+    <!-- Botón para iniciar el examen -->
+    <div class="text-center my-5" id="start-exam-section">
+        <button id="startExamBtn" class="btn btn-lg btn-primary" style="font-size:2rem;padding:1em 2em;box-shadow:0 0 16px #8031B6;">INICIAR EXAMEN DEL MÓDULO 1</button>
+    </div>
+
     <!-- Examen del módulo 1 -->
-    <div class="examen-modulo1-wrapper" style="width:70%;margin:0 auto;">
+    <div class="examen-modulo1-wrapper" id="examWrapper" style="width:70%;margin:0 auto;display:none;">
         <h1>EXAMEN DEL MODULO 1</h1>
-        <p class="parrafoExam">Este examen consta de 10 preguntas con multiples respuestas,
-             en las que solo hay una respuesta verdadera.
-             <br>
-            Debera elegir la respuesta correcta segun sus conocimientos adquiridos durante el modulo.
-            <br>
-            Al finalizar el examen, recuerde hacer click en enviar.
-        </p>
-        <form class="containerExam d-flex flex-wrap">
-            <div class="question">
-                <h4>1. ¿Pregunta 1?</h4>
-                <div class="options">
-                        <label for="pregunta1">¿Cuál es tu color favorito?</label><br>
-                        <input type="radio" id="color1" name="color" value="Rojo"> Rojo<br>
-                        <input type="radio" id="color2" name="color" value="Azul"> Azul<br>
-                        <input type="radio" id="color3" name="color" value="Verde"> Verde<br>
-                        <input type="radio" id="color4" name="color" value="Amarillo"> Amarillo<br>
-                </div>
-            </div>
-            <!-- Repite el bloque anterior para las demás preguntas -->
-            <div class="question">
-                <h4>2. ¿Pregunta 2?</h4>
-                <div class="options">
-                    <label for="pregunta2">¿Qué deporte prefieres?</label><br>
-                    <input type="radio" id="deporte1" name="deporte" value="Fútbol"> Fútbol<br>
-                    <input type="radio" id="deporte2" name="deporte" value="Baloncesto"> Baloncesto<br>
-                    <input type="radio" id="deporte3" name="deporte" value="Natación"> Natación<br>
-                    <input type="radio" id="deporte4" name="deporte" value="Correr"> Correr<br>
-                </div>
-            </div>
-            <div class="question">
-                <h4>3. ¿Pregunta 3?</h4>
-                <div class="options">
-                    <label for="pregunta3">¿Cuál es tu comida favorita?</label><br>
-                    <input type="radio" id="comida1" name="comida" value="Pizza"> Pizza<br>
-                    <input type="radio" id="comida2" name="comida" value="Sushi"> Sushi<br>
-                    <input type="radio" id="comida3" name="comida" value="Hamburguesa"> Hamburguesa<br>
-                    <input type="radio" id="comida4" name="comida" value="Tacos"> Tacos<br>
-                </div>
-            </div>
-            <div class="question">
-                <h4>4. ¿Pregunta 4?</h4>
-                <div class="options">
-                    <label for="pregunta4">¿Te gustan los animales?</label><br>
-                <input type="radio" id="animales1" name="animales" value="Sí"> Sí<br>
-                <input type="radio" id="animales2" name="animales" value="No"> No<br>
-                </div>
-            </div>
-            <div class="question">
-                <h4>5. ¿Pregunta 5?</h4>
-                <div class="options">
-                        <label for="pregunta5">¿Cuál es tu estación del año preferida?</label><br>
-                        <input type="radio" id="estacion1" name="estacion" value="Primavera"> Primavera<br>
-                        <input type="radio" id="estacion2" name="estacion" value="Verano"> Verano<br>
-                        <input type="radio" id="estacion3" name="estacion" value="Otoño"> Otoño<br>
-                        <input type="radio" id="estacion4" name="estacion" value="Invierno"> Invierno<br>
-                   
-                </div>
-            </div>
-            <div class="question">
-                <h4>6. ¿Pregunta 6?</h4>
-                <div class="options">
-                  
-                        <label for="pregunta5">¿Cuál es tu cancion preferida?</label><br>
-                        <input type="radio" id="cancion1" name="cancion" value="Castle of Glass"> Castle of Glass<br>
-                        <input type="radio" id="cancion2" name="cancion" value="Burn It Down"> Burn It Down<br>
-                        <input type="radio" id="cancion3" name="cancion" value="Breacking the habit"> Breacking the habit<br>
-                        <input type="radio" id="cancion4" name="cancion" value="Somewhere I belong"> Somewhere I belong<br>
-                   
-                </div>
-            </div>
-            <div class="question">
-                <h4>7. ¿Pregunta 7?</h4>
-                <div class="options">
-                    
-                        <label for="pregunta5">¿Cuál es tu banda preferida?</label><br>
-                        <input type="radio" id="banda1" name="banda" value="Linkin Park"> Linkin Park<br>
-                        <input type="radio" id="banda2" name="banda" value="Metallica"> Metallica<br>
-                        <input type="radio" id="banda3" name="banda" value="Muse"> Muse<br>
-                        <input type="radio" id="banda4" name="banda" value="Slipknot"> Slipknot<br>
-                    
-                </div>
-            </div>
-            <div class="question">
-                <h4>8. ¿Pregunta 8?</h4>
-                <div class="options">
-                   
-                        <label for="pregunta5">¿Cuál es tu pais preferido?</label><br>
-                        <input type="radio" id="pais1" name="pais" value="Mexico"> Mexico<br>
-                        <input type="radio" id="pais2" name="pais" value="Argentina"> Argentina<br>
-                        <input type="radio" id="pais3" name="pais" value="Peru"> Peru<br>
-                        <input type="radio" id="pais4" name="pais" value="Chile"> Chile<br>
-                   
-                </div>
-            </div>
-            <div class="question">
-                <h4>9. ¿Pregunta 9?</h4>
-                <div class="options">
-                  
-                        <label for="pregunta5">¿Cuál es tu ciudad preferida?</label><br>
-                        <input type="radio" id="ciudad1" name="ciudad" value="Munich"> Munich<br>
-                        <input type="radio" id="ciudad2" name="ciudad" value="Tokio"> Tokio<br>
-                        <input type="radio" id="ciudad3" name="ciudad" value="Madrid"> Madrid<br>
-                        <input type="radio" id="ciudad4" name="ciudad" value="Medellin"> Medellin<br>
-                   
-                </div>
-            </div>
-            <div class="question">
-                <h4>10. ¿Pregunta 10?</h4>
-                <div class="options">
-                  
-                        <label for="pregunta5">¿Cuál es tu libro predilecto?</label><br>
-                        <input type="radio" id="libro1" name="libro" value="Crimen y Castigo"> Crimen y Castigo<br>
-                        <input type="radio" id="libro2" name="libro" value="El carrusel"> El carrusel<br>
-                        <input type="radio" id="libro3" name="libro" value="Camino a la servidumbre"> Camino a la servidumbre<br>
-                        <input type="radio" id="libro4" name="libro" value="El olvido que seremos"> El olvido que seremos<br>
-                 
-                </div>
-            </div>
-            <!-- Agrega aquí las preguntas restantes -->
-            <button class="submit-button">ENVIAR</button>
+        <p class="parrafoExam">Este examen consta de 10 preguntas con múltiples respuestas, en las que solo hay una respuesta verdadera.<br>Deberá elegir la respuesta correcta según sus conocimientos adquiridos durante el módulo.<br>Al finalizar el examen, recuerde hacer click en enviar.</p>
+        <form id="examForm" class="containerExam d-flex flex-column align-items-center justify-content-center">
         </form>
     </div>
 

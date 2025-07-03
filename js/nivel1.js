@@ -47,4 +47,26 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link) link.style.display = 'none';
         });
     }
+
+    // Lógica para mostrar el estado de la card del módulo 1
+    const estadoCompletado = document.getElementById('estado-modulo7');
+    const estadoProgreso = document.getElementById('estado-modulo7-progreso');
+    // Por compatibilidad, buscar también en el resto de la página
+    // Si el usuario está logueado, mostrar el estado correspondiente
+    if (isLoggedIn) {
+        // Si el usuario ya aprobó el examen 1
+        const aprobadoExamen1 = localStorage.getItem('repetirExamenModulo1') === 'false';
+        if (aprobadoExamen1) {
+            if (estadoCompletado) estadoCompletado.style.display = 'block';
+            if (estadoProgreso) estadoProgreso.style.display = 'none';
+        } else {
+            // Si no ha aprobado, mostrar "En progreso"
+            if (estadoCompletado) estadoCompletado.style.display = 'none';
+            if (estadoProgreso) estadoProgreso.style.display = 'block';
+        }
+    } else {
+        // Si no está logueado, ocultar ambos estados
+        if (estadoCompletado) estadoCompletado.style.display = 'none';
+        if (estadoProgreso) estadoProgreso.style.display = 'none';
+    }
 }); 

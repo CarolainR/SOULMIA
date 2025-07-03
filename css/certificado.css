@@ -12,7 +12,7 @@
         }
 
         .certificate {
-            border: 10px solid #d4af37;
+            border: 10px solid #8031B6;
             padding: 40px;
             max-width: 900px;
             margin: auto;
@@ -22,18 +22,22 @@
 
         .logos {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
         }
 
         .logos img {
-            height: 60px;
+            height: 160px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
 
         h1 {
             text-align: center;
             font-size: 28px;
-            color: #333;
+            color: #8031B6;
             margin-bottom: 5px;
         }
 
@@ -41,15 +45,24 @@
             text-align: center;
             font-weight: normal;
             font-size: 20px;
-            color: #666;
+            color: #8031B6;
             margin-bottom: 40px;
+        }
+
+        h2#curso-titulo {
+            color: #000 !important;
         }
 
         .content {
             font-size: 18px;
             line-height: 1.6;
             text-align: center;
-            color: #333;
+            color: #8031B6;
+        }
+
+        .content p:first-child {
+            color: #000 !important;
+            font-weight: 500;
         }
 
         .student-name {
@@ -57,7 +70,7 @@
             font-size: 30px;
             font-weight: bold;
             margin: 20px 0;
-            color: #000;
+            color: #8031B6;
         }
 
         .signatures {
@@ -80,7 +93,7 @@
         .location-date {
             margin-top: 30px;
             font-size: 16px;
-            color: #777;
+            color: #8031B6;
         }
 
         .certificate-buttons {
@@ -90,14 +103,32 @@
 
         .download-btn {
             padding: 10px 20px;
-            background-color: #d4af37;
+            background-color: #BF0C73;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s, color 0.2s;
         }
 
         .download-btn:hover {
-            background-color: #b8941f;
+            background-color: #8031B6;
+            color: #fff;
+        }
+
+        .download-btn.bloqueado {
+            background-color: #ccc;
+            color: #888;
+            cursor: not-allowed;
+            border: none;
+            opacity: 0.7;
+            pointer-events: auto;
+        }
+
+        .content p,
+        #tiempo-acumulado {
+            color: #000 !important;
         }

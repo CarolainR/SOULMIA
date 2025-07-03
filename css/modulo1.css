@@ -362,7 +362,25 @@ p, span, a, li {
 
 /* Greeting */
 #greeting {
-    display: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #18122B;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.3em 1em;
+    margin-left: 1em;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 0 8px #8031B6, 0 0 16px #8031B6;
+    min-width: 120px;
+    min-height: 36px;
+    transition: all 0.3s;
+}
+#greeting span {
+    color: #BF0C73;
+    font-weight: 700;
+    margin-left: 0.3em;
 }
 
 /* Footer */
@@ -997,4 +1015,20 @@ html, body {
 }
 .img-portada-pdf:hover {
     opacity: 0.8;
+}
+
+/* Animaciones para preguntas del examen */
+.animated-question {
+    opacity: 1;
+    transition: opacity 0.4s, transform 0.4s;
+}
+.fade-out {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s, transform 0.4s;
 }
