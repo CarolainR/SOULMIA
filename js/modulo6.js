@@ -117,8 +117,13 @@ function capturarRespuestas(){
             if(acumulado >= 7){
 
                 console.log("Ganaste el examen😀");
-                user.progreso += 12.5
+                user.progreso = Math.max(user.progreso || 0, 75); // 75% para el sexto módulo
                 localStorage.setItem("user",JSON.stringify(user))
+                // Guardar flag de examen aprobado para certificados
+                localStorage.setItem('repetirExamenModulo6', 'false');
+                if (window.actualizarProgresoDashboard) {
+                    window.actualizarProgresoDashboard();
+                }
             }else{
                 console.log("Debes repetir el examen 😭")
             }

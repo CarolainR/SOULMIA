@@ -119,6 +119,9 @@ function capturarRespuestas(){
                 console.log("Ganaste el examen😀");
                 user.progreso += 12.5
                 localStorage.setItem("user",JSON.stringify(user))
+                if (window.actualizarProgresoDashboard) {
+                    window.actualizarProgresoDashboard();
+                }
             }else{
                 console.log("Debes repetir el examen 😭")
             }

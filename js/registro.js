@@ -12,21 +12,31 @@ document.getElementById('registerBtn').addEventListener('click', function() {
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
+    // Inicializar progreso de módulos
+    const progresoModulos = {
+        1: 'desbloqueado',
+        2: 'bloqueado',
+        3: 'bloqueado',
+        4: 'bloqueado',
+        5: 'bloqueado',
+        6: 'bloqueado',
+        7: 'bloqueado',
+        8: 'bloqueado'
+    };
 
-    //usamos .push para agregar elementos al array <user> del localstorage
-
-    usuarios.push( {fullName: fullName,
+    usuarios.push({
+        fullName: fullName,
         email: email,
-        progreso: 0,
         password: password,
         userLogged: false,
-        progreso: 0})
+        progreso: 0,
+        progresoModulos: progresoModulos
+    });
 
     // Guardar datos en localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-
     alert('Registro exitoso');
-window.location.href = './login.html';
+    window.location.href = './login.html';
 });
 

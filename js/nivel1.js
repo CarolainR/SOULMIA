@@ -51,22 +51,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lógica para mostrar el estado de la card del módulo 1
     const estadoCompletado = document.getElementById('estado-modulo7');
     const estadoProgreso = document.getElementById('estado-modulo7-progreso');
-    // Por compatibilidad, buscar también en el resto de la página
-    // Si el usuario está logueado, mostrar el estado correspondiente
+
+    // Lógica para bloquear el acceso al módulo 2
+    const btnModulo2 = document.querySelector('a[href="../vistas/modulo2.html"]');
+    const cardModulo2 = btnModulo2 ? btnModulo2.closest('.modulo-card-n1') : null;
+    const estadoBloqueadoModulo2 = cardModulo2 ? cardModulo2.querySelector('.estado-bloqueado') : null;
+
     if (isLoggedIn) {
-        // Si el usuario ya aprobó el examen 1
-        const aprobadoExamen1 = localStorage.getItem('repetirExamenModulo1') === 'false';
-        if (aprobadoExamen1) {
+        // Leer usuario activo y su progreso
+        const user = JSON.parse(localStorage.getItem('user'));
+        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        const usuarioActivo = usuarios.find(u => u.email === user.email);
+        let estadoModulo1 = usuarioActivo && usuarioActivo.progresoModulos ? usuarioActivo.progresoModulos[1] : null;
+        let estadoModulo2 = usuarioActivo && usuarioActivo.progresoModulos ? usuarioActivo.progresoModulos[2] : null;
+
+        if (estadoModulo1 === 'completado') {
             if (estadoCompletado) estadoCompletado.style.display = 'block';
             if (estadoProgreso) estadoProgreso.style.display = 'none';
+            // Habilitar acceso a módulo 2
+            if (btnModulo2) {
+                btnModulo2.classList.remove('disabled');
+                btnModulo2.style.pointerEvents = '';
+                btnModulo2.style.opacity = '';
+                btnModulo2.href = '../vistas/modulo2.html';
+            }
+            if (estadoBloqueadoModulo2) estadoBloqueadoModulo2.style.display = 'none';
         } else {
-            // Si no ha aprobado, mostrar "En progreso"
+            // Bloquear acceso a módulo 2
+            if (btnModulo2) {
+                btnModulo2.classList.add('disabled');
+                btnModulo2.style.pointerEvents = 'none';
+                btnModulo2.style.opacity = '0.5';
+                btnModulo2.removeAttribute('href');
+            }
+            if (estadoBloqueadoModulo2) estadoBloqueadoModulo2.style.display = 'block';
+        }
+
+        if (estadoModulo1 === 'en-progreso') {
             if (estadoCompletado) estadoCompletado.style.display = 'none';
             if (estadoProgreso) estadoProgreso.style.display = 'block';
+        } else if (estadoModulo1 !== 'completado') {
+            if (estadoCompletado) estadoCompletado.style.display = 'none';
+            if (estadoProgreso) estadoProgreso.style.display = 'none';
         }
     } else {
-        // Si no está logueado, ocultar ambos estados
+        // Si no está logueado, ocultar ambos estados y bloquear módulo 2
         if (estadoCompletado) estadoCompletado.style.display = 'none';
         if (estadoProgreso) estadoProgreso.style.display = 'none';
+        if (btnModulo2) {
+            btnModulo2.classList.add('disabled');
+            btnModulo2.style.pointerEvents = 'none';
+            btnModulo2.style.opacity = '0.5';
+            btnModulo2.removeAttribute('href');
+        }
+        if (estadoBloqueadoModulo2) estadoBloqueadoModulo2.style.display = 'block';
     }
 }); 

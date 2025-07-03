@@ -117,8 +117,11 @@ function capturarRespuestas(){
             if(acumulado >= 7){
 
                 console.log("Ganaste el examen😀");
-                user.progreso += 12.5
+                user.progreso = Math.max(user.progreso || 0, 37.5); // 37.5% para el tercer módulo
                 localStorage.setItem("user",JSON.stringify(user))
+                if (window.actualizarProgresoDashboard) {
+                    window.actualizarProgresoDashboard();
+                }
             }else{
                 console.log("Debes repetir el examen 😭")
             }

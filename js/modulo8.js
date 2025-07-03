@@ -119,6 +119,15 @@ function capturarRespuestas(){
                 console.log("Ganaste el examen😀");
                 user.progreso += 12.5
                 localStorage.setItem("user",JSON.stringify(user))
+                // Guardar flag de examen aprobado para certificados
+                localStorage.setItem('repetirExamenModulo8', 'false');
+                if (user) {
+                    user.progreso = 100; // 100% para el octavo módulo
+                    localStorage.setItem('user', JSON.stringify(user));
+                }
+                if (window.actualizarProgresoDashboard) {
+                    window.actualizarProgresoDashboard();
+                }
             }else{
                 console.log("Debes repetir el examen 😭")
             }

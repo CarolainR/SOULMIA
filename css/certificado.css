@@ -1,134 +1,181 @@
-        body{margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        .certificate-container {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #f5f5f5;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .certificate {
-            border: 10px solid #8031B6;
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
-        }
+.certificate-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
 
-        .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-        }
+.certificate {
+    width: 900px;
+    height: 636px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0;
+    /* border: 5mm solid #8031B6; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
 
-        .logos img {
-            height: 160px;
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
+.certificate-main {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+}
 
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            color: #8031B6;
-            margin-bottom: 5px;
-        }
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
-        h2 {
-            text-align: center;
-            font-weight: normal;
-            font-size: 20px;
-            color: #8031B6;
-            margin-bottom: 40px;
-        }
+.logos img {
+    height: 110px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
 
-        h2#curso-titulo {
-            color: #000 !important;
-        }
+h1 {
+    text-align: center;
+    font-size: 16px;
+    color: #8031B6;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
 
-        .content {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: center;
-            color: #8031B6;
-        }
+h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 13px;
+    color: #8031B6;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+}
 
-        .content p:first-child {
-            color: #000 !important;
-            font-weight: 500;
-        }
+h2#curso-titulo {
+    color: #000 !important;
+}
 
-        .student-name {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 30px;
-            font-weight: bold;
-            margin: 20px 0;
-            color: #8031B6;
-        }
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    text-align: center;
+    color: #8031B6;
+}
 
-        .signatures {
-            margin-top: 60px;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 50px;
-        }
+.content p:first-child {
+    color: #000 !important;
+    font-weight: 500;
+}
 
-        .signature-box {
-            text-align: center;
-        }
+.student-name {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #8031B6;
+    letter-spacing: 0.5px;
+}
 
-        .signature-line {
-            border-top: 1px solid #000;
-            margin-top: 40px;
-            width: 250px;
-        }
+.signatures {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
 
-        .location-date {
-            margin-top: 30px;
-            font-size: 16px;
-            color: #8031B6;
-        }
+.signature-box {
+    text-align: center;
+}
 
-        .certificate-buttons {
-            margin: 20px;
-            text-align: center;
-        }
+.signature-line {
+    width: 120px;
+    margin: 0 auto 6px auto;
+    border-top: 2px solid #000;
+    height: 0;
+}
 
-        .download-btn {
-            padding: 10px 20px;
-            background-color: #BF0C73;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background 0.2s, color 0.2s;
-        }
+.signature-name {
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: 10px;
+}
 
-        .download-btn:hover {
-            background-color: #8031B6;
-            color: #fff;
-        }
+.signature-title {
+    font-size: 9px;
+}
 
-        .download-btn.bloqueado {
-            background-color: #ccc;
-            color: #888;
-            cursor: not-allowed;
-            border: none;
-            opacity: 0.7;
-            pointer-events: auto;
-        }
+.location-date {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #8031B6;
+}
 
-        .content p,
-        #tiempo-acumulado {
-            color: #000 !important;
-        }
+.certificate-buttons {
+    margin: 20px;
+    text-align: center;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background-color: #BF0C73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #8031B6;
+    color: #fff;
+}
+
+.download-btn.bloqueado {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    border: none;
+    opacity: 0.7;
+    pointer-events: auto;
+}
+
+.content p,
+#tiempo-acumulado {
+    color: #000 !important;
+}
+
+.firma-directora {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+}

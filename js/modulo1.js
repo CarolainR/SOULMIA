@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameSpan = document.getElementById('username');
 
     if (greetingDiv && usernameSpan) {
-        if (isLoggedIn) {
-            const user = JSON.parse(localStorage.getItem('user'));
-            if (user) {
+    if (isLoggedIn) {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
                 usernameSpan.textContent = user.fullName || user.email;
-                greetingDiv.style.display = 'block';
+            greetingDiv.style.display = 'block';
             } else {
                 greetingDiv.classList.add('d-none');
             }
@@ -340,6 +340,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (acumulado >= 8) {
             localStorage.setItem('notasModulo1', JSON.stringify(notasModulo1));
             localStorage.setItem('repetirExamenModulo1', 'false');
+            // === ACTUALIZAR PROGRESO DEL USUARIO Y REFRESCAR DASHBOARD ===
+            let user = JSON.parse(localStorage.getItem('user'));
+            if (user) {
+                user.progreso = Math.max(user.progreso || 0, 12.5); // 12.5% para el primer módulo
+                localStorage.setItem('user', JSON.stringify(user));
+            }
+            if (window.actualizarProgresoDashboard) {
+                window.actualizarProgresoDashboard();
+            }
             alert('¡Examen enviado! Puedes ver tus resultados en la sección de calificaciones.');
         } else {
             localStorage.setItem('notasModulo1', JSON.stringify([0,0,0,0,0,0,0,0,0,0]));

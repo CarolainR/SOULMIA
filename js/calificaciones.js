@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameSpan = document.getElementById('username');
 
     if (greetingDiv && usernameSpan) {
-        if (isLoggedIn) {
-            const user = JSON.parse(localStorage.getItem('user'));
-            if (user) {
+    if (isLoggedIn) {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
                 usernameSpan.textContent = user.fullName || user.email;
-                greetingDiv.style.display = 'block';
+            greetingDiv.style.display = 'block';
             } else {
                 greetingDiv.classList.add('d-none');
             }

@@ -67,32 +67,75 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.disabled = true;
             btn.style.opacity = '0.5';
             btn.style.cursor = 'not-allowed';
-            btn.querySelector('a').removeAttribute('href'); // quita el link para que no redirija
+            btn.querySelector('a').removeAttribute('href');
         });
+        return;
     }
 
+    // Leer usuario logueado y su progreso
+    const user = JSON.parse(localStorage.getItem('user'));
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    let usuarioActivo = usuarios.find(u => u.email === user.email);
+    const progreso = usuarioActivo && usuarioActivo.progresoModulos ? usuarioActivo.progresoModulos : {};
+
+    // Cards y botones de Módulos
+    const cards = document.querySelectorAll('.col-lg-4.col-md-6');
+    for (let i = 1; i <= 8; i++) {
+        const card = cards[i-1];
+        if (!card) continue;
+        const btnModulo = card.querySelector('a.btn');
+        if (!btnModulo) continue;
+        let estado = progreso[i];
+        if (estado === 'completado') {
+            btnModulo.textContent = 'Completado';
+            btnModulo.classList.remove('btn-primary', 'btn-warning', 'btn-secondary');
+            btnModulo.classList.add('btn-success');
+            btnModulo.disabled = true;
+        } else if (estado === 'en-progreso') {
+            btnModulo.textContent = 'En progreso';
+            btnModulo.classList.remove('btn-primary', 'btn-success', 'btn-secondary');
+            btnModulo.classList.add('btn-warning');
+            btnModulo.disabled = false;
+            btnModulo.href = `../vistas/nivel${Math.ceil(i/3)}.html`;
+        } else if (estado === 'desbloqueado') {
+            btnModulo.textContent = 'Desbloqueado';
+            btnModulo.classList.remove('btn-success', 'btn-warning', 'btn-secondary');
+            btnModulo.classList.add('btn-primary');
+            btnModulo.disabled = false;
+            btnModulo.href = `../vistas/nivel${Math.ceil(i/3)}.html`;
+            // Solo para módulo 1: al hacer clic, poner en progreso
+            if (i === 1) {
+                btnModulo.addEventListener('click', function(e) {
+                    // Cambiar estado a en-progreso solo si no lo está ya
+                    if (usuarioActivo.progresoModulos[1] !== 'en-progreso') {
+                        usuarioActivo.progresoModulos[1] = 'en-progreso';
+                        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+                    }
+                });
+            }
+        } else {
+            btnModulo.textContent = 'Bloqueado';
+            btnModulo.classList.remove('btn-primary', 'btn-success', 'btn-warning');
+            btnModulo.classList.add('btn-secondary');
+            btnModulo.disabled = true;
+            btnModulo.href = '#';
+        }
+    }
+
+    // Mantener la lógica de repetirExamenModuloX para los exámenes
     // Estado de aprobación de exámenes
     const aprobadoExamen1 = localStorage.getItem('repetirExamenModulo1') === 'false';
     const aprobadoExamen2 = localStorage.getItem('repetirExamenModulo2') === 'false';
     const aprobadoExamen3 = localStorage.getItem('repetirExamenModulo3') === 'false';
     const aprobadoExamen6 = localStorage.getItem('repetirExamenModulo6') === 'false';
 
-    // Cards y botones de Módulos
-    const card1 = document.querySelectorAll('.col-lg-4.col-md-6')[0];
-    const card2 = document.querySelectorAll('.col-lg-4.col-md-6')[1];
-    const card3 = document.querySelectorAll('.col-lg-4.col-md-6')[2];
-    const btnModulo1 = card1 ? card1.querySelector('a.btn') : null;
-    const btnModulo2 = card2 ? card2.querySelector('a.btn') : null;
-    const btnModulo3 = card3 ? card3.querySelector('a.btn') : null;
-
     // Botones de nivel
     const btnNivel2 = document.querySelector('a[href="../vistas/nivel2.html"]');
     const btnNivel3 = document.querySelector('a[href="../vistas/nivel3.html"]');
 
     // Card 1: asegurar clases iniciales
-    if (btnModulo1) {
-        btnModulo1.classList.add('btn', 'btn-primary');
-    }
+    const card1 = document.querySelectorAll('.col-lg-4.col-md-6')[0];
+    const btnModulo1 = card1 ? card1.querySelector('a.btn') : null;
 
     // Card 1
     if (aprobadoExamen1) {
@@ -103,42 +146,42 @@ document.addEventListener('DOMContentLoaded', function () {
             btnModulo1.disabled = true;
         }
         // Card 2: En progreso si examen 1 aprobado
-        if (btnModulo2) {
-            if (aprobadoExamen2) {
-                btnModulo2.textContent = 'Completado';
-                btnModulo2.classList.remove('btn-primary', 'btn-warning');
-                btnModulo2.classList.add('btn-success');
-                btnModulo2.disabled = true;
-            } else {
-                btnModulo2.textContent = 'En progreso';
-                btnModulo2.classList.remove('btn-primary', 'btn-secondary');
-                btnModulo2.classList.add('btn-warning');
-                btnModulo2.disabled = false;
-                btnModulo2.href = '../vistas/nivel2.html';
-            }
+        const card2 = document.querySelectorAll('.col-lg-4.col-md-6')[1];
+        const btnModulo2 = card2 ? card2.querySelector('a.btn') : null;
+        if (aprobadoExamen2) {
+            btnModulo2.textContent = 'Completado';
+            btnModulo2.classList.remove('btn-primary', 'btn-warning');
+            btnModulo2.classList.add('btn-success');
+            btnModulo2.disabled = true;
+        } else {
+            btnModulo2.textContent = 'En progreso';
+            btnModulo2.classList.remove('btn-primary', 'btn-secondary');
+            btnModulo2.classList.add('btn-warning');
+            btnModulo2.disabled = false;
+            btnModulo2.href = '../vistas/nivel2.html';
         }
         // Card 3: Bloqueado si examen 2 no aprobado
-        if (btnModulo3) {
-            if (aprobadoExamen2) {
-                if (aprobadoExamen3) {
-                    btnModulo3.textContent = 'Completado';
-                    btnModulo3.classList.remove('btn-primary', 'btn-warning');
-                    btnModulo3.classList.add('btn-success');
-                    btnModulo3.disabled = true;
-                } else {
-                    btnModulo3.textContent = 'En progreso';
-                    btnModulo3.classList.remove('btn-primary', 'btn-secondary');
-                    btnModulo3.classList.add('btn-warning');
-                    btnModulo3.disabled = false;
-                    btnModulo3.href = '../vistas/nivel3.html';
-                }
-            } else {
-                btnModulo3.textContent = 'Bloqueado';
+        const card3 = document.querySelectorAll('.col-lg-4.col-md-6')[2];
+        const btnModulo3 = card3 ? card3.querySelector('a.btn') : null;
+        if (aprobadoExamen2) {
+            if (aprobadoExamen3) {
+                btnModulo3.textContent = 'Completado';
                 btnModulo3.classList.remove('btn-primary', 'btn-warning');
-                btnModulo3.classList.add('btn-secondary');
+                btnModulo3.classList.add('btn-success');
                 btnModulo3.disabled = true;
-                btnModulo3.href = '#';
+            } else {
+                btnModulo3.textContent = 'En progreso';
+                btnModulo3.classList.remove('btn-primary', 'btn-secondary');
+                btnModulo3.classList.add('btn-warning');
+                btnModulo3.disabled = false;
+                btnModulo3.href = '../vistas/nivel3.html';
             }
+        } else {
+            btnModulo3.textContent = 'Bloqueado';
+            btnModulo3.classList.remove('btn-primary', 'btn-warning');
+            btnModulo3.classList.add('btn-secondary');
+            btnModulo3.disabled = true;
+            btnModulo3.href = '#';
         }
     } else {
         if (btnModulo1) {

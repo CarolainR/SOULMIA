@@ -259,4 +259,60 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // Mostrar el tiempo inicial al cargar
     updateTiempoEnLinea();
+
+    // ====== FUNCIÓN GLOBAL PARA ACTUALIZAR PROGRESO Y MÓDULO EN DASHBOARD ======
+    window.actualizarProgresoDashboard = function() {
+        // Obtener usuario actualizado
+        let user = null;
+        if (localStorage.getItem('loggedIn') === 'true' && localStorage.getItem('user')) {
+            user = JSON.parse(localStorage.getItem('user'));
+        }
+        // Actualizar barra de progreso y porcentaje en la card
+        const progreso = (user && user.progreso !== undefined) ? user.progreso : 0;
+        const progressCard = document.querySelector('.progress-card');
+        if (progressCard) {
+            progressCard.innerHTML = `
+                <h2>Progreso</h2>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36">
+                      <defs>
+                        <linearGradient id="progressGradient" x1="1" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#bf0c73"/>
+                          <stop offset="100%" stop-color="#8031b6"/>
+                        </linearGradient>
+                      </defs>
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle" id="progressCircle"
+                        stroke="url(#progressGradient)"
+                        stroke-dasharray="0, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <text x="18" y="20.35" class="percentage" id="progressPercent">0%</text>
+                    </svg>
+                </div>
+                <p>De Curso Completado</p>
+            `;
+            // Volver a animar el progreso
+            animateProgress(progreso);
+        }
+        // Actualizar módulo actual
+        const currentModule = getCurrentModuleInfo(user);
+        updateCurrentModule(currentModule.name, currentModule.title);
+        // Actualizar estados del sidebar
+        renderSidebarStates();
+    };
+    // Llamar al cargar la página (por si acaso)
+    window.actualizarProgresoDashboard();
+    // Escuchar cambios en localStorage (por ejemplo, si el progreso cambia desde otro script o pestaña)
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'user' || e.key === 'repetirExamenModulo1') {
+            window.actualizarProgresoDashboard();
+        }
+    });
 });
