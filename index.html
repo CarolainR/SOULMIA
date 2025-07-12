@@ -75,88 +75,44 @@
 
 <body>
 
-    <!-- ENCABEZADO :) -->
+    <!-- Header -->
     <div class="header">
-
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-none">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center w-100">
-
-                    <!-- columna de logo -->
-
-                        <a class="navbar-brand d-flex" href="./index.html">
-                            <img class="logo" src="./sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.svg" alt="Logo Soulmia">
-                        </a>
-
-                    <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
-                    <button class="navbar-toggler mx-auto " 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                   <!--  Links del Nav -->
-
-                    <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
-                        <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
-                                        href="./vistas/modulos.html">Módulos</a></li>
-                                <li class="nav-item"><a class="biblioteca nav-link2 fs-4 text-white"
-                                        href="./vistas/biblioteca.html">Biblioteca</a></li>
-                                <li class="nav-item"><a class="calificaciones nav-link3 fs-4 text-white"
-                                        href="./vistas/calificaciones.html">Calificaciones</a></li>
-                                <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
-                                        href="./vistas/dashboard.html">Dashboard</a></li>
-                                <!--<li class="nav-item"><a class="nav-link5 fs-4 text-white"
-                                        href="./vistas/profesores.html">Profesores</a></li>-->
-                                <li class="nav-item"><a class="nav-link6 fs-4 text-white"
-                                        href="./vistas/sobrenosotros.html">Sobre Nosotros</a></li>
-                                <!--<li class="nav-item"><a class="nav-link7 fs-4 text-white"
-                                        href="./vistas/tienda.html">Tienda</a></li>-->
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Columna de icono de perfil y greeting -->
-                    <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
-
-                        <!-- Menú desplegable de perfil -->
-                        <div class="d-flex">
-                            <!-- fila de saludo -->
-
-                       
-                                <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
-                                    <span id="welcomeMessage"><span id="username"></span></span>
-
-                                </div>
-                         
-
-
-                            <!-- fila de icono de perfil y menu dropdown -->
-
-                            <div class="profileMenu text-white text-center d-flex align-items-center px-3">
-                                <span class="profileIcon" onclick="toggleProfileMenu()">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                                <div id="profileMenuContent" class="profileMenuContent">
-                                    <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
-                                    <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
-                                    <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-        </nav>
-
+      <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="./index.html">
+            <img class="logo" src="./sources/LOGO SOULMIA EN POSITIVO 16 JUN 25_Mesa de trabajo 1.png" alt="Logo Soulmia" style="max-height: 100px; width: auto; height: auto; display: block; visibility: visible; opacity: 1;">
+          </a>
+          
+          <!-- Botón hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Links de navegación -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link1" href="./vistas/modulos.html">Módulos</a></li>
+              <li class="nav-item"><a class="biblioteca nav-link2" href="./vistas/biblioteca.html">Biblioteca</a></li>
+              <li class="nav-item"><a class="calificaciones nav-link3" href="./vistas/calificaciones.html">Calificaciones</a></li>
+              <li class="nav-item"><a class="dashboard nav-link4" href="./vistas/dashboard.html">Dashboard</a></li>
+              <li class="nav-item"><a class="nav-link6" href="./vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+            </ul>
+          </div>
+          
+          <!-- Perfil -->
+          <div class="profileMenu">
+            <span class="profileIcon" onclick="toggleProfileMenu()">
+              <i class="fas fa-user"></i>
+            </span>
+            <div id="profileMenuContent" class="profileMenuContent">
+              <a href="./vistas/login.html" aria-label="Ir a Login">Login</a>
+              <a href="./vistas/registro.html" aria-label="Ir a Registro">Registro</a>
+              <a href="./index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
 
                                                          <!-- INICIO DEL CONTENIDO =) -->

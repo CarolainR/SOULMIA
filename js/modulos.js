@@ -1,6 +1,35 @@
+// Función para toggle del menú de perfil
+function toggleProfileMenu() {
+    console.log('toggleProfileMenu ejecutado');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    if (profileMenuContent) {
+        console.log('profileMenuContent encontrado');
+        const currentDisplay = profileMenuContent.style.display;
+        console.log('display actual:', currentDisplay);
+        profileMenuContent.style.display = currentDisplay === 'block' ? 'none' : 'block';
+        console.log('nuevo display:', profileMenuContent.style.display);
+    } else {
+        console.log('profileMenuContent NO encontrado');
+    }
+}
+
+// TEST - Verificar que el JavaScript se está cargando
+console.log('modulos.js cargado correctamente');
+
 // greeting user
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Agregar event listener adicional al icono de perfil
+    const profileIcon = document.querySelector('.profileIcon');
+    if (profileIcon) {
+        console.log('profileIcon encontrado, agregando event listener');
+        profileIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleProfileMenu();
+        });
+    } else {
+        console.log('profileIcon NO encontrado');
+    }
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
     const greetingDiv = document.getElementById('greeting');
     const usernameSpan = document.getElementById('username');

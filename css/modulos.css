@@ -6,128 +6,124 @@
     --black: #020202;
 }
 
+
+
 /* Tipografía */
 body {
     background-color: var(--black) !important;
     color: var(--white) !important;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300; /* Light para párrafos */
+    font-weight: 300;
+    overflow-x: hidden !important;
+    position: relative !important;
+    z-index: 1 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 900; /* Black para títulos */
+    font-weight: 900;
 }
 
 .subtitle {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700; /* Bold para subtítulos */
+    font-weight: 700;
 }
 
 p, span, a, li {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300; /* Light para texto normal */
+    font-weight: 300;
 }
 
-/* Header y Navegación */
+/* HEADER Y NAVBAR LIMPIOS */
 .header {
     background-color: var(--black) !important;
-    padding: 8px !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
+    padding: 8px 0 !important;
+    width: 100% !important;
     overflow: visible !important;
+    min-height: 80px !important;
+    position: relative !important;
+    z-index: 1000 !important;
 }
 
 .navbar {
     background-color: var(--black) !important;
     padding: 0.8rem 0 !important;
     width: 100% !important;
-    max-width: 100vw !important;
-    margin: 0 auto !important;
     overflow: visible !important;
+    position: relative !important;
+    z-index: 1000 !important;
 }
 
 .container-fluid {
-    width: 100%;
-    max-width: 100vw;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
-    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
     overflow: visible !important;
-}
-
-.d-flex.justify-content-between.align-items-center.w-100 {
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 1000 !important;
 }
 
 .navbar-brand {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 0;
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 200px !important;
+    max-width: 300px !important;
 }
 
+.navbar-collapse {
+    flex-grow: 1 !important;
+    justify-content: center !important;
+}
+
+/* Logo */
 .navbar-brand img {
     max-height: 100px !important;
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
     transition: transform 0.3s ease;
-    display: block;
-    visibility: visible;
-    opacity: 1;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
 .navbar-brand img:hover {
     transform: scale(1.05);
 }
 
-.col-3.d-flex.justify-content-start.align-items-center {
-    width: 300px !important;
-    min-width: 300px !important;
-    max-width: 300px !important;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+/* Estilos específicos para la clase .logo */
+.logo {
+    max-height: 100px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
-.col-6.d-flex.justify-content-center.align-items-center {
-    flex: 1 1 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-}
-
+/* Links de navegación */
 .navbar-nav {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav .nav-item {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilos generales para todos los links de navegación */
 .navbar-nav .nav-link,
 .navbar-nav .nav-link1,
 .navbar-nav .nav-link2,
@@ -136,52 +132,15 @@ p, span, a, li {
 .navbar-nav .nav-link5,
 .navbar-nav .nav-link6,
 .navbar-nav .nav-link7 {
-    color: #FFFFFF !important;
+    color: var(--white) !important;
     transition: all 0.3s ease;
     font-weight: 500;
-    font-size: 16px !important;
+    font-size: 16px;
     padding: 0.5rem 1rem;
-    position: relative;
     text-decoration: none;
     white-space: nowrap;
-    margin: 0 1.5rem;
-    background: none;
-    box-shadow: none !important;
-    text-shadow: none;
 }
 
-.navbar-nav .nav-link1:hover,
-.navbar-nav .nav-link2:hover,
-.navbar-nav .nav-link3:hover,
-.navbar-nav .nav-link4:hover,
-.navbar-nav .nav-link5:hover,
-.navbar-nav .nav-link6:hover,
-.navbar-nav .nav-link7:hover {
-    color: #FFFFFF !important;
-    transform: translateY(-2px);
-}
-
-/* Efecto de línea para todos los links */
-.navbar-nav .nav-link::after,
-.navbar-nav .nav-link1::after,
-.navbar-nav .nav-link2::after,
-.navbar-nav .nav-link3::after,
-.navbar-nav .nav-link4::after,
-.navbar-nav .nav-link5::after,
-.navbar-nav .nav-link6::after,
-.navbar-nav .nav-link7::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: var(--accent);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-/* Neon purple box-shadow y animación para links del nav */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link1:hover,
 .navbar-nav .nav-link2:hover,
@@ -192,87 +151,73 @@ p, span, a, li {
 .navbar-nav .nav-link7:hover {
     color: #d400ff !important;
     text-shadow: 0 0 8px #d400ff, 0 0 16px #d400ff, 0 0 32px #d400ff;
-    background: none;
-    box-shadow: none !important;
-    animation: none;
-    text-decoration: none !important;
-}
-
-@keyframes neon-glow {
-    0% {
-        box-shadow: 0 0 0 #d400ff;
-        text-shadow: 0 0 0 #d400ff;
-    }
-    100% {
-        box-shadow: 0 0 8px #d400ff, 0 0 16px #d400ff, 0 0 32px #d400ff;
-        text-shadow: 0 0 8px #d400ff, 0 0 16px #d400ff;
-    }
 }
 
 /* Botón hamburguesa */
 .navbar-toggler {
     border: 1px solid var(--white) !important;
+    padding: 0.25rem 0.5rem !important;
+    display: none !important;
 }
 
 .navbar-toggler-icon {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Mostrar el botón hamburguesa solo en móviles */
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        display: block !important;
+    }
 }
 
 /* Menú de perfil */
 .profileMenu {
-    width: auto !important;
-    min-width: unset !important;
-    max-width: unset !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+    z-index: 1001 !important;
 }
 
 .profileIcon {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
     color: var(--white) !important;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease !important;
+    padding: 0.5rem !important;
+    position: relative !important;
+    z-index: 1001 !important;
 }
 
 .profileIcon:hover {
     color: var(--accent) !important;
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 
 .profileMenuContent {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: var(--secondary);
-    min-width: 200px;
-    width: max-content;
-    white-space: nowrap;
-    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    z-index: 9999;
-    border: none !important;
-    margin: 0 !important;
-    overflow-y: visible !important;
-    max-height: none !important;
-    height: auto !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+    background-color: var(--secondary) !important;
+    min-width: 200px !important;
+    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary) !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 0 !important;
+    z-index: 10000 !important;
+    overflow: visible !important;
+}
+
+/* Asegurar que el menú se muestre cuando tenga display block */
+.profileMenuContent[style*="display: block"] {
+    display: block !important;
 }
 
 .profileMenuContent a {
-    border-left: none !important;
-    border-right: none !important;
     color: var(--white);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -281,8 +226,6 @@ p, span, a, li {
     transition: all 0.3s ease;
     border-radius: 4px;
     margin: 0.25rem 0.5rem;
-    position: relative;
-    z-index: 10000;
 }
 
 .profileMenuContent a:hover {
@@ -291,50 +234,117 @@ p, span, a, li {
     transform: translateX(5px);
 }
 
-.profileMenu:hover .profileMenuContent,
-.profileMenu:focus-within .profileMenuContent {
-    display: block;
-    animation: neonShadow 0.3s ease forwards;
-}
-
-@keyframes neonShadow {
-    0% {
-        box-shadow: 0 0 5px var(--primary),
-                    0 0 10px var(--primary);
-        transform: translateY(-5px);
-    }
-    100% {
-        box-shadow: 0 0 10px var(--primary),
-                    0 0 20px var(--primary),
-                    0 0 30px var(--primary);
-        transform: translateY(0);
-    }
-}
-
-/* Ajustes para móvil */
-@media (max-width: 991.98px) {
-    .navbar-nav {
-        flex-wrap: wrap;
-        gap: 0.2rem;
-    }
-    .navbar-brand {
-        margin-bottom: 0.5rem;
-    }
-    .col-3, .col-6 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100%;
-        justify-content: center !important;
-        margin-bottom: 0.5rem;
-    }
-    .profileMenu {
-        justify-content: center;
-    }
+.profileMenu:hover .profileMenuContent {
+    display: block !important;
 }
 
 /* Greeting */
 #greeting {
     display: none !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991.98px) {
+    .header {
+        padding: 8px 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    .container-fluid {
+        flex-wrap: wrap !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    /* Ocultar los links del navbar por defecto en móviles */
+    .navbar-collapse {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 999 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+    }
+    
+    /* Mostrar los links cuando el navbar-collapse tenga la clase 'show' */
+    .navbar-collapse.show {
+        display: block !important;
+    }
+    
+    /* Asegurar que el navbar-collapse de Bootstrap funcione */
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-collapse.collapse.show {
+        display: block !important;
+    }
+    
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link1,
+    .navbar-nav .nav-link2,
+    .navbar-nav .nav-link3,
+    .navbar-nav .nav-link4,
+    .navbar-nav .nav-link5,
+    .navbar-nav .nav-link6,
+    .navbar-nav .nav-link7 {
+        font-size: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    
+    .navbar-brand img {
+        max-height: 80px;
+    }
+    
+    .profileMenu {
+        margin-left: auto !important;
+        overflow: visible !important;
+        z-index: 1001 !important;
+    }
+    
+    .profileMenuContent {
+        z-index: 10000 !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 10px !important;
+        overflow: visible !important;
+    }
+    
+    .navbar-brand img {
+        max-height: 70px;
+    }
+    
+    .profileMenu {
+        overflow: visible !important;
+        z-index: 1001 !important;
+    }
+    
+    .profileMenuContent {
+        z-index: 10000 !important;
+        overflow: visible !important;
+    }
 }
 
 /* Footer */
@@ -816,20 +826,20 @@ p, span, a, li {
     padding: 0;
 }
 
-@media (max-width: 991.98px) {
-    .navbar .row.w-100,
-    .navbar .col-3, .navbar .col-6 {
-        flex-direction: unset;
-        align-items: unset;
-        width: unset !important;
-        max-width: unset !important;
-        flex: unset;
-        justify-content: unset !important;
-        margin-bottom: unset;
-    }
-    .profileMenu {
-        justify-content: center;
-    }
+/* Estilos específicos para cuando Bootstrap maneje el collapse */
+.navbar-collapse.collapse {
+    display: none !important;
+}
+
+.navbar-collapse.collapsing {
+    display: block !important;
+    height: auto !important;
+    overflow: hidden !important;
+    transition: height 0.35s ease !important;
+}
+
+.navbar-collapse.collapse.show {
+    display: block !important;
 }
 
 /* Animación y box-shadow fucsia para los botones de los módulos */
@@ -858,3 +868,5 @@ p, span, a, li {
     filter: brightness(1.15);
   }
 }
+
+

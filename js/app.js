@@ -6,7 +6,37 @@
  5.
  6.
 */
+
+// Función para toggle del menú de perfil
+function toggleProfileMenu() {
+    console.log('toggleProfileMenu ejecutado');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    if (profileMenuContent) {
+        console.log('profileMenuContent encontrado');
+        const currentDisplay = profileMenuContent.style.display;
+        console.log('display actual:', currentDisplay);
+        profileMenuContent.style.display = currentDisplay === 'block' ? 'none' : 'block';
+        console.log('nuevo display:', profileMenuContent.style.display);
+    } else {
+        console.log('profileMenuContent NO encontrado');
+    }
+}
+
+// TEST - Verificar que el JavaScript se está cargando
+console.log('app.js cargado correctamente');
+
 document.addEventListener('DOMContentLoaded', function () {
+    // Agregar event listener adicional al icono de perfil
+    const profileIcon = document.querySelector('.profileIcon');
+    if (profileIcon) {
+        console.log('profileIcon encontrado, agregando event listener');
+        profileIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleProfileMenu();
+        });
+    } else {
+        console.log('profileIcon NO encontrado');
+    }
     // Obtener el formulario de login
     const loginForm = document.querySelector('.loginForm');
     
@@ -172,4 +202,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (aboutText) observer.observe(aboutText);
     if (aboutImage) observer.observe(aboutImage);
+});
+
+// --- MENÚ DE PERFIL: mostrar debajo del icono de perfil ---
+function toggleProfileMenu() {
+    const profileIcon = document.querySelector('.profileIcon');
+    const menu = document.getElementById('profileMenuContent');
+    if (!menu || !profileIcon) return;
+
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+        return;
+    }
+
+    // Mostrar temporalmente para medir el ancho
+    menu.style.display = 'block';
+    menu.style.visibility = 'hidden';
+
+    const rect = profileIcon.getBoundingClientRect();
+    const scrollY = window.scrollY || window.pageYOffset;
+    const scrollX = window.scrollX || window.pageXOffset;
+    const top = rect.bottom + scrollY + 4;
+    let left = rect.right - menu.offsetWidth + scrollX;
+
+    // Si el menú se sale por la izquierda, lo alineamos al borde izquierdo del icono
+    if (left < 0) left = rect.left + scrollX;
+    // Si el menú se sale por la derecha, lo ajustamos al borde derecho de la ventana
+    if (left + menu.offsetWidth > window.innerWidth) left = window.innerWidth - menu.offsetWidth - 8;
+
+    menu.style.top = top + 'px';
+    menu.style.left = left + 'px';
+    menu.style.right = '';
+    menu.style.visibility = 'visible';
+}
+
+// Ocultar el menú si se hace click fuera
+window.addEventListener('click', function(e) {
+    const menu = document.getElementById('profileMenuContent');
+    const profileIcon = document.querySelector('.profileIcon');
+    if (!menu || !profileIcon) return;
+    if (!menu.contains(e.target) && !profileIcon.contains(e.target)) {
+        menu.style.display = 'none';
+    }
 });
