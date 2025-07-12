@@ -1309,3 +1309,14 @@ p, span, a, li {
         min-width: 0;
     }
 }
+
+/* Tamaño de letra para los links del navbar */
+.navbar-nav .nav-link1,
+.navbar-nav .nav-link2,
+.navbar-nav .nav-link3,
+.navbar-nav .nav-link4,
+.navbar-nav .nav-link5,
+.navbar-nav .nav-link6,
+.navbar-nav .nav-link7 {
+    font-size: 16px !important;
+}

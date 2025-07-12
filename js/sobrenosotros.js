@@ -5,12 +5,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const greetingDiv = document.getElementById('greeting');
     const usernameSpan = document.getElementById('username');
 
+    // Lógica para mostrar/ocultar links del navbar según login
+    const linkModulos = document.querySelector('a[href="../vistas/modulos.html"]');
+    const linkBiblioteca = document.querySelector('a[href="../vistas/biblioteca.html"]');
+    const linkCalificaciones = document.querySelector('a[href="../vistas/calificaciones.html"]');
+    const linkDashboard = document.querySelector('a[href="../vistas/dashboard.html"]');
+
     if (isLoggedIn) {
+        // Mostrar links de usuario loggeado
+        if (linkBiblioteca) linkBiblioteca.parentElement.style.display = '';
+        if (linkCalificaciones) linkCalificaciones.parentElement.style.display = '';
+        if (linkDashboard) linkDashboard.parentElement.style.display = '';
+        // Ocultar solo Módulos si quieres que desaparezca cuando hay login:
+        // linkModulos.parentElement.style.display = 'none';
+        // Si quieres que Módulos siempre esté visible, comenta la línea anterior
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) {
-            usernameSpan.textContent = user.email || user.username; // Ajusta según el formato del usuario
+            usernameSpan.textContent = user.email || user.username;
             greetingDiv.style.display = 'block';
         }
+    } else {
+        // Ocultar links de usuario loggeado
+        if (linkBiblioteca) linkBiblioteca.parentElement.style.display = 'none';
+        if (linkCalificaciones) linkCalificaciones.parentElement.style.display = 'none';
+        if (linkDashboard) linkDashboard.parentElement.style.display = 'none';
+        // Mostrar solo Módulos
+        if (linkModulos) linkModulos.parentElement.style.display = '';
     }
 
     //  logout
@@ -27,17 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Aquí deberías validar las credenciales del usuario
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    
-    // Guardar información del usuario en localStorage
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('user', JSON.stringify({ username, email }));
-    
-    // Redirigir al usuario a la página principal o donde desees
-    window.location.href = './index.html';
-});
+// El resto del código de login no es necesario aquí para sobrenosotros.html

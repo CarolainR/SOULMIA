@@ -31,6 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '../index.html'; // Redirigir al index después del logout
         });
     }
+
+    // Selección de links
+    // No hay link a 'Módulos' en este navbar, pero sí a 'Sobre Nosotros'
+    const linkBiblioteca = document.querySelector('a[href="../vistas/biblioteca.html"]');
+    const linkCalificaciones = document.querySelector('a[href="../vistas/calificaciones.html"]');
+    const linkDashboard = document.querySelector('a[href="../vistas/dashboard.html"]');
+    const linkSobreNosotros = document.querySelector('a[href="../vistas/sobrenosotros.html"]');
+
+    // Ocultar todos los links de usuario loggeado por defecto
+    if (linkBiblioteca) linkBiblioteca.parentElement.style.display = 'none';
+    if (linkCalificaciones) linkCalificaciones.parentElement.style.display = 'none';
+    if (linkDashboard) linkDashboard.parentElement.style.display = 'none';
+
+    // Mostrar solo Sobre Nosotros por defecto
+    if (linkSobreNosotros) linkSobreNosotros.parentElement.style.display = '';
+
+    if (isLoggedIn) {
+        // Mostrar links de usuario loggeado
+        if (linkBiblioteca) linkBiblioteca.parentElement.style.display = '';
+        if (linkCalificaciones) linkCalificaciones.parentElement.style.display = '';
+        if (linkDashboard) linkDashboard.parentElement.style.display = '';
+    }
 });
 
 
