@@ -45,6 +45,43 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '../index.html'; // Redirigir al index después del logout
         });
     }
+
+    // Bootstrap maneja automáticamente el menú hamburguesa
+    // No necesitamos JavaScript adicional para esto
+});
+
+// Función para el menú de perfil
+function toggleProfileMenu() {
+    console.log('toggleProfileMenu llamado');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    if (profileMenuContent) {
+        const isVisible = profileMenuContent.classList.contains('show') || profileMenuContent.style.display === 'block';
+        
+        if (isVisible) {
+            profileMenuContent.classList.remove('show');
+            profileMenuContent.style.display = 'none';
+            console.log('Menú de perfil oculto');
+        } else {
+            profileMenuContent.classList.add('show');
+            profileMenuContent.style.display = 'block';
+            console.log('Menú de perfil visible');
+        }
+    } else {
+        console.error('No se encontró profileMenuContent');
+    }
+}
+
+// Cerrar menú de perfil al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    const profileMenu = document.querySelector('.profileMenu');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    
+    if (profileMenu && profileMenuContent) {
+        if (!profileMenu.contains(event.target)) {
+            profileMenuContent.classList.remove('show');
+            profileMenuContent.style.display = 'none';
+        }
+    }
 });
 
 // El resto del código de login no es necesario aquí para sobrenosotros.html

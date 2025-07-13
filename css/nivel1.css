@@ -204,6 +204,7 @@ p, span, a, li {
 /* Botón hamburguesa */
 .navbar-toggler {
     border: 1px solid var(--white) !important;
+    display: none !important;
 }
 
 .navbar-toggler-icon {
@@ -317,6 +318,207 @@ p, span, a, li {
     }
     .profileMenu {
         justify-content: center;
+    }
+    
+    /* Mostrar botón hamburguesa en pantallas medianas y pequeñas */
+    .navbar-toggler {
+        display: block !important;
+        order: 2 !important;
+        margin: 0 auto !important;
+        border: 1px solid var(--white) !important;
+        padding: 0.25rem 0.5rem !important;
+        flex-shrink: 0 !important;
+        position: static !important;
+        float: none !important;
+        justify-self: center !important;
+        align-self: center !important;
+        flex: 0 0 auto !important;
+    }
+    
+    /* Ajustar layout del header para responsive */
+    .header .navbar .container-fluid {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+    }
+    
+    .header .navbar .d-flex.justify-content-between {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+        position: relative !important;
+    }
+    
+    /* Logo - a la izquierda */
+    .header .navbar .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        margin-right: 0 !important;
+        flex-shrink: 0 !important;
+        order: 1 !important;
+        justify-content: flex-start !important;
+    }
+    
+    .header .navbar .navbar-brand img {
+        max-height: 100px !important;
+        width: auto !important;
+    }
+    
+    /* Botón hamburguesa - en el centro */
+    .header .navbar .navbar-toggler {
+        display: block !important;
+        order: 2 !important;
+        margin: 0 !important;
+        border: 1px solid var(--white) !important;
+        padding: 0.25rem 0.5rem !important;
+        flex-shrink: 0 !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        float: none !important;
+        justify-self: center !important;
+        align-self: center !important;
+        flex: 0 0 auto !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Icono de perfil - a la derecha */
+    .header .navbar .col-3 {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        order: 3 !important;
+        flex-shrink: 0 !important;
+        margin-left: 0 !important;
+        position: static !important;
+        float: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        padding-right: 40px !important;
+        margin-right: 20px !important;
+        position: relative !important;
+    }
+    
+    .header .navbar .profileMenu {
+        position: absolute !important;
+        right: 25px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    
+    .header .navbar .profileIcon {
+        font-size: 1.8rem !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Ocultar links en pantallas pequeñas */
+    .col-7.d-flex {
+        display: none !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    /* Cuando Bootstrap muestra el menú colapsado */
+    .col-7.d-flex.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 1000 !important;
+        padding: 1rem !important;
+        border-top: 1px solid var(--primary) !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    /* Asegurar que el navbar-collapse también funcione */
+    .header .navbar .navbar-collapse {
+        display: none !important;
+    }
+    
+    .header .navbar .navbar-collapse.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 1000 !important;
+        padding: 1rem !important;
+        border-top: 1px solid var(--primary) !important;
+    }
+    
+    .header .navbar .navbar-collapse.show .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .header .navbar .navbar-collapse.show .navbar-nav .nav-item {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .header .navbar .navbar-collapse.show .navbar-nav .nav-link {
+        font-size: 1.1rem !important;
+        padding: 0.5rem !important;
+        color: var(--white) !important;
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Estilos para cuando el menú está desplegado */
+    .col-7.d-flex.show .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .col-7.d-flex.show .navbar-nav .nav-item {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .col-7.d-flex.show .navbar-nav .nav-link {
+        font-size: 1.1rem !important;
+        padding: 0.5rem !important;
+        color: var(--white) !important;
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 }
 
@@ -495,6 +697,22 @@ p, span, a, li {
     .infoFooter {
         text-align: center;
     }
+    
+    /* Centrar links del footer en pantallas medianas y pequeñas */
+    .linksFooter {
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .footerLink {
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+        display: block !important;
+    }
 }
 
 /* Botones */
@@ -511,6 +729,24 @@ p, span, a, li {
 }
 
 /* Media queries */
+@media (max-width: 991.98px) {
+    /* Centrar links del footer en tablets */
+    .linksFooter {
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+        width: 100% !important;
+    }
+    
+    .footerLink {
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0.6rem 0 !important;
+        display: block !important;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-nav {
         gap: 1rem;
@@ -554,6 +790,67 @@ p, span, a, li {
 
     .navbar-brand img {
         max-height: 80px !important;
+    }
+    
+    /* Ajustes adicionales para el botón hamburguesa en móviles */
+    .navbar-toggler {
+        margin: 0 !important;
+        padding: 0.2rem 0.4rem !important;
+        display: block !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Asegurar que los elementos estén en la misma fila en móviles */
+    .header .navbar .container-fluid {
+        padding: 0 10px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .header .navbar .d-flex.justify-content-between {
+        gap: 5px !important;
+    }
+    
+    .header .navbar .navbar-brand {
+        flex-shrink: 0 !important;
+        order: 1 !important;
+    }
+    
+    .header .navbar .navbar-toggler {
+        order: 2 !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 1002 !important;
+    }
+    
+    .header .navbar .col-3 {
+        order: 3 !important;
+        flex-shrink: 0 !important;
+        justify-content: flex-end !important;
+        padding-right: 35px !important;
+        margin-right: 15px !important;
+        position: relative !important;
+    }
+    
+    .header .navbar .profileMenu {
+        position: absolute !important;
+        right: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    
+    .header .navbar .profileIcon {
+        font-size: 1.6rem !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
     }
 }
 
@@ -734,22 +1031,22 @@ p, span, a, li {
 /* Responsive para cards */
 @media (max-width: 991.98px) {
   .modulo-card-n1 {
-    min-height: 320px;
-    height: 320px;
+    min-height: 380px;
+    height: 380px;
   }
   .modulo-card-inner-n1 {
-    min-height: 320px;
+    min-height: 380px;
     height: 100%;
   }
 }
 @media (max-width: 767.98px) {
   .modulo-card-n1 {
-    min-height: 260px;
-    height: 260px;
+    min-height: 320px;
+    height: 320px;
     max-width: 98vw;
   }
   .modulo-card-inner-n1 {
-    min-height: 260px;
+    min-height: 320px;
     height: 100%;
   }
   .modulo-title-n1 {
@@ -793,7 +1090,47 @@ p, span, a, li {
 @media (max-width: 575.98px) {
   .modulo-card-n1 {
     max-width: 98vw;
-    min-height: 220px;
+    min-height: 280px;
+  }
+  
+  /* Centrar links del footer en pantallas muy pequeñas */
+  .linksFooter {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+  }
+  
+  .footerLink {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0.3rem 0 !important;
+    display: block !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* Ajustes para header en pantallas muy pequeñas */
+  .header .navbar .navbar-brand img {
+    max-height: 80px !important;
+  }
+  
+  .header .navbar .navbar-toggler {
+    padding: 0.15rem 0.3rem !important;
+  }
+  
+  .header .navbar .profileIcon {
+    font-size: 1.4rem !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  .header .navbar .profileMenu {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
   }
 }
 

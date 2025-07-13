@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log('profileIcon NO encontrado');
     }
+    
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
     const greetingDiv = document.getElementById('greeting');
     const usernameSpan = document.getElementById('username');
@@ -59,28 +60,78 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Selección de links
+    // Selección de links del navbar
     const linkModulos = document.querySelector('a[href="../vistas/modulos.html"]');
     const linkBiblioteca = document.querySelector('a[href="../vistas/biblioteca.html"]');
     const linkCalificaciones = document.querySelector('a[href="../vistas/calificaciones.html"]');
     const linkDashboard = document.querySelector('a[href="../vistas/dashboard.html"]');
     const linkSobreNosotros = document.querySelector('a[href="../vistas/sobrenosotros.html"]');
 
-    // Ocultar todos los links de usuario loggeado por defecto
-    if (linkBiblioteca) linkBiblioteca.parentElement.style.display = 'none';
-    if (linkCalificaciones) linkCalificaciones.parentElement.style.display = 'none';
-    if (linkDashboard) linkDashboard.parentElement.style.display = 'none';
+    // Debug: verificar que se encontraron los links
+    console.log('Links encontrados:', {
+        modulos: linkModulos,
+        biblioteca: linkBiblioteca,
+        calificaciones: linkCalificaciones,
+        dashboard: linkDashboard,
+        sobreNosotros: linkSobreNosotros
+    });
 
-    // Mostrar solo Módulos y Sobre Nosotros por defecto
-    if (linkModulos) linkModulos.parentElement.style.display = '';
-    if (linkSobreNosotros) linkSobreNosotros.parentElement.style.display = '';
-
-    if (isLoggedIn) {
-        // Mostrar links de usuario loggeado
-        if (linkBiblioteca) linkBiblioteca.parentElement.style.display = '';
-        if (linkCalificaciones) linkCalificaciones.parentElement.style.display = '';
-        if (linkDashboard) linkDashboard.parentElement.style.display = '';
+    // Función para actualizar visibilidad de links
+    function updateNavbarLinks() {
+        const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+        console.log('Estado de login:', isLoggedIn);
+        
+        // Links que siempre deben estar visibles
+        if (linkModulos) {
+            linkModulos.parentElement.style.setProperty('display', '', 'important');
+            console.log('Módulos: visible');
+        }
+        if (linkSobreNosotros) {
+            linkSobreNosotros.parentElement.style.setProperty('display', '', 'important');
+            console.log('Sobre Nosotros: visible');
+        }
+        
+        // Links que solo se muestran si el usuario está loggeado
+        if (isLoggedIn) {
+            if (linkBiblioteca) {
+                linkBiblioteca.parentElement.style.setProperty('display', '', 'important');
+                console.log('Biblioteca: visible (usuario loggeado)');
+            }
+            if (linkCalificaciones) {
+                linkCalificaciones.parentElement.style.setProperty('display', '', 'important');
+                console.log('Calificaciones: visible (usuario loggeado)');
+            }
+            if (linkDashboard) {
+                linkDashboard.parentElement.style.setProperty('display', '', 'important');
+                console.log('Dashboard: visible (usuario loggeado)');
+            }
+        } else {
+            if (linkBiblioteca) {
+                linkBiblioteca.parentElement.style.setProperty('display', 'none', 'important');
+                console.log('Biblioteca: oculto (usuario NO loggeado)');
+            }
+            if (linkCalificaciones) {
+                linkCalificaciones.parentElement.style.setProperty('display', 'none', 'important');
+                console.log('Calificaciones: oculto (usuario NO loggeado)');
+            }
+            if (linkDashboard) {
+                linkDashboard.parentElement.style.setProperty('display', 'none', 'important');
+                console.log('Dashboard: oculto (usuario NO loggeado)');
+            }
+        }
     }
+
+    // Ejecutar la función al cargar la página
+    console.log('Ejecutando updateNavbarLinks...');
+    updateNavbarLinks();
+    
+    // También ejecutar cuando cambie el estado de login (por si acaso)
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'loggedIn') {
+            console.log('Estado de login cambió, actualizando navbar...');
+            updateNavbarLinks();
+        }
+    });
 });
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {

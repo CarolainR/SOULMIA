@@ -106,4 +106,65 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (estadoBloqueadoModulo2) estadoBloqueadoModulo2.style.display = 'block';
     }
-}); 
+    
+    // Asegurar que el botón hamburguesa funcione correctamente
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const col7 = document.querySelector('.col-7.d-flex');
+    
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            console.log('Botón hamburguesa clickeado');
+            
+            // Toggle para navbar-collapse
+            if (navbarCollapse) {
+                navbarCollapse.classList.toggle('show');
+                console.log('navbar-collapse toggled');
+            }
+            
+            // Toggle para col-7
+            if (col7) {
+                col7.classList.toggle('show');
+                console.log('col-7 toggled');
+            }
+            
+            // Actualizar aria-expanded
+            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+            navbarToggler.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+});
+
+// Función para el menú de perfil
+function toggleProfileMenu() {
+    console.log('toggleProfileMenu llamado');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    if (profileMenuContent) {
+        const isVisible = profileMenuContent.classList.contains('show') || profileMenuContent.style.display === 'block';
+        
+        if (isVisible) {
+            profileMenuContent.classList.remove('show');
+            profileMenuContent.style.display = 'none';
+            console.log('Menú de perfil oculto');
+        } else {
+            profileMenuContent.classList.add('show');
+            profileMenuContent.style.display = 'block';
+            console.log('Menú de perfil visible');
+        }
+    } else {
+        console.error('No se encontró profileMenuContent');
+    }
+}
+
+// Cerrar menú de perfil al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    const profileMenu = document.querySelector('.profileMenu');
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    
+    if (profileMenu && profileMenuContent) {
+        if (!profileMenu.contains(event.target)) {
+            profileMenuContent.classList.remove('show');
+            profileMenuContent.style.display = 'none';
+        }
+    }
+});

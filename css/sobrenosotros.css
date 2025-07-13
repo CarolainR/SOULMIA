@@ -1320,3 +1320,379 @@ p, span, a, li {
 .navbar-nav .nav-link7 {
     font-size: 16px !important;
 }
+
+/* Responsive específico para el footer en pantallas pequeñas y medianas */
+@media (max-width: 991.98px) {
+    .footer .container-fluid {
+        text-align: center;
+    }
+    
+    .footer .row {
+        justify-content: center;
+    }
+    
+    .linksFooter {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .footerLink {
+        text-align: center !important;
+        margin: 0.5rem 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .footer .social-links {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+    }
+    
+    .footer .social-links a {
+        margin: 0 0.5rem !important;
+    }
+    
+    .footer h5.social-title {
+        text-align: center !important;
+        margin: 1rem auto !important;
+    }
+    
+    .infoFooter {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1rem !important;
+    }
+    
+    .infoFooter address,
+    .infoFooter div {
+        text-align: center !important;
+        margin: 0.5rem 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .footer p.text-center {
+        margin-top: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+
+    .infoFooter {
+        text-align: center;
+    }
+    
+    .linksFooter {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .footerLink {
+        text-align: center !important;
+        margin: 0.5rem 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .social-links {
+        gap: 0.5rem !important;
+    }
+    
+    .footer .social-links a {
+        margin: 0 0.25rem !important;
+        font-size: 1.3rem !important;
+    }
+    
+    .footerLink {
+        font-size: 1.1rem !important;
+    }
+    
+    .infoFooter address,
+    .infoFooter div {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Responsive del header para pantallas medianas y pequeñas */
+@media (max-width: 991.98px) {
+    .header .navbar .container-fluid {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+    }
+    
+    .header .navbar .d-flex.justify-content-between {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+    
+    /* Logo - a la izquierda */
+    .header .navbar .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        margin-right: 0 !important;
+        flex-shrink: 0 !important;
+        order: 1 !important;
+        justify-content: flex-start !important;
+    }
+    
+    /* Botón hamburguesa - centrado */
+    .header .navbar .navbar-toggler {
+        display: block !important;
+        order: 2 !important;
+        margin: 0 auto !important;
+        border: 1px solid var(--white) !important;
+        padding: 0.25rem 0.5rem !important;
+        flex-shrink: 0 !important;
+        position: static !important;
+        float: none !important;
+        justify-self: center !important;
+        align-self: center !important;
+        flex: 0 0 auto !important;
+    }
+    
+    .header .navbar .navbar-toggler-icon {
+        filter: brightness(0) invert(1) !important;
+    }
+    
+    /* Icono de perfil - más hacia la izquierda */
+    .header .navbar .sectionRight {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        order: 3 !important;
+        flex-shrink: 0 !important;
+        margin-left: 15px !important;
+        position: static !important;
+        float: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        padding-right: 15px !important;
+    }
+    
+    .header .navbar .profileMenu {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        float: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    .header .navbar .profileIcon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        color: var(--white) !important;
+        transition: all 0.3s ease !important;
+        padding: 0.5rem !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    /* Ocultar la columna de links pero permitir que Bootstrap la muestre */
+    .header .navbar .col-7 {
+        display: none !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    .header .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 1000 !important;
+        padding: 1rem !important;
+        border-top: 1px solid var(--primary) !important;
+    }
+    
+    .header .navbar .navbar-collapse.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 1000 !important;
+        padding: 1rem !important;
+        border-top: 1px solid var(--primary) !important;
+    }
+    
+    /* Cuando Bootstrap muestra el menú colapsado */
+    .header .navbar .col-7.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: var(--black) !important;
+        z-index: 1000 !important;
+        padding: 1rem !important;
+        border-top: 1px solid var(--primary) !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    .header .navbar .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    /* Estilos para cuando el menú está desplegado */
+    .header .navbar .col-7.show .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .header .navbar .col-7.show .navbar-nav .nav-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .header .navbar .col-7.show .navbar-nav .nav-link {
+        font-size: 1.1rem !important;
+        padding: 0.5rem !important;
+        color: var(--white) !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .header .navbar .navbar-nav .nav-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .header .navbar .navbar-nav .nav-link {
+        font-size: 1.1rem !important;
+        padding: 0.5rem !important;
+        color: var(--white) !important;
+    }
+    
+    /* Forzar layout horizontal */
+    .header .navbar .container-fluid > * {
+        display: inline-flex !important;
+        vertical-align: middle !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Asegurar que no haya elementos apilados */
+    .header .navbar .d-flex.justify-content-between > * {
+        display: inline-flex !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .navbar .container-fluid {
+        padding: 0 10px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .header .navbar .navbar-toggler {
+        margin: 0 auto !important;
+        padding: 0.2rem 0.4rem !important;
+        display: block !important;
+    }
+    
+    .header .navbar .sectionRight {
+        margin-left: 10px !important;
+        display: flex !important;
+    }
+    
+    /* Estilos específicos para el menú de perfil en móviles */
+    .header .navbar .profileMenuContent {
+        position: absolute !important;
+        top: 100% !important;
+        right: 0 !important;
+        left: auto !important;
+        min-width: 180px !important;
+        max-width: 200px !important;
+        background-color: var(--secondary) !important;
+        border: 1px solid var(--primary) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        z-index: 1003 !important;
+        overflow: visible !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: none !important;
+    }
+    
+    .header .navbar .profileMenuContent.show {
+        display: block !important;
+    }
+    
+    .header .navbar .profileMenu {
+        position: relative !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .navbar .navbar-brand img {
+        max-height: 40px !important;
+    }
+    
+    .header .navbar .navbar-toggler {
+        padding: 0.15rem 0.3rem !important;
+    }
+    
+    .header .navbar .profileIcon {
+        font-size: 1.2rem !important;
+    }
+}
