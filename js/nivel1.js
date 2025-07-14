@@ -167,4 +167,4 @@ document.addEventListener('click', function(event) {
             profileMenuContent.style.display = 'none';
         }
     }
-});
+}); 

@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) {
                 usernameSpan.textContent = user.fullName || user.email;
-            greetingDiv.style.display = 'block';
+            greetingDiv.classList.add('show');
             } else {
-                greetingDiv.classList.add('d-none');
+                greetingDiv.classList.remove('show');
             }
         } else {
-            greetingDiv.classList.add('d-none');
+            greetingDiv.classList.remove('show');
         }
     }
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             localStorage.removeItem('loggedIn');
             localStorage.removeItem('user');
-            greetingDiv.style.display = 'none'; // Ocultar saludo
+            greetingDiv.classList.remove('show'); // Ocultar saludo
             alert('Has cerrado sesión exitosamente');
             window.location.href = '../index.html'; // Redirigir al index después del logout
         });
@@ -53,9 +53,76 @@ document.addEventListener('DOMContentLoaded', function() {
         if (linkCalificaciones) linkCalificaciones.parentElement.style.display = '';
         if (linkDashboard) linkDashboard.parentElement.style.display = '';
     }
+    
+    // Manejo del menú hamburguesa con Bootstrap 5
+    const hamburgerBtn = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (hamburgerBtn && navbarCollapse) {
+        // Bootstrap 5 maneja el toggle automáticamente, pero podemos agregar funcionalidad adicional
+        hamburgerBtn.addEventListener('click', function() {
+            // El toggle ya está manejado por Bootstrap, pero podemos agregar efectos visuales
+            console.log('Botón hamburguesa clickeado');
+        });
+        
+        // Cerrar menú al hacer click en un link
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .nav-link1, .navbar-nav .nav-link2, .navbar-nav .nav-link3, .navbar-nav .nav-link4, .navbar-nav .nav-link5, .navbar-nav .nav-link6, .navbar-nav .nav-link7');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Usar Bootstrap Collapse API para cerrar el menú
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            });
+        });
+        
+        // Cerrar menú al hacer click fuera
+        document.addEventListener('click', function(event) {
+            if (!hamburgerBtn.contains(event.target) && !navbarCollapse.contains(event.target)) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    }
+    
+    // Asegurar que Bootstrap Collapse funcione correctamente
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar todos los elementos collapse de Bootstrap
+        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
+        var collapseList = collapseElementList.map(function (collapseEl) {
+            return new bootstrap.Collapse(collapseEl, {
+                toggle: false
+            });
+        });
+        
+        // Debug: verificar que el botón hamburguesa existe
+        const hamburgerBtn = document.querySelector('.navbar-toggler');
+        if (hamburgerBtn) {
+            console.log('Botón hamburguesa encontrado:', hamburgerBtn);
+        } else {
+            console.log('Botón hamburguesa NO encontrado');
+        }
+        
+        // Debug: verificar que el navbar-collapse existe
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse) {
+            console.log('Navbar collapse encontrado:', navbarCollapse);
+        } else {
+            console.log('Navbar collapse NO encontrado');
+        }
+    });
 });
 
-
+// Función para toggle del menú de perfil
+function toggleProfileMenu() {
+    const profileMenuContent = document.getElementById('profileMenuContent');
+    if (profileMenuContent) {
+        profileMenuContent.style.display = profileMenuContent.style.display === 'block' ? 'none' : 'block';
+    }
+}
 
 //VALIDACION DE EXAMEN POR MODULO Y Y PROGRESO GENERAL EN DASHBOARD
 

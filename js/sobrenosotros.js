@@ -83,5 +83,5 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-
+    
 // El resto del código de login no es necesario aquí para sobrenosotros.html

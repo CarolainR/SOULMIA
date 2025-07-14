@@ -9,7 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
+    <!-- Font Awesome SOLO el correcto -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,91 +17,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/calificaciones.css">
-    <title>SOULMIA🍸</title>
+    <title>CALIFICACIONES🍸</title>
     <link rel="icon" type="image/x-icon" href="./sources/favicon.ico">
 </head>
 <body class="bg-black">
     <!-- ENCABEZADO -->
- <div class="header">
-
-
+     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-none">
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center w-100">
-
-                    <!-- columna de logo -->
-
+                    
+                    <!-- Logo - a la izquierda -->
+                    <div class="logo-col">
                         <a class="navbar-brand d-flex" href="../index.html">
                             <img class="logo" src="../sources/LOGO SOULMIA  1 JUL 25_Mesa de trabajo 1.png" alt="Logo Soulmia"
                                 style="max-height: 50px;">
                         </a>
-
-                    <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
-                    <button class="navbar-toggler mx-auto " 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                   <!--  Links del Nav -->
-
-                    <div class="col-7 d-flex justify-content-center"> <!-- columna de links de nav -->
-                        <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
-                                        href="../vistas/modulos.html">Módulos</a></li>
-                                <li class="nav-item"><a class="nav-link1 fs-4 text-white"
-                                        href="../vistas/biblioteca.html">Biblioteca</a></li>
-                                <li class="nav-item"><a class="nav-link3 fs-4 text-white"
-                                        href="../vistas/calificaciones.html">Calificaciones</a></li>
-                                <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
-                                        href="../vistas/dashboard.html">Dashboard</a></li>
-                                <!--<li class="nav-item"><a class="nav-link5 fs-4 text-white"
-                                        href="../vistas/profesores.html">Profesores</a></li>-->
-                                <li class="nav-item"><a class="nav-link6 fs-4 text-white"
-                                        href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
-                               <!-- <li class="nav-item"><a class="nav-link7 fs-4 text-white"
-                                        href="../vistas/tienda.html">Tienda</a></li> -->
-                            </ul>
+                    </div>
+                    
+                    <!-- Botón hamburguesa - en el centro -->
+                    <div class="hamburger-col">
+                        <button class="navbar-toggler" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" 
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Links del Nav - en el centro (ahora dentro de hamburger-col) -->
+                        <div class="navbar-center-col">
+                            <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                            href="../index.html">Inicio</a></li>
+                                    <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                            href="../vistas/modulos.html">Módulos</a></li>
+                                    <li class="nav-item"><a class="nav-link1 fs-4 text-white"
+                                            href="../vistas/biblioteca.html">Biblioteca</a></li>
+                                    <li class="nav-item"><a class="dashboard nav-link4 fs-4 text-white"
+                                            href="../vistas/dashboard.html">Dashboard</a></li>
+                                   <!-- <li class="nav-item"><a class="nav-link5 fs-4 text-white"
+                                            href="../vistas/profesores.html">Profesores</a></li>-->
+                                    <li class="nav-item"><a class="nav-link6 fs-4 text-white"
+                                            href="../vistas/sobrenosotros.html">Sobre Nosotros</a></li>
+                                  <!--  <li class="nav-item"><a class="nav-link7 fs-4 text-white"
+                                            href="../vistas/tienda.html">Tienda</a></li> -->
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!-- Columna de icono de perfil y greeting -->
-                    <div class="sectionRight col-3 d-flex justify-content-end"> <!-- columna de icono de perfil y greeting -->
-
-                        <!-- Menú desplegable de perfil -->
-                        <div class="d-flex">
-                            <!-- fila de saludo -->
-
-                       
-                                <div class="greeting bg-dark d-flex text-center text-white " id="greeting" style="display: none;">
-                                    <span id="welcomeMessage"><span id="username"></span></span>
-
-                                </div>
-                         
-
-
-                            <!-- fila de icono de perfil y menu dropdown -->
-
-                            <div class="profileMenu text-white text-center d-flex align-items-center px-3">
-                                <span class="profileIcon" onclick="toggleProfileMenu()">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                                <div id="profileMenuContent" class="profileMenuContent">
-                                    <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
-                                </div>
+                    
+                    <!-- Icono de perfil - a la derecha -->
+                    <div class="profile-col">
+                        <div class="profileMenu text-white text-center d-flex align-items-center px-3">
+                            <span class="profileIcon" onclick="toggleProfileMenu()">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <div id="profileMenuContent" class="profileMenuContent">
+                                <a href="../index.html" id="logoutBtn" aria-label="Ir a logout">logout</a>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
+                <!-- Greeting en una fila aparte debajo de la fila principal -->
+                <div class="greeting bg-dark d-flex text-center text-white" id="greeting" style="display: none;">
+                    <span id="welcomeMessage"><span id="username"></span></span>
+                </div>
+            </div>
         </nav>
-
     </div>
 
      <div class="banner-title-container">
@@ -210,7 +195,7 @@
                 <div><p>Syrups, shrubs, cordiales y bitters artesanales</p> <div class="nota">0.0</div> </div>
                 <div><p>Desarrollo de carta creativa sostenible</p> <div class="nota">0.0</div> </div>
             </div>
-s        </div>
+        </div>
     </div>
 </div>
 
@@ -238,12 +223,12 @@ s        </div>
         </div>
         <p class="text-center mt-2">¡Síguenos!</p>
         <!-- Información de contacto (dirección a la izquierda, correo a la derecha) -->
-        <div style="width:100%;display:flex;justify-content:space-between;align-items:center;margin:1em 0;">
-          <span style="display:inline-block;margin-left:2em;color:#BF0C73;text-align:left;flex:1;">
-            <i class="fa-solid fa-map"></i> El Chagualo, Medellín, Antioquia, COLOMBIA
+        <div class="infoFooter" style="width:100%;display:flex;justify-content:space-between;align-items:center;margin:1em 0; border: none;">
+          <span class="infoFooter" style="display:inline-block;margin-left:2em;color:#BF0C73;text-align:left;flex:1;">
+            <i class="bi bi-geo-alt-fill"></i> El Chagualo, Medellín, Antioquia, COLOMBIA
           </span>
-          <span style="display:inline-block;margin-right:2em;color:#BF0C73;text-align:right;flex:1;">
-            <i class="fa-regular fa-paper-plane"></i> soulmiacontacto@gmail.com
+          <span class="infoFooter" style="display:inline-block;margin-right:2em;color:#BF0C73;text-align:right;flex:1;">
+            <i class="bi bi-envelope-at-fill"></i> soulmiacontacto@gmail.com
           </span>
         </div>
         <!-- Derechos de autor -->

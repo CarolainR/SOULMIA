@@ -6,6 +6,13 @@
     --black: #020202;
 }
 
+/* Prevenir scroll horizontal global */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 /* Tipografía */
 body {
     background-color: var(--black) !important;
@@ -33,8 +40,8 @@ p, span, a, li {
 .header {
     background-color: var(--black) !important;
     padding: 9px;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     overflow: visible !important;
 }
@@ -43,14 +50,14 @@ p, span, a, li {
     background-color: var(--black) !important;
     padding: 1rem 0;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     overflow: visible !important;
 }
 
 .container-fluid {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
@@ -61,7 +68,7 @@ p, span, a, li {
 .d-flex.justify-content-between.align-items-center.w-100 {
     flex-wrap: wrap;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     margin: 0;
 }
 
@@ -302,6 +309,17 @@ p, span, a, li {
 
 /* Ajustes para móvil */
 @media (max-width: 991.98px) {
+    /* Prevenir scroll horizontal */
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    html {
+        overflow-x: hidden !important;
+    }
+    
     .navbar-nav {
         flex-wrap: wrap;
         gap: 0.2rem;
@@ -748,6 +766,17 @@ p, span, a, li {
 }
 
 @media (max-width: 768px) {
+    /* Prevenir scroll horizontal */
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    html {
+        overflow-x: hidden !important;
+    }
+    
     .navbar-nav {
         gap: 1rem;
     }
@@ -1088,8 +1117,19 @@ p, span, a, li {
 }
 
 @media (max-width: 575.98px) {
+  /* Prevenir scroll horizontal */
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  html {
+    overflow-x: hidden !important;
+  }
+  
   .modulo-card-n1 {
-    max-width: 98vw;
+    max-width: 98%;
     min-height: 280px;
   }
   

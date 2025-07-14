@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'loggedIn') {
             console.log('Estado de login cambió, actualizando navbar...');
             updateNavbarLinks();
-        }
+    }
     });
 });
 
